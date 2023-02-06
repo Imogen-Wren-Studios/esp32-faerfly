@@ -1,7 +1,7 @@
 # imogen-wren-card-pcb
  Imogen Wren Business Card PCB - ImmoFuzz
  
- _This project incorperates 2 personal projects I have been meaning to work on into 1 package.
+ _This project incorperates 2 personal projects I have been meaning to work on into 1 package._
  
  1. A PCB business card I can hand out to people at gigs / work to advertise myself
  2. A Ripping Beast of a fuzz I built many years ago out of recycled parts from old broadcast cameras, and have never successfully managed to replicate.
