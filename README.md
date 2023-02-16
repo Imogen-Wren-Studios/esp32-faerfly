@@ -56,6 +56,9 @@ Slot for 2nd regulator for powering with 2s? or KISS
 
 I think KISS
 
+### Charging IC and LOw Voltage Cutoff
+
+
 
 ## Research
 
@@ -84,7 +87,25 @@ https://www.mouser.co.uk/ProductDetail/Microchip-Technology/MCP73844T-820I-MS
 
 _This option needs regulator to 5v_
 
+### Microcontroller Options
+#### AtTiny85
+- https://uk.farnell.com/microchip/attiny85-20su/mcu-8bit-attiny-20mhz-wsoic-8/dp/1455164
+- Feels more "Haxxor" using a tiny processor
+- More Difficult to implement
+- The device achieves a throughput of 20 MIPS at 20 MHz and operates between 2.7 to 5.5V.
+   - In voltage range 
 
+#### SAMD21
+- 3.3v 
+- Lots of experience with device
+- https://www.mouser.co.uk/ProductDetail/Microchip-Technology/ATSAMD21E16L-AF?qs=9KdFJXLqUo%252B5fCZYsYcg9g%3D%3D
+
+#### AtMega382p
+- Most commonly understood platform - better engagement
+- https://www.lcsc.com/product-detail/Microcontroller-Units-MCUs-MPUs-SOCs_Microchip-Tech-ATMEGA328P-AU_C14877.html
+- Expensive
+- in stock ATM
+- 1.8 - 5.5v
 
 ### Capaciative Sensing
 
