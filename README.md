@@ -44,11 +44,14 @@ _The project is a business card that can be handed out at gigs and work, and als
  
  ### WS2821b LED Implementation
  
- ![image](https://user-images.githubusercontent.com/97303986/219457981-92afcb83-094e-4cd9-8534-0c05b1694e8a.png)
+ ![image](https://user-images.githubusercontent.com/97303986/219457981-92afcb83-094e-4cd9-8534-0c05b1694e8a.png) <br>
 https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf
-Vdd = 3.5 - 5.6 
+- Vdd = 3.5 - 5.6 
+- Vinput = VDD +-0.5
 
- Close to 3v3 but is out of spec
+
+
+ Battery can be unregulated direct to LEDs & regulated to microcontroller
 
 
 ## Research
