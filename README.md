@@ -72,7 +72,7 @@ https://www.mouser.co.uk/ProductDetail/Microchip-Technology/MIC2550AYTS
 
 #### USB C Connectors
 https://www.mouser.co.uk/ProductDetail/Amphenol-Commercial-Products/124018402112A
-
+https://www.lcsc.com/product-detail/span-style-background-color-ff0-USB-span-Connectors_G-Switch-GT-USB-7007A_C5299422.html
 
 ### LiPo Battery Charging
 #### 1S
