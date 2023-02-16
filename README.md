@@ -42,14 +42,31 @@ _The project is a business card that can be handed out at gigs and work, and als
  
  ## Circuit Snippets
  
- ## WS2821b LED
+ ### WS2821b LED Implementation
  
  ![image](https://user-images.githubusercontent.com/97303986/219457981-92afcb83-094e-4cd9-8534-0c05b1694e8a.png)
 
 
+
 ### Research
+
+#### AtTiny85 Interface
+**DrAzzy - ATtiny Obsessee**
+_Jan '20post #2_
+If you use my core (board manager url in sig), there is a serial bootloader (use the (optiboot) board def).
+
+But you will still need an ISP programmer or arduino running Arduino as ISP sketch to bootload it (usbasps and nano clones are both 3 bucks or so on ebay/aliexpress, either is suitable).
+
+You will also need a 0.1uf cap and 10k resistor for the autoreset circuit so the serial adapter can reset it into the bootloader. (Also, dont forget that you also need a 0.1uf ceramic cap between power and ground close to the t85 ti ensure reliable operation; without this the chip may behave erratically depending on circumstances - I mention this because it is very often omitted in designs I see here, particularly with tinies. You always need this for digital ICs unless otherwise specified in the datasheet. With the t85, if on breadboard or protoboard, i usually put this across the top of the chip to minimize the distance between cap and chip)
+
+#### LiPo Battery Charging
+https://uk.rs-online.com/web/p/battery-management/7386360
+
+
 
 #### Capaciative Sensing
 
 https://www.instructables.com/Capacitive-Sensing-for-Dummies/
-_Seems to mostly be used with a microcontroller, havnt managed to find an analog audio implementation yey_
+_Seems to mostly be used with a microcontroller, havnt managed to find an analog audio implementation yet_
+
+https://docs.arduino.cc/built-in-examples/analog/Smoothing Smoothing Data from Capacative touch sensor
