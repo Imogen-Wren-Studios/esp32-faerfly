@@ -70,6 +70,10 @@ You will also need a 0.1uf cap and 10k resistor for the autoreset circuit so the
 
 https://www.mouser.co.uk/ProductDetail/Microchip-Technology/MIC2550AYTS
 
+#### USB C Connectors
+https://www.mouser.co.uk/ProductDetail/Amphenol-Commercial-Products/124018402112A
+
+
 ### LiPo Battery Charging
 #### 1S
 https://uk.rs-online.com/web/p/battery-management/7386360
