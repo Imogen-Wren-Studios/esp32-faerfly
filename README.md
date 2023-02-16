@@ -52,6 +52,9 @@ https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf
 
 
  Battery can be unregulated direct to LEDs & regulated to microcontroller
+Slot for 2nd regulator for powering with 2s? or KISS
+
+I think KISS
 
 
 ## Research
