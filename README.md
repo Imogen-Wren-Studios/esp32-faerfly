@@ -13,14 +13,14 @@ _The project is a business card that can be handed out at gigs and work, and als
  2. A fun electronics project or thing
 
 ### Ideas
- 1. A Ripping Beast of a fuzz I built many years ago out of recycled parts from old broadcast cameras, and have never successfully managed to replicate.
+ 1. A Ripping Beast of a fuzz I built many years ago out of recycled parts from old broadcast cameras, and have never successfully managed to replicate. <br?
     **Disadvantages:**
     - Limited use as soldering project due to SMD parts
     - Wont be seen once it goes into box
     - Difficulties with supply of Ukranian Transistor
 
 
- 2. An AtTiny85 based mini pocket lightshow. Rechargable and interactive. Probably get it fabbed so it isnt a soldering project, but include a programming port so it can be reprogrammed easily.
+ 2. An AtTiny85 based mini pocket lightshow. Rechargable and interactive. Probably get it fabbed so it isnt a soldering project, but include a programming port so it can be reprogrammed easily. <br?
      **Advantages:**
     - Fun programming challenge - Can link to repo with working code in case of bricking
     - Card more likely to be used in the open and interacted with over time
@@ -28,16 +28,16 @@ _The project is a business card that can be handed out at gigs and work, and als
     - Could exclude battery and make a point of indicating to reuse broken disposible vape for battery. Recycling electronic waste! 
 
 
- 4. Capacitive touch instrument. Extermal power supply, 9v based for ease. Basic Light Show included?
+ 4. Capacitive touch instrument. Extermal power supply, 9v based for ease. Basic Light Show included? 
     - Analog or Digital?  
-    **Analog Advantages**
+    **Analog Advantages** <br?
     - More motivation to treat it as a soldering excercise rather than a programming one.
-    - More likely to be of interest to the DIY Music crowd
+    - More likely to be of interest to the DIY Music crowd <br?
     **Overall Advantages**
-    - could end up being used to make cool music
+    - could end up being used to make cool music <br?
     **Disadvantages:**
     - Circuit needs testing
-    - how sensitive is circuit to change
+    - how sensitive is circuit to change <br?
  
  
  
