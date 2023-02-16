@@ -62,7 +62,14 @@ You will also need a 0.1uf cap and 10k resistor for the autoreset circuit so the
 https://www.mouser.co.uk/ProductDetail/Microchip-Technology/MIC2550AYTS
 
 ### LiPo Battery Charging
+#### 1S
 https://uk.rs-online.com/web/p/battery-management/7386360
+https://www.mouser.co.uk/ProductDetail/Microchip-Technology-Atmel/MCP73832T-5ACI-OT
+
+#### 2S
+https://www.mouser.co.uk/ProductDetail/Microchip-Technology/MCP73844T-820I-MS
+
+_This option needs regulator to 5v_
 
 
 
