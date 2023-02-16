@@ -40,4 +40,16 @@ _The project is a business card that can be handed out at gigs and work, and als
     - how sensitive is circuit to change <br>
  
  
+ ## Circuit Snippets
  
+ ## WS2821b LED
+ 
+ ![image](https://user-images.githubusercontent.com/97303986/219457981-92afcb83-094e-4cd9-8534-0c05b1694e8a.png)
+
+
+### Research
+
+#### Capaciative Sensing
+
+https://www.instructables.com/Capacitive-Sensing-for-Dummies/
+_Seems to mostly be used with a microcontroller, havnt managed to find an analog audio implementation yey_
