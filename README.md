@@ -57,6 +57,10 @@ _If you use my core (board manager url in sig), there is a serial bootloader (us
 But you will still need an ISP programmer or arduino running Arduino as ISP sketch to bootload it (usbasps and nano clones are both 3 bucks or so on ebay/aliexpress, either is suitable).
 You will also need a 0.1uf cap and 10k resistor for the autoreset circuit so the serial adapter can reset it into the bootloader. (Also, dont forget that you also need a 0.1uf ceramic cap between power and ground close to the t85 ti ensure reliable operation; without this the chip may behave erratically depending on circumstances - I mention this because it is very often omitted in designs I see here, particularly with tinies. You always need this for digital ICs unless otherwise specified in the datasheet. With the t85, if on breadboard or protoboard, i usually put this across the top of the chip to minimize the distance between cap and chip)_
 
+#### USB - SPI Bridge
+
+https://www.mouser.co.uk/ProductDetail/Microchip-Technology/MIC2550AYTS
+
 ### LiPo Battery Charging
 https://uk.rs-online.com/web/p/battery-management/7386360
 
