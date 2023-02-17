@@ -38,6 +38,10 @@ _The project is a business card that can be handed out at gigs and work, and als
     **Disadvantages:**
     - Circuit needs testing
     - how sensitive is circuit to change <br>
+    
+ ## Strech Features
+ 
+ - NFC Tap phone to link to linktree?
  
  
  ## Circuit Snippets
@@ -96,7 +100,7 @@ _This option needs regulator to 5v_
    - In voltage range 
 
 #### SAMD21
-- 3.3v 
+- 3.3v  MUST BE REGULATED
 - Lots of experience with device
 - https://www.mouser.co.uk/ProductDetail/Microchip-Technology/ATSAMD21E16L-AF?qs=9KdFJXLqUo%252B5fCZYsYcg9g%3D%3D
 
@@ -105,7 +109,12 @@ _This option needs regulator to 5v_
 - https://www.lcsc.com/product-detail/Microcontroller-Units-MCUs-MPUs-SOCs_Microchip-Tech-ATMEGA328P-AU_C14877.html
 - Expensive
 - in stock ATM
-- 1.8 - 5.5v
+- 1.8 - 5.5v - No Need for Regulator
+
+### ESP32
+- 3v3 Only - needs regulating
+- Wifiability gives further haxxor abilities
+- OTA Updates
 
 ### Capaciative Sensing
 
