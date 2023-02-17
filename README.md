@@ -98,6 +98,7 @@ _This option needs regulator to 5v_
 - More Difficult to implement
 - The device achieves a throughput of 20 MIPS at 20 MHz and operates between 2.7 to 5.5V.
    - In voltage range 
+- Have code almost ready to run https://github.com/Imogen-Wren-Studios/unicorn-attiny85
 
 #### SAMD21
 - 3.3v  MUST BE REGULATED
@@ -115,6 +116,10 @@ _This option needs regulator to 5v_
 - 3v3 Only - needs regulating
 - Wifiability gives further haxxor abilities
 - OTA Updates
+https://www.lcsc.com/product-detail/WiFi-Modules_Espressif-Systems-ESP32-WROOM-32-N4_C82899.html
+- Price: 
+  - 1+   -  	US$3.2455	
+  - 10+	 -   US$2.9273
 
 ### Capaciative Sensing
 
