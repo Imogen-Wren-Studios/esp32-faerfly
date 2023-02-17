@@ -120,6 +120,7 @@ _This option needs regulator to 5v_
 - Wifiability gives further haxxor abilities
 - OTA Updates
 https://www.lcsc.com/product-detail/WiFi-Modules_Espressif-Systems-ESP32-WROOM-32-N4_C82899.html
+- Have some code that could be used: https://github.com/Imogen-Wren-Studios/esp32-ws2812b-glediator
 - Price: 
   - 1+   -  	US$3.2455	
   - 10+	 -   US$2.9273
