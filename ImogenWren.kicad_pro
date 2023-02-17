@@ -471,6 +471,35 @@
     "subpart_first_id": 65,
     "subpart_id_separator": 0
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "84b7ad53-68b5-40da-9777-f5bb9a09ecb4",
+      ""
+    ],
+    [
+      "6e419124-9cf1-4d50-9712-1b17a0c994e7",
+      "USB MCU CH340 Interface A"
+    ],
+    [
+      "73b599da-b6db-49f1-8fbb-0cc64eaf9377",
+      "MCU"
+    ],
+    [
+      "9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0",
+      "ESP32"
+    ],
+    [
+      "b86764a3-50e0-4d6c-869d-b8d48d944fad",
+      "USB ESP32 CH340 Interface "
+    ],
+    [
+      "330c6a2c-ef5e-4ba5-9203-bd719a2545ac",
+      "Logic Level Conversion"
+    ],
+    [
+      "5d70f0ae-944c-460c-8592-0cd073646a17",
+      "USB"
+    ]
+  ],
   "text_variables": {}
 }
