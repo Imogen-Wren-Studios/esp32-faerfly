@@ -111,6 +111,9 @@ _This option needs regulator to 5v_
 - Expensive
 - in stock ATM
 - 1.8 - 5.5v - No Need for Regulator
+  - Qty.	Unit Price	Ext. Price
+  - 1+	US  $3.045
+  - 10+	US  $2.7126 - 	US$ 27.13
 
 ### ESP32
 - 3v3 Only - needs regulating
