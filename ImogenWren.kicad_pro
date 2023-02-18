@@ -489,8 +489,20 @@
       "Logic Level Conversion"
     ],
     [
+      "5386ed57-b516-470f-a1c7-5bff94fbdd17",
+      "Buttons"
+    ],
+    [
       "5d70f0ae-944c-460c-8592-0cd073646a17",
       "USB"
+    ],
+    [
+      "12ff2674-8866-4175-acc8-2cbcf21e0040",
+      "Audio Driver"
+    ],
+    [
+      "257521cf-9b93-4c7d-82f3-71ab472635d5",
+      "WS2812b LEDs"
     ]
   ],
   "text_variables": {}

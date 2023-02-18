@@ -967,6 +967,57 @@
     )
   )
 
+  (sheet (at 90.17 147.32) (size 40.64 33.02) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 12ff2674-8866-4175-acc8-2cbcf21e0040)
+    (property "Sheetname" "Audio Driver" (at 90.17 146.6084 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "esp32-audio-output.kicad_sch" (at 90.17 180.9246 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "ImogenWren"
+        (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4" (page "7"))
+      )
+    )
+  )
+
+  (sheet (at 222.25 45.72) (size 34.29 21.59) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 257521cf-9b93-4c7d-82f3-71ab472635d5)
+    (property "Sheetname" "WS2812b LEDs" (at 222.25 45.0084 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "ws2812b-led-string.kicad_sch" (at 222.25 67.8946 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "ImogenWren"
+        (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4" (page "8"))
+      )
+    )
+  )
+
+  (sheet (at 168.91 121.92) (size 31.75 26.67) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 5386ed57-b516-470f-a1c7-5bff94fbdd17)
+    (property "Sheetname" "Buttons" (at 168.91 121.2084 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "buttons.kicad_sch" (at 168.91 149.1746 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "ImogenWren"
+        (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4" (page "6"))
+      )
+    )
+  )
+
   (sheet (at 41.91 38.1) (size 21.59 45.72) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 61 236 255 0.3000))
