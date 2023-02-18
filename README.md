@@ -42,6 +42,8 @@ _The project is a business card that can be handed out at gigs and work, and als
  ## Strech Features
  
  - NFC Tap phone to link to linktree?
+ - Edge connectors could be used as both touch interface, and connection to other hardware. Generic port? Is this now a new form we are trying to invent for development boards?
+ - 3d printed case for different functions, like exposed touch pins, 
  
  
  ## Circuit Snippets
