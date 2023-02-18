@@ -63,6 +63,7 @@ I think KISS
 ### Charging IC and LOw Voltage Cutoff
 
 
+https://www.mouser.co.uk/ProductDetail/Littelfuse/SMAJ350A?
 
 ## Research
 
@@ -98,6 +99,7 @@ _This option needs regulator to 5v_
 - More Difficult to implement
 - The device achieves a throughput of 20 MIPS at 20 MHz and operates between 2.7 to 5.5V.
    - In voltage range 
+- Have code almost ready to run https://github.com/Imogen-Wren-Studios/unicorn-attiny85
 
 #### SAMD21
 - 3.3v  MUST BE REGULATED
@@ -110,11 +112,19 @@ _This option needs regulator to 5v_
 - Expensive
 - in stock ATM
 - 1.8 - 5.5v - No Need for Regulator
+  - Qty.	Unit Price	Ext. Price
+  - 1+	US  $3.045
+  - 10+	US  $2.7126 - 	US$ 27.13
 
 ### ESP32
 - 3v3 Only - needs regulating
 - Wifiability gives further haxxor abilities
 - OTA Updates
+https://www.lcsc.com/product-detail/WiFi-Modules_Espressif-Systems-ESP32-WROOM-32-N4_C82899.html
+- Have some code that could be used: https://github.com/Imogen-Wren-Studios/esp32-ws2812b-glediator
+- Price: 
+  - 1+   -  	US$3.2455	
+  - 10+	 -   US$2.9273
 
 ### Capaciative Sensing
 
