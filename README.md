@@ -63,6 +63,7 @@ I think KISS
 ### Charging IC and LOw Voltage Cutoff
 
 
+https://www.mouser.co.uk/ProductDetail/Littelfuse/SMAJ350A?
 
 ## Research
 
