@@ -135,3 +135,15 @@ https://www.instructables.com/Capacitive-Sensing-for-Dummies/
 _Seems to mostly be used with a microcontroller, havnt managed to find an analog audio implementation yet_
 
 https://docs.arduino.cc/built-in-examples/analog/Smoothing Smoothing Data from Capacative touch sensor
+
+## Edge Connector Idea
+
+|Pin Num| label | use | notes |
+|---    |---    |---  |---    |
+| 0     |       |     |       |    
+| 0     |       |     |       |    
+| 0     |       |     |       |    
+| 0     |       |     |       |    
+| 0     |       |     |       |    
+| 0     |       |     |       |    
+| 0     |       |     |       |  
