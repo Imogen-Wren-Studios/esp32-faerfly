@@ -88,6 +88,7 @@ https://www.lcsc.com/product-detail/span-style-background-color-ff0-USB-span-Con
 #### 1S
 https://uk.rs-online.com/web/p/battery-management/7386360
 https://www.mouser.co.uk/ProductDetail/Microchip-Technology-Atmel/MCP73832T-5ACI-OT
+https://www.mouser.co.uk/datasheet/2/268/20001984g-846362.pdf
 
 #### 2S
 https://www.mouser.co.uk/ProductDetail/Microchip-Technology/MCP73844T-820I-MS
