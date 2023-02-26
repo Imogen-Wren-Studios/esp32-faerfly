@@ -495,10 +495,6 @@
       "USB ESP32 CH340 Interface "
     ],
     [
-      "330c6a2c-ef5e-4ba5-9203-bd719a2545ac",
-      "Logic Level Conversion"
-    ],
-    [
       "5386ed57-b516-470f-a1c7-5bff94fbdd17",
       "Buttons"
     ],
