@@ -198,7 +198,7 @@
       (property "Value" "8-pin-edge-touch" (at -2.54 20.32 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Footprint" "Connector_PCBEdge:BUS_PCIexpress_x1" (at 15.24 -39.37 0)
+      (property "Footprint" "000-edge-connectors-immo:8-pin-edge-touch" (at 15.24 -39.37 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "Datasheet" "http://www.ritrontek.com/uploadfile/2016/1026/20161026105231124.pdf#page=63" (at -3.81 -27.94 0)
@@ -1635,7 +1635,7 @@
   (symbol (lib_id "000-edge-connectors-immo:1-pin-edge-touch-XL") (at 200.66 115.57 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 10a67ff5-4995-429f-8162-2ac8ae1ff38d)
-    (property "Reference" "J4" (at 207.01 101.6 0)
+    (property "Reference" "J5" (at 207.01 101.6 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1-pin-edge-touch-XL" (at 207.01 104.14 0)
@@ -1651,7 +1651,7 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0"
-          (reference "J4") (unit 1)
+          (reference "J5") (unit 1)
         )
       )
     )
@@ -1660,7 +1660,7 @@
   (symbol (lib_id "000_MCU_microcontrollers_Immo:ESP32-WROOM-32_2") (at 140.97 106.68 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 16e5dd32-7561-4c03-9a96-48bb32c31074)
-    (property "Reference" "U4" (at 139.1159 69.85 0)
+    (property "Reference" "U3" (at 139.1159 69.85 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "ESP32-WROOM-32" (at 139.1159 72.39 0)
@@ -1714,7 +1714,7 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0"
-          (reference "U4") (unit 1)
+          (reference "U3") (unit 1)
         )
       )
     )
@@ -1750,7 +1750,7 @@
   (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 248.92 151.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 677820e5-7271-4b8d-99fd-003518600599)
-    (property "Reference" "R2" (at 243.84 149.86 0)
+    (property "Reference" "R9" (at 243.84 149.86 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 243.84 152.4 0)
@@ -1767,7 +1767,7 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0"
-          (reference "R2") (unit 1)
+          (reference "R9") (unit 1)
         )
       )
     )
@@ -1808,7 +1808,7 @@
     (property "Value" "Touch Pins" (at 207.01 121.92 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Connector_PCBEdge:BUS_PCIexpress_x1" (at 215.9 166.37 0)
+    (property "Footprint" "000-edge-connectors-immo:8-pin-edge-touch" (at 215.9 166.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.ritrontek.com/uploadfile/2016/1026/20161026105231124.pdf#page=63" (at 196.85 154.94 0)
@@ -1834,13 +1834,13 @@
   (symbol (lib_id "Connector:Conn_01x05_Male") (at 105.41 148.59 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 924c79f3-54c3-48ed-8c1e-888ab85a2db8)
-    (property "Reference" "J2" (at 106.045 138.43 0)
+    (property "Reference" "J3" (at 106.045 138.43 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "ESP_GPIO_B" (at 106.045 140.97 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x05_P1.27mm_Vertical" (at 105.41 148.59 0)
+    (property "Footprint" "Connector_PCBEdge:BUS_PCIexpress_x1" (at 105.41 148.59 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 105.41 148.59 0)
@@ -1854,7 +1854,7 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0"
-          (reference "J2") (unit 1)
+          (reference "J3") (unit 1)
         )
       )
     )
@@ -1863,7 +1863,7 @@
   (symbol (lib_id "power:PWR_FLAG") (at 48.26 29.21 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9b929e1c-db36-468e-9665-de5ff3b3d8f4)
-    (property "Reference" "#FLG0101" (at 48.26 31.115 0)
+    (property "Reference" "#FLG01" (at 48.26 31.115 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "PWR_FLAG" (at 48.26 34.29 0)
@@ -1879,7 +1879,7 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0"
-          (reference "#FLG0101") (unit 1)
+          (reference "#FLG01") (unit 1)
         )
       )
     )
@@ -1888,7 +1888,7 @@
   (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 166.37 63.5 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a083bf9a-031e-4815-a9e8-a48c23160bca)
-    (property "Reference" "R30" (at 165.0999 60.96 0)
+    (property "Reference" "R7" (at 165.0999 60.96 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "330r" (at 170.18 66.04 90)
@@ -1905,7 +1905,7 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0"
-          (reference "R30") (unit 1)
+          (reference "R7") (unit 1)
         )
       )
     )
@@ -1914,7 +1914,7 @@
   (symbol (lib_id "000_Diodes_Immo:LED_0805_smd") (at 157.48 63.5 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b03ccb86-48a1-4dd2-af87-50abe8a96224)
-    (property "Reference" "D9" (at 158.75 59.69 0)
+    (property "Reference" "D1" (at 158.75 59.69 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "Blue" (at 158.75 66.04 0)
@@ -1931,7 +1931,7 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0"
-          (reference "D9") (unit 1)
+          (reference "D1") (unit 1)
         )
       )
     )
@@ -1940,7 +1940,7 @@
   (symbol (lib_id "000-edge-connectors-immo:6-pin-edge-touch") (at 100.33 118.11 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b597f313-8315-4c7e-80b4-798b69973cd2)
-    (property "Reference" "J7" (at 103.505 96.52 0)
+    (property "Reference" "J2" (at 103.505 96.52 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SDI/SDO" (at 103.505 99.06 0)
@@ -1961,7 +1961,7 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0"
-          (reference "J7") (unit 1)
+          (reference "J2") (unit 1)
         )
       )
     )
@@ -1970,13 +1970,13 @@
   (symbol (lib_id "Connector:Conn_01x05_Male") (at 271.78 156.21 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b87ea73c-eb71-4e52-9f4f-945d69a579e1)
-    (property "Reference" "J5" (at 273.05 157.4801 0)
+    (property "Reference" "J7" (at 273.05 157.4801 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "i2c Header" (at 273.05 160.02 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x05_P1.27mm_Vertical" (at 271.78 156.21 0)
+    (property "Footprint" "Connector_PCBEdge:BUS_PCIexpress_x1" (at 271.78 156.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 271.78 156.21 0)
@@ -1990,7 +1990,7 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0"
-          (reference "J5") (unit 1)
+          (reference "J7") (unit 1)
         )
       )
     )
@@ -1999,7 +1999,7 @@
   (symbol (lib_id "000_Capacitor_Film_Immo:cap_film_0805") (at 83.82 35.56 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bacde3a1-5695-4987-b2f4-a3bed4b4360a)
-    (property "Reference" "C5" (at 87.63 34.2899 0)
+    (property "Reference" "C3" (at 87.63 34.2899 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 87.63 36.8299 0)
@@ -2016,7 +2016,7 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0"
-          (reference "C5") (unit 1)
+          (reference "C3") (unit 1)
         )
       )
     )
@@ -2025,7 +2025,7 @@
   (symbol (lib_id "000_Capacitor_Film_Immo:cap_film_0805") (at 116.84 59.69 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bb1c97e7-f2b5-466c-8319-74aeab3f00d6)
-    (property "Reference" "C1" (at 118.11 57.15 0)
+    (property "Reference" "C4" (at 118.11 57.15 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 118.11 62.23 0)
@@ -2042,7 +2042,7 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0"
-          (reference "C1") (unit 1)
+          (reference "C4") (unit 1)
         )
       )
     )
@@ -2051,13 +2051,13 @@
   (symbol (lib_id "Connector:Conn_01x04_Male") (at 110.49 83.82 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid be23f596-d5db-444a-b0ff-473f4df0b7a0)
-    (property "Reference" "J3" (at 111.125 76.2 0)
+    (property "Reference" "J4" (at 111.125 76.2 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "ESPpin4-7" (at 111.125 78.74 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x04_P1.27mm_Vertical" (at 110.49 83.82 0)
+    (property "Footprint" "Connector_PCBEdge:BUS_PCIexpress_x1" (at 110.49 83.82 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 110.49 83.82 0)
@@ -2070,7 +2070,7 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0"
-          (reference "J3") (unit 1)
+          (reference "J4") (unit 1)
         )
       )
     )
@@ -2079,7 +2079,7 @@
   (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 231.14 151.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid be85b88b-1337-4a5f-b7f3-b7c3b39622dd)
-    (property "Reference" "R3" (at 227.33 149.86 0)
+    (property "Reference" "R8" (at 227.33 149.86 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 226.06 152.4 0)
@@ -2096,7 +2096,7 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0"
-          (reference "R3") (unit 1)
+          (reference "R8") (unit 1)
         )
       )
     )
@@ -2105,7 +2105,7 @@
   (symbol (lib_id "000_Capacitor_Film_Immo:cap_film_0805") (at 125.73 59.69 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid dc8b459f-12bb-4fbb-8f5d-4059ab147d6a)
-    (property "Reference" "C3" (at 127 57.15 0)
+    (property "Reference" "C5" (at 127 57.15 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100n" (at 128.27 62.23 0)
@@ -2122,7 +2122,7 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0"
-          (reference "C3") (unit 1)
+          (reference "C5") (unit 1)
         )
       )
     )

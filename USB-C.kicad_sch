@@ -780,7 +780,7 @@
   (symbol (lib_id "Connector:USB_C_Receptacle") (at 97.79 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 04f1d58f-a117-48c2-ab11-35e92ed8e9c7)
-    (property "Reference" "J1" (at 97.79 44.45 0)
+    (property "Reference" "J?" (at 97.79 44.45 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "USB_C_Receptacle" (at 97.79 46.99 0)
@@ -820,10 +820,10 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4"
-          (reference "J1") (unit 1)
+          (reference "J?") (unit 1)
         )
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/5d70f0ae-944c-460c-8592-0cd073646a17"
-          (reference "J1") (unit 1)
+          (reference "J8") (unit 1)
         )
       )
     )
@@ -832,7 +832,7 @@
   (symbol (lib_id "000_Capacitor_Film_Immo:cap_film_0805") (at 130.81 107.95 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0adc4ef4-e54b-4dd5-9051-4048a75f4610)
-    (property "Reference" "C1" (at 134.62 107.315 0)
+    (property "Reference" "C?" (at 134.62 107.315 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10n" (at 134.62 109.855 0)
@@ -849,10 +849,10 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4"
-          (reference "C1") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/5d70f0ae-944c-460c-8592-0cd073646a17"
-          (reference "C4") (unit 1)
+          (reference "C8") (unit 1)
         )
       )
     )
@@ -861,7 +861,7 @@
   (symbol (lib_id "000_Resistors_Immo:Resistor_0805") (at 120.65 107.95 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 175bd946-37d0-4f63-a50e-99aec04d95b7)
-    (property "Reference" "R1" (at 123.19 107.315 90)
+    (property "Reference" "R?" (at 123.19 107.315 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "5k2" (at 123.19 109.855 90)
@@ -878,10 +878,10 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4"
-          (reference "R1") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/5d70f0ae-944c-460c-8592-0cd073646a17"
-          (reference "R1") (unit 1)
+          (reference "R12") (unit 1)
         )
       )
     )
@@ -890,7 +890,7 @@
   (symbol (lib_id "power:GNDPWR") (at 149.86 53.34 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1da30eb1-d7e8-47df-bd9c-f9deb47427c5)
-    (property "Reference" "#PWR02" (at 149.86 58.42 0)
+    (property "Reference" "#PWR?" (at 149.86 58.42 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDPWR" (at 149.733 58.42 0)
@@ -906,10 +906,10 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4"
-          (reference "#PWR02") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/5d70f0ae-944c-460c-8592-0cd073646a17"
-          (reference "#PWR02") (unit 1)
+          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -918,7 +918,7 @@
   (symbol (lib_id "Device:FerriteBead") (at 138.43 50.8 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 43206434-7f40-43a7-bf4d-175867e9c61c)
-    (property "Reference" "FB1" (at 138.3792 44.45 90)
+    (property "Reference" "FB?" (at 138.3792 44.45 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "FerriteBead" (at 138.3792 46.99 90)
@@ -935,7 +935,7 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4"
-          (reference "FB1") (unit 1)
+          (reference "FB?") (unit 1)
         )
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/5d70f0ae-944c-460c-8592-0cd073646a17"
           (reference "FB1") (unit 1)
@@ -947,7 +947,7 @@
   (symbol (lib_id "power:GNDPWR") (at 161.29 53.34 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 45914545-e4f2-4c82-b203-ec3b9dab5e48)
-    (property "Reference" "#PWR03" (at 161.29 58.42 0)
+    (property "Reference" "#PWR?" (at 161.29 58.42 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDPWR" (at 161.163 58.42 0)
@@ -963,10 +963,10 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/5d70f0ae-944c-460c-8592-0cd073646a17"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -975,7 +975,7 @@
   (symbol (lib_id "000_Capacitor_Film_Immo:cap_film_0805") (at 149.86 46.99 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c6fff695-4cea-49d9-8168-38685ebdb224)
-    (property "Reference" "C2" (at 153.67 46.355 0)
+    (property "Reference" "C?" (at 153.67 46.355 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 153.67 48.895 0)
@@ -992,10 +992,10 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4"
-          (reference "C2") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/5d70f0ae-944c-460c-8592-0cd073646a17"
-          (reference "C13") (unit 1)
+          (reference "C10") (unit 1)
         )
       )
     )
@@ -1004,7 +1004,7 @@
   (symbol (lib_id "000_Capacitor_Film_Immo:cap_film_0805") (at 157.48 107.95 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d199acaf-28a7-417a-a347-5112d997881b)
-    (property "Reference" "C5" (at 161.29 107.315 0)
+    (property "Reference" "C?" (at 161.29 107.315 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "47p" (at 161.29 109.855 0)
@@ -1021,10 +1021,10 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4"
-          (reference "C5") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/5d70f0ae-944c-460c-8592-0cd073646a17"
-          (reference "C14") (unit 1)
+          (reference "C11") (unit 1)
         )
       )
     )
@@ -1033,7 +1033,7 @@
   (symbol (lib_id "000_Capacitor_Film_Immo:cap_film_0805") (at 146.05 107.95 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e6ca30c6-d1ab-426b-bb00-c339a5c521a4)
-    (property "Reference" "C4" (at 149.86 107.315 0)
+    (property "Reference" "C?" (at 149.86 107.315 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "47p" (at 149.86 109.855 0)
@@ -1050,10 +1050,10 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4"
-          (reference "C4") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/5d70f0ae-944c-460c-8592-0cd073646a17"
-          (reference "C12") (unit 1)
+          (reference "C9") (unit 1)
         )
       )
     )
@@ -1062,7 +1062,7 @@
   (symbol (lib_id "000_Capacitor_Film_Immo:cap_film_0805") (at 161.29 46.99 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ff95378d-e708-4aae-898d-a6a7146f564d)
-    (property "Reference" "C3" (at 165.1 46.355 0)
+    (property "Reference" "C?" (at 165.1 46.355 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4n7" (at 165.1 48.895 0)
@@ -1079,10 +1079,10 @@
     (instances
       (project "ImogenWren"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4"
-          (reference "C3") (unit 1)
+          (reference "C?") (unit 1)
         )
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/5d70f0ae-944c-460c-8592-0cd073646a17"
-          (reference "C15") (unit 1)
+          (reference "C12") (unit 1)
         )
       )
     )
