@@ -1,11 +1,18 @@
-21585115990197390
+21586793793224587
+000-edge-connectors-immo
+1-pin-edge-touch-xl
+PCIexpress Bus Edge Connector x1 http://www.ritrontek.com/uploadfile/2016/1026/20161026105231124.pdf#page=70
+PCIe
+0
+1
+1
 000-edge-connectors-immo
 8-pin-edge-touch
 PCIexpress Bus Edge Connector x1 http://www.ritrontek.com/uploadfile/2016/1026/20161026105231124.pdf#page=70
 PCIe
 0
-36
-36
+8
+8
 000-edge-connectors-immo
 BUS_PCIexpress_x1_1_1
 PCIexpress Bus Edge Connector x1 http://www.ritrontek.com/uploadfile/2016/1026/20161026105231124.pdf#page=70
