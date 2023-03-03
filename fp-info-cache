@@ -1,4 +1,4 @@
-21595621999802570
+21605689175448861
 000-edge-connectors-immo
 1-pin-edge-touch-xl
 PCIexpress Bus Edge Connector x1 http://www.ritrontek.com/uploadfile/2016/1026/20161026105231124.pdf#page=70
@@ -7,6 +7,20 @@ PCIe
 1
 1
 000-edge-connectors-immo
+2-pin-edge
+PCIexpress Bus Edge Connector x1 http://www.ritrontek.com/uploadfile/2016/1026/20161026105231124.pdf#page=70
+PCIe
+0
+2
+2
+000-edge-connectors-immo
+3-pin-edge
+PCIexpress Bus Edge Connector x1 http://www.ritrontek.com/uploadfile/2016/1026/20161026105231124.pdf#page=70
+PCIe
+0
+3
+3
+000-edge-connectors-immo
 4-pin-edge
 PCIexpress Bus Edge Connector x1 http://www.ritrontek.com/uploadfile/2016/1026/20161026105231124.pdf#page=70
 PCIe
@@ -14,12 +28,19 @@ PCIe
 4
 4
 000-edge-connectors-immo
+5-pin-edge-touch
+PCIexpress Bus Edge Connector x1 http://www.ritrontek.com/uploadfile/2016/1026/20161026105231124.pdf#page=70
+PCIe
+0
+5
+5
+000-edge-connectors-immo
 6-pin-edge-touch
 PCIexpress Bus Edge Connector x1 http://www.ritrontek.com/uploadfile/2016/1026/20161026105231124.pdf#page=70
 PCIe
 0
-8
-8
+6
+6
 000-edge-connectors-immo
 8-pin-edge-touch
 PCIexpress Bus Edge Connector x1 http://www.ritrontek.com/uploadfile/2016/1026/20161026105231124.pdf#page=70
@@ -475,6 +496,20 @@ CreditCard
 0
 0
 0
+000_Modules_Immo
+ESP32-WROOM-32
+Single 2.4 GHz Wi-Fi and Bluetooth combo chip https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf
+Single 2.4 GHz Wi-Fi and Bluetooth combo  chip
+0
+60
+39
+000_Modules_Immo
+ESP32-WROOM-32_nokeepout
+Single 2.4 GHz Wi-Fi and Bluetooth combo chip https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf
+Single 2.4 GHz Wi-Fi and Bluetooth combo  chip
+0
+60
+39
 000_Pin_Headers_Immo
 PinHeader_1x10_P2.54mm_Vertical
 Through hole straight pin header, 1x10, 2.54mm pitch, single row
@@ -544,6 +579,13 @@ TOGGLE SWITCH
 TOGGLE SWITCH
 0
 3
+3
+000_Switches_Immo
+SW_SPDT_PCM12
+Ultraminiature Surface Mount Slide Switch, right-angle, https://www.ckswitches.com/media/1424/pcm.pdf
+
+0
+7
 3
 000_Transistors_Immo
 AltFP
