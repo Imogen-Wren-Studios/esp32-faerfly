@@ -10408,7 +10408,7 @@
       (stroke (width 0.1) (type default)) (layer "B.SilkS") (tstamp 5eae8476-38b5-420f-95b4-28208ab8a85c))
     (fp_arc (start 4.832381 -2.419381) (mid 5.460999 -2.158999) (end 5.721381 -1.530381)
       (stroke (width 0.1) (type default)) (layer "B.SilkS") (tstamp c8f69748-c7cb-443c-87fb-853e088f3647))
-    (fp_arc (start 5.721388 4.578382) (mid 5.461002 5.206995) (end 4.832388 5.467382)
+    (fp_arc (start 5.721388 4.578382) (mid 5.461003 5.206999) (end 4.832388 5.467382)
       (stroke (width 0.1) (type default)) (layer "B.SilkS") (tstamp 35fa6faa-e44c-4249-a399-c35c481d65cc))
     (fp_line (start -1.15 5.45) (end -1.15 -3.95)
       (stroke (width 0.05) (type solid)) (layer "B.CrtYd") (tstamp b34f126b-a832-453e-be60-7a98fd28cf9f))
