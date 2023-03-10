@@ -1,0 +1,107 @@
+Info: Processing symbol 'C1:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'C2:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'C3:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'C4:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'C5:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'C6:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'C7:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'C8:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'U2:Package_TO_SOT_SMD:SOT-223-3_TabPin2'.
+Info: Processing symbol 'C9:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'U3:RF_Module:ESP32-WROOM-32'.
+Info: Processing symbol 'C10:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'U4:Package_SO:SOIC-16_3.9x9.9mm_P1.27mm'.
+Info: Processing symbol 'C11:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'WLED1:LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm'.
+Info: Processing symbol 'C12:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'WLED2:LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm'.
+Info: Processing symbol 'C13:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'C14:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'C15:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'C16:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'C17:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'C18:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'C19:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'C20:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'C21:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'C22:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'C23:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'C24:Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder'.
+Info: Processing symbol 'D1:LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder'.
+Info: Processing symbol 'D2:Diode_SMD:D_MiniMELF'.
+Info: Processing symbol 'D3:Diode_SMD:D_MiniMELF'.
+Info: Processing symbol 'EC1:Capacitor_SMD:CP_Elec_10x10'.
+Info: Processing symbol 'FB1:Inductor_SMD:L_0805_2012Metric_Pad1.05x1.20mm_HandSolder'.
+Info: Processing symbol 'J1:000-edge-connectors-immo:2-pin-edge'.
+Info: Processing symbol 'WLED3:LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm'.
+Info: Processing symbol 'WLED4:LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm'.
+Info: Processing symbol 'J2:000-edge-connectors-immo:6-pin-edge-touch'.
+Info: Processing symbol 'J3:000-edge-connectors-immo:3-pin-edge'.
+Info: Processing symbol 'J4:000-edge-connectors-immo:5-pin-edge-touch'.
+Info: Processing symbol 'WLED5:LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm'.
+Info: Processing symbol 'J5:000-edge-connectors-immo:1-pin-edge-touch-xl'.
+Info: Processing symbol 'WLED6:LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm'.
+Info: Processing symbol 'J6:000-edge-connectors-immo:8-pin-edge-touch'.
+Info: Processing symbol 'J7:000-edge-connectors-immo:4-pin-edge'.
+Info: Processing symbol 'J8:Connector_USB:USB_C_Receptacle_Molex_105450-0101'.
+Info: Processing symbol 'WLED7:LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm'.
+Info: Processing symbol 'WLED8:LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm'.
+Info: Processing symbol 'WLED9:LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm'.
+Info: Processing symbol 'WLED10:LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm'.
+Info: Processing symbol 'WLED11:LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm'.
+Info: Processing symbol 'WLED12:LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm'.
+Info: Processing symbol 'Q2:Package_TO_SOT_SMD:SOT-23'.
+Info: Processing symbol 'J9:000-edge-connectors-immo:5-pin-edge-touch'.
+Info: Processing symbol 'J10:000-edge-connectors-immo:4-pin-edge'.
+Info: Processing symbol 'JP1:Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels'.
+Info: Processing symbol 'JP2:Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm'.
+Info: Processing symbol 'JP3:Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm'.
+Info: Processing symbol 'JPw1:Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm'.
+Info: Processing symbol 'Q1:Package_TO_SOT_SMD:SOT-23'.
+Info: Processing symbol 'R1:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R2:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R3:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R4:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R5:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R6:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R7:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R8:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R9:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R10:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R11:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R12:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R13:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R14:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R15:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R16:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'SW1:000_Switches_Immo:SW_SPDT_PCM12'.
+Info: Processing symbol 'SW2:Button_Switch_SMD:SW_SPST_EVQPE1'.
+Info: Processing symbol 'SW3:Button_Switch_SMD:SW_SPST_EVQPE1'.
+Info: Processing symbol 'U1:Package_TO_SOT_SMD:SOT-23-5'.
+Reconnect C8 pin 2 from GNDPWR to GND.
+Reconnect C9 pin 2 from GNDPWR to GND.
+Reconnect C10 pin 2 from GNDPWR to GND.
+Reconnect C11 pin 2 from GNDPWR to GND.
+Reconnect C12 pin 2 from GNDPWR to GND.
+Change J1 value from Battery Cell to Battery Cell 4.2v.
+Reconnect J1 pin A1 from GNDPWR to GND.
+Change J4 value from gpio-B to ESP-gpio-B.
+Change J5 value from Touch0 to 1-pin-edge-touch-XL.
+Reconnect J8 pin A1 from GNDPWR to GND.
+Reconnect J8 pin A12 from GNDPWR to GND.
+Reconnect J8 pin B1 from GNDPWR to GND.
+Reconnect J8 pin B12 from GNDPWR to GND.
+Reconnect J8 pin S1 from GNDPWR to GND.
+Reconnect J8 pin S1 from GNDPWR to GND.
+Change JP2 value from usb/batt to Power Routing.
+Reconnect R12 pin 1 from GNDPWR to GND.
+Reconnect U1 pin 2 from GNDPWR to GND.
+Reconnect J8 pin S1 from GNDPWR to GND.
+Reconnect JP1 pin 2 from GNDPWR to GND.
+Reconnect R1 pin 2 from GNDPWR to GND.
+Change JP3 value from led-data to LED_DATA_SOURCE.
+Reconnect J8 pin S1 from GNDPWR to GND.
+Change JPw1 value from led-pwr to Disable Onboard LEDs.
+
+
+Info: Total warnings: 0, errors: 0.
