@@ -1,10 +1,13 @@
 {
   "board": {
-    "active_layer": 49,
+    "active_layer": 56,
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [],
-    "hidden_nets": [],
+    "hidden_nets": [
+      "GNDPWR",
+      "GND"
+    ],
     "high_contrast_mode": 0,
     "net_color_mode": 1,
     "opacity": {
@@ -65,7 +68,7 @@
       39,
       40
     ],
-    "visible_layers": "fffff7f_fffffffe",
+    "visible_layers": "aebff5f_fffffffe",
     "zone_display_mode": 0
   },
   "meta": {
