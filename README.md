@@ -177,5 +177,7 @@ Lumin8
 Lumin32
 Luminino
 Lumino32
+Luino32
+
 
 
