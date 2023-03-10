@@ -156,28 +156,32 @@ for 3D printing projects. It contains mounting tabs to assit in adding diffusers
 
 Given this I need a name for this development board. I was out of ideas so I asked Chat GPT and this is the current shortlist, some have been modified slightly or added to as this gave me ideas:
 
-ESPuino
-DevSparkie
-Sparkino
-ESP-Firefly
-Luino
-Comet
-LEDirector
-Glimmerino
-ChromaCore
-PixelPilot
-PixelESP
-ChromaPilot
-illuminuno
-illumuino
-IlluminESP
-Illumin8
-Ilumin8
-Lumin8
-Lumin32
-Luminino
-Lumino32
-Luino32
+### Name Ideas:
+- ESPuino
+- DevSparkie
+- Sparkino
+- ESP-Firefly
+- FaerFly
+- Faer
+- Luino
+- Comet
+- LEDirector
+- Glimmerino
+- ChromaCore
+- PixelPilot
+- PixelESP
+- ChromaPilot
+- Chromino
+- illuminuno
+- illumuino
+- IlluminESP
+- Illumin8
+- Ilumin8
+- Lumin8
+- Lumin32
+- Luminino
+- Lumino32
+- Luino32
 
 
 
