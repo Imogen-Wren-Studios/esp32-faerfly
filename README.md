@@ -147,3 +147,37 @@ https://docs.arduino.cc/built-in-examples/analog/Smoothing Smoothing Data from C
 | 0     |       |     |       |    
 | 0     |       |     |       |    
 | 0     |       |     |       |  
+
+
+## Continued Development
+
+Now the project has become more clearly defined, it is an ESP development board with built in WS2821b LEDs designed to be used as a wearable badge, or a light up stand
+for 3D printing projects. It contains mounting tabs to assit in adding diffusers and optics. The wifi can be used to coordinate groups of them to sync colours around the room.
+
+Given this I need a name for this development board. I was out of ideas so I asked Chat GPT and this is the current shortlist, some have been modified slightly or added to as this gave me ideas:
+
+ESPuino
+DevSparkie
+Sparkino
+ESP-Firefly
+Luino
+Comet
+LEDirector
+Glimmerino
+ChromaCore
+PixelPilot
+PixelESP
+ChromaPilot
+illuminuno
+illumuino
+IlluminESP
+Illumin8
+Ilumin8
+Lumin8
+Lumin32
+Luminino
+Lumino32
+Luino32
+
+
+
