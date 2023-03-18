@@ -57,14 +57,9 @@
         }
       ],
       "drc_exclusions": [
-        "items_not_allowed|193190000|71790000|4333f3c7-c5cb-48de-be49-f4da430a8e2a|00000000-0000-0000-0000-000000000000",
-        "items_not_allowed|193190000|71790000|5ec41998-02b2-4578-a761-47467f53a9fa|00000000-0000-0000-0000-000000000000",
-        "items_not_allowed|193190000|71790000|9a583269-d60d-4426-af1b-c3a7358eb114|00000000-0000-0000-0000-000000000000",
         "items_not_allowed|193190000|71790000|ac00488a-1f31-49ea-990f-630caa5dcb20|00000000-0000-0000-0000-000000000000",
-        "items_not_allowed|193226027|117666028|0c04bcbb-e850-4267-905f-e2529e762112|00000000-0000-0000-0000-000000000000",
         "items_not_allowed|193226027|117666028|423bbfdf-555b-4dca-85d0-accb459130db|00000000-0000-0000-0000-000000000000",
-        "items_not_allowed|193226027|117666028|8a16ef27-022e-4980-9425-b17f95384e12|00000000-0000-0000-0000-000000000000",
-        "items_not_allowed|193226027|117666028|9cd52daf-119a-487d-a54b-90cc33fe35f7|00000000-0000-0000-0000-000000000000"
+        "lib_footprint_mismatch|191200000|94400000|2626c7e1-c172-4b49-acd9-63b3cca31332|00000000-0000-0000-0000-000000000000"
       ],
       "meta": {
         "version": 2
@@ -79,8 +74,8 @@
         "diff_pair_gap_out_of_range": "error",
         "diff_pair_uncoupled_length_too_long": "error",
         "drill_out_of_range": "error",
-        "duplicate_footprints": "warning",
-        "extra_footprint": "warning",
+        "duplicate_footprints": "ignore",
+        "extra_footprint": "ignore",
         "footprint": "error",
         "footprint_type_mismatch": "error",
         "hole_clearance": "error",
