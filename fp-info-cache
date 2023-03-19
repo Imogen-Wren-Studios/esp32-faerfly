@@ -1,4 +1,4 @@
-21627107971937344
+21628788050490577
 000-edge-connectors-immo
 1-pin-edge-touch-xl
 PCIexpress Bus Edge Connector x1 http://www.ritrontek.com/uploadfile/2016/1026/20161026105231124.pdf#page=70
@@ -566,6 +566,13 @@ CMS SOT
 0
 4
 3
+000_Modules_Immo
+CopperPad
+
+
+0
+1
+1
 000_Modules_Immo
 CreditCard
 
