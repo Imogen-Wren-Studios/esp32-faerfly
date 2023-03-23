@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>D:\KiCAD 6.0\KiCad6.0 PROJECTS\imogen-wren-card-pcb\ImogenWren.kicad_sch</source>
-    <date>21/03/2023 12:52:27 AM</date>
+    <date>22/03/2023 11:53:16 PM</date>
     <tool>Eeschema 7.0.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -152,7 +152,13 @@
     <comp ref="C25">
       <value>4u7</value>
       <footprint>Capacitor_Tantalum_SMD:CP_EIA-2012-12_Kemet-R_Pad1.30x1.05mm_HandSolder</footprint>
-      <libsource lib="" part="tantalum_1" description="Polarized capacitor"/>
+      <fields>
+        <field name="Cost">0.0994</field>
+        <field name="JLCpart">C1954175</field>
+      </fields>
+      <libsource lib="000_Capacitor_Film_Immo" part="4u7_tantalum" description="Polarized capacitor"/>
+      <property name="JLCpart" value="C1954175"/>
+      <property name="Cost" value="0.0994"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ImogenWren.kicad_sch"/>
       <property name="ki_description" value="Polarized capacitor"/>
@@ -163,7 +169,13 @@
     <comp ref="C26">
       <value>4u7</value>
       <footprint>Capacitor_Tantalum_SMD:CP_EIA-2012-12_Kemet-R_Pad1.30x1.05mm_HandSolder</footprint>
-      <libsource lib="000_Capacitor_Film_Immo" part="tantalum" description="Polarized capacitor"/>
+      <fields>
+        <field name="Cost">0.0994</field>
+        <field name="JLCpart">C1954175</field>
+      </fields>
+      <libsource lib="000_Capacitor_Film_Immo" part="4u7_tantalum" description="Polarized capacitor"/>
+      <property name="JLCpart" value="C1954175"/>
+      <property name="Cost" value="0.0994"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ImogenWren.kicad_sch"/>
       <property name="ki_description" value="Polarized capacitor"/>
@@ -174,7 +186,13 @@
     <comp ref="EC1">
       <value>1000u</value>
       <footprint>Capacitor_SMD:CP_Elec_10x10</footprint>
-      <libsource lib="000_Capacitor_Electrolytic_Immo" part="220u" description="Polarized capacitor"/>
+      <fields>
+        <field name="Cost">0.1866</field>
+        <field name="JLCpart">C134726</field>
+      </fields>
+      <libsource lib="000_Capacitor_Electrolytic_Immo" part="1000uF" description="Polarized capacitor"/>
+      <property name="JLCpart" value="C134726"/>
+      <property name="Cost" value="0.1866"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ImogenWren.kicad_sch"/>
       <property name="ki_description" value="Polarized capacitor"/>
@@ -340,7 +358,13 @@
     <comp ref="R6">
       <value>470r</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
-      <libsource lib="000_Resistors_Immo" part="Resistor_0805" description="Resistor"/>
+      <fields>
+        <field name="Cost">0.0027</field>
+        <field name="JLCpart">C280020</field>
+      </fields>
+      <libsource lib="000_Resistors_Immo" part="470r" description="Resistor"/>
+      <property name="JLCpart" value="C280020"/>
+      <property name="Cost" value="0.0027"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ImogenWren.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -352,10 +376,14 @@
       <value>SW_SPDT_small</value>
       <footprint>000_Switches_Immo:SW_SPDT_PCM12</footprint>
       <fields>
+        <field name="Cost">0.4487</field>
+        <field name="JLCpart">C221841</field>
         <field name="NAME">Power</field>
       </fields>
       <libsource lib="000_Switches_Immo" part="SW_SPDT_small" description="Switch, single pole double throw"/>
       <property name="NAME" value="Power"/>
+      <property name="JLCpart" value="C221841"/>
+      <property name="Cost" value="0.4487"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ImogenWren.kicad_sch"/>
       <property name="ki_description" value="Switch, single pole double throw"/>
@@ -894,22 +922,34 @@
     </comp>
     <comp ref="C8">
       <value>10n</value>
-      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
-      <libsource lib="000_Capacitor_Film_Immo" part="cap_film_0805" description="Unpolarized capacitor"/>
+      <footprint>000_Capacitors_Immo:C_0805_2012_HandSolder_kawaii</footprint>
+      <fields>
+        <field name="Cost">0.0051</field>
+        <field name="JLCpart">C83170</field>
+      </fields>
+      <libsource lib="000_Capacitor_Film_Immo" part="10n_MLCC" description="Unpolarized capacitor 0805"/>
+      <property name="JLCpart" value="C83170"/>
+      <property name="Cost" value="0.0051"/>
       <property name="Sheetname" value="USB"/>
       <property name="Sheetfile" value="USB-C.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_description" value="Unpolarized capacitor 0805"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/USB/" tstamps="/5d70f0ae-944c-460c-8592-0cd073646a17/"/>
       <tstamps>0adc4ef4-e54b-4dd5-9051-4048a75f4610</tstamps>
     </comp>
     <comp ref="C9">
       <value>47p</value>
-      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
-      <libsource lib="000_Capacitor_Film_Immo" part="cap_film_0805" description="Unpolarized capacitor"/>
+      <footprint>000_Capacitors_Immo:C_0805_2012_HandSolder_kawaii</footprint>
+      <fields>
+        <field name="Cost">0.0056</field>
+        <field name="JLCpart">C24659</field>
+      </fields>
+      <libsource lib="000_Capacitor_Film_Immo" part="47p_MLCC" description="Unpolarized capacitor 0805"/>
+      <property name="JLCpart" value="C24659"/>
+      <property name="Cost" value="0.0056"/>
       <property name="Sheetname" value="USB"/>
       <property name="Sheetfile" value="USB-C.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_description" value="Unpolarized capacitor 0805"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/USB/" tstamps="/5d70f0ae-944c-460c-8592-0cd073646a17/"/>
       <tstamps>e6ca30c6-d1ab-426b-bb00-c339a5c521a4</tstamps>
@@ -933,22 +973,34 @@
     </comp>
     <comp ref="C11">
       <value>47p</value>
-      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
-      <libsource lib="000_Capacitor_Film_Immo" part="cap_film_0805" description="Unpolarized capacitor"/>
+      <footprint>000_Capacitors_Immo:C_0805_2012_HandSolder_kawaii</footprint>
+      <fields>
+        <field name="Cost">0.0056</field>
+        <field name="JLCpart">C24659</field>
+      </fields>
+      <libsource lib="000_Capacitor_Film_Immo" part="47p_MLCC" description="Unpolarized capacitor 0805"/>
+      <property name="JLCpart" value="C24659"/>
+      <property name="Cost" value="0.0056"/>
       <property name="Sheetname" value="USB"/>
       <property name="Sheetfile" value="USB-C.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_description" value="Unpolarized capacitor 0805"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/USB/" tstamps="/5d70f0ae-944c-460c-8592-0cd073646a17/"/>
       <tstamps>d199acaf-28a7-417a-a347-5112d997881b</tstamps>
     </comp>
     <comp ref="C12">
       <value>4n7</value>
-      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
-      <libsource lib="000_Capacitor_Film_Immo" part="cap_film_0805" description="Unpolarized capacitor"/>
+      <footprint>000_Capacitors_Immo:C_0805_2012_HandSolder_kawaii</footprint>
+      <fields>
+        <field name="Cost">0.0118</field>
+        <field name="JLCpart">C2915753</field>
+      </fields>
+      <libsource lib="000_Capacitor_Film_Immo" part="4n7_MLCC" description="Unpolarized capacitor 0805"/>
+      <property name="JLCpart" value="C2915753"/>
+      <property name="Cost" value="0.0118"/>
       <property name="Sheetname" value="USB"/>
       <property name="Sheetfile" value="USB-C.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_description" value="Unpolarized capacitor 0805"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/USB/" tstamps="/5d70f0ae-944c-460c-8592-0cd073646a17/"/>
       <tstamps>ff95378d-e708-4aae-898d-a6a7146f564d</tstamps>
@@ -956,7 +1008,13 @@
     <comp ref="FB1">
       <value>FerriteBead</value>
       <footprint>Inductor_SMD:L_0805_2012Metric_Pad1.05x1.20mm_HandSolder</footprint>
-      <libsource lib="Device" part="FerriteBead" description="Ferrite bead"/>
+      <fields>
+        <field name="Cost">0.558</field>
+        <field name="JLCpart">C845115</field>
+      </fields>
+      <libsource lib="000_inductors_immo" part="FerriteBead" description="Ferrite bead"/>
+      <property name="JLCpart" value="C845115"/>
+      <property name="Cost" value="0.558"/>
       <property name="Sheetname" value="USB"/>
       <property name="Sheetfile" value="USB-C.kicad_sch"/>
       <property name="ki_description" value="Ferrite bead"/>
@@ -968,7 +1026,13 @@
       <value>USB_C_Receptacle</value>
       <footprint>Connector_USB:USB_C_Receptacle_Molex_105450-0101</footprint>
       <datasheet>https://www.usb.org/sites/default/files/documents/usb_type-c.zip</datasheet>
-      <libsource lib="Connector" part="USB_C_Receptacle" description="USB Full-Featured Type-C Receptacle connector"/>
+      <fields>
+        <field name="Cost">0.6619</field>
+        <field name="JLCpart">C134092</field>
+      </fields>
+      <libsource lib="000_Connectors_Immo" part="USB_C_Receptacle" description="USB Full-Featured Type-C Receptacle connector"/>
+      <property name="JLCpart" value="C134092"/>
+      <property name="Cost" value="0.6619"/>
       <property name="Sheetname" value="USB"/>
       <property name="Sheetfile" value="USB-C.kicad_sch"/>
       <property name="ki_description" value="USB Full-Featured Type-C Receptacle connector"/>
@@ -977,9 +1041,15 @@
       <tstamps>04f1d58f-a117-48c2-ab11-35e92ed8e9c7</tstamps>
     </comp>
     <comp ref="R12">
-      <value>5k2</value>
+      <value>4k7</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
-      <libsource lib="000_Resistors_Immo" part="Resistor_0805" description="Resistor"/>
+      <fields>
+        <field name="Cost">0.002</field>
+        <field name="JLCpart">C5140142</field>
+      </fields>
+      <libsource lib="000_Resistors_Immo" part="4k7" description="Resistor"/>
+      <property name="JLCpart" value="C5140142"/>
+      <property name="Cost" value="0.002"/>
       <property name="Sheetname" value="USB"/>
       <property name="Sheetfile" value="USB-C.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -1356,23 +1426,6 @@
         <pin num="A4" name="A4" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="" part="tantalum_1">
-      <description>Polarized capacitor</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>CP_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">C</field>
-        <field name="Value">tantalum</field>
-        <field name="Footprint">Capacitor_Tantalum_SMD:CP_EIA-2012-12_Kemet-R_Pad1.30x1.05mm_HandSolder</field>
-        <field name="Datasheet">~</field>
-      </fields>
-      <pins>
-        <pin num="1" name="" type="passive"/>
-        <pin num="2" name="" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="000-edge-connectors-immo" part="1-pin-edge-touch-XL">
       <description>PCI Express bus connector x1</description>
       <docs>http://www.ritrontek.com/uploadfile/2016/1026/20161026105231124.pdf#page=63</docs>
@@ -1532,7 +1585,7 @@
         <pin num="A8" name="A8" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="000_Capacitor_Electrolytic_Immo" part="220u">
+    <libpart lib="000_Capacitor_Electrolytic_Immo" part="1000uF">
       <description>Polarized capacitor</description>
       <docs>~</docs>
       <footprints>
@@ -1540,9 +1593,11 @@
       </footprints>
       <fields>
         <field name="Reference">EC</field>
-        <field name="Value">220u</field>
+        <field name="Value">1000uF</field>
         <field name="Footprint">Capacitor_SMD:CP_Elec_10x10</field>
         <field name="Datasheet">~</field>
+        <field name="JLCpart">C134726</field>
+        <field name="Cost">0.1866</field>
       </fields>
       <pins>
         <pin num="1" name="" type="passive"/>
@@ -1568,34 +1623,76 @@
         <pin num="2" name="" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="000_Capacitor_Film_Immo" part="cap_film_0805">
-      <description>Unpolarized capacitor</description>
+    <libpart lib="000_Capacitor_Film_Immo" part="10n_MLCC">
+      <description>Unpolarized capacitor 0805</description>
       <docs>~</docs>
       <footprints>
         <fp>C_*</fp>
       </footprints>
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">cap_film_0805</field>
-        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</field>
+        <field name="Value">10n_MLCC</field>
+        <field name="Footprint">000_Capacitors_Immo:C_0805_2012_HandSolder_kawaii</field>
         <field name="Datasheet">~</field>
+        <field name="JLCpart">C83170</field>
+        <field name="Cost">0.0051</field>
       </fields>
       <pins>
         <pin num="1" name="" type="passive"/>
         <pin num="2" name="" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="000_Capacitor_Film_Immo" part="tantalum">
+    <libpart lib="000_Capacitor_Film_Immo" part="47p_MLCC">
+      <description>Unpolarized capacitor 0805</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">47p_MLCC</field>
+        <field name="Footprint">000_Capacitors_Immo:C_0805_2012_HandSolder_kawaii</field>
+        <field name="Datasheet">~</field>
+        <field name="JLCpart">C24659</field>
+        <field name="Cost">0.0056</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="000_Capacitor_Film_Immo" part="4n7_MLCC">
+      <description>Unpolarized capacitor 0805</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">4n7_MLCC</field>
+        <field name="Footprint">000_Capacitors_Immo:C_0805_2012_HandSolder_kawaii</field>
+        <field name="Datasheet">~</field>
+        <field name="JLCpart">C2915753</field>
+        <field name="Cost">0.0118</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="000_Capacitor_Film_Immo" part="4u7_tantalum">
       <description>Polarized capacitor</description>
       <docs>~</docs>
       <footprints>
         <fp>CP_*</fp>
       </footprints>
       <fields>
-        <field name="Reference">EC</field>
-        <field name="Value">tantalum</field>
+        <field name="Reference">C</field>
+        <field name="Value">4u7_tantalum</field>
         <field name="Footprint">Capacitor_Tantalum_SMD:CP_EIA-2012-12_Kemet-R_Pad1.30x1.05mm_HandSolder</field>
         <field name="Datasheet">~</field>
+        <field name="JLCpart">C1954175</field>
+        <field name="Cost">0.0994</field>
       </fields>
       <pins>
         <pin num="1" name="" type="passive"/>
@@ -1639,6 +1736,47 @@
         <pin num="1" name="A" type="passive"/>
         <pin num="2" name="C" type="input"/>
         <pin num="3" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="000_Connectors_Immo" part="USB_C_Receptacle">
+      <description>USB Full-Featured Type-C Receptacle connector</description>
+      <docs>https://www.usb.org/sites/default/files/documents/usb_type-c.zip</docs>
+      <footprints>
+        <fp>USB*C*Receptacle*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">USB_C_Receptacle</field>
+        <field name="Datasheet">https://www.usb.org/sites/default/files/documents/usb_type-c.zip</field>
+        <field name="JLCpart">C134092</field>
+        <field name="Cost">0.6619</field>
+      </fields>
+      <pins>
+        <pin num="A1" name="GND" type="passive"/>
+        <pin num="A2" name="TX1+" type="bidirectional"/>
+        <pin num="A3" name="TX1-" type="bidirectional"/>
+        <pin num="A4" name="VBUS" type="passive"/>
+        <pin num="A5" name="CC1" type="bidirectional"/>
+        <pin num="A6" name="D+" type="bidirectional"/>
+        <pin num="A7" name="D-" type="bidirectional"/>
+        <pin num="A8" name="SBU1" type="bidirectional"/>
+        <pin num="A9" name="VBUS" type="passive"/>
+        <pin num="A10" name="RX2-" type="bidirectional"/>
+        <pin num="A11" name="RX2+" type="bidirectional"/>
+        <pin num="A12" name="GND" type="passive"/>
+        <pin num="B1" name="GND" type="passive"/>
+        <pin num="B2" name="TX2+" type="bidirectional"/>
+        <pin num="B3" name="TX2-" type="bidirectional"/>
+        <pin num="B4" name="VBUS" type="passive"/>
+        <pin num="B5" name="CC2" type="bidirectional"/>
+        <pin num="B6" name="D+" type="bidirectional"/>
+        <pin num="B7" name="D-" type="bidirectional"/>
+        <pin num="B8" name="SBU2" type="bidirectional"/>
+        <pin num="B9" name="VBUS" type="passive"/>
+        <pin num="B10" name="RX1-" type="bidirectional"/>
+        <pin num="B11" name="RX1+" type="bidirectional"/>
+        <pin num="B12" name="GND" type="passive"/>
+        <pin num="S1" name="SHIELD" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="000_Diodes_Immo" part="LED_0805_smd">
@@ -1752,6 +1890,25 @@
         <pin num="2" name="" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="000_Resistors_Immo" part="470r">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R?</field>
+        <field name="Value">470r</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="JLCpart">C280020</field>
+        <field name="Cost">0.0027</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="000_Resistors_Immo" part="4k7">
       <description>Resistor</description>
       <docs>~</docs>
@@ -1797,6 +1954,8 @@
         <field name="Footprint">000_Switches_Immo:SW_SPDT_PCM12</field>
         <field name="Datasheet">~</field>
         <field name="NAME">Power</field>
+        <field name="JLCpart">C221841</field>
+        <field name="Cost">0.4487</field>
       </fields>
       <pins>
         <pin num="1" name="A" type="passive"/>
@@ -1818,6 +1977,27 @@
         <pin num="2" name="2" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="000_inductors_immo" part="FerriteBead">
+      <description>Ferrite bead</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+        <fp>*Ferrite*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">FB</field>
+        <field name="Value">FerriteBead</field>
+        <field name="Footprint">Inductor_SMD:L_0805_2012Metric_Pad1.05x1.20mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="JLCpart">C845115</field>
+        <field name="Cost">0.558</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Battery_Management" part="MCP73831-2-OT">
       <description>Single cell, Li-Ion/Li-Po charge management controller, 4.20V, Tri-State Status Output, in SOT23-5 package</description>
       <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf</docs>
@@ -1836,63 +2016,6 @@
         <pin num="3" name="V_{BAT}" type="power_out"/>
         <pin num="4" name="V_{DD}" type="power_in"/>
         <pin num="5" name="PROG" type="input"/>
-      </pins>
-    </libpart>
-    <libpart lib="Connector" part="USB_C_Receptacle">
-      <description>USB Full-Featured Type-C Receptacle connector</description>
-      <docs>https://www.usb.org/sites/default/files/documents/usb_type-c.zip</docs>
-      <footprints>
-        <fp>USB*C*Receptacle*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">J</field>
-        <field name="Value">USB_C_Receptacle</field>
-        <field name="Datasheet">https://www.usb.org/sites/default/files/documents/usb_type-c.zip</field>
-      </fields>
-      <pins>
-        <pin num="A1" name="GND" type="passive"/>
-        <pin num="A2" name="TX1+" type="bidirectional"/>
-        <pin num="A3" name="TX1-" type="bidirectional"/>
-        <pin num="A4" name="VBUS" type="passive"/>
-        <pin num="A5" name="CC1" type="bidirectional"/>
-        <pin num="A6" name="D+" type="bidirectional"/>
-        <pin num="A7" name="D-" type="bidirectional"/>
-        <pin num="A8" name="SBU1" type="bidirectional"/>
-        <pin num="A9" name="VBUS" type="passive"/>
-        <pin num="A10" name="RX2-" type="bidirectional"/>
-        <pin num="A11" name="RX2+" type="bidirectional"/>
-        <pin num="A12" name="GND" type="passive"/>
-        <pin num="B1" name="GND" type="passive"/>
-        <pin num="B2" name="TX2+" type="bidirectional"/>
-        <pin num="B3" name="TX2-" type="bidirectional"/>
-        <pin num="B4" name="VBUS" type="passive"/>
-        <pin num="B5" name="CC2" type="bidirectional"/>
-        <pin num="B6" name="D+" type="bidirectional"/>
-        <pin num="B7" name="D-" type="bidirectional"/>
-        <pin num="B8" name="SBU2" type="bidirectional"/>
-        <pin num="B9" name="VBUS" type="passive"/>
-        <pin num="B10" name="RX1-" type="bidirectional"/>
-        <pin num="B11" name="RX1+" type="bidirectional"/>
-        <pin num="B12" name="GND" type="passive"/>
-        <pin num="S1" name="SHIELD" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="FerriteBead">
-      <description>Ferrite bead</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>Inductor_*</fp>
-        <fp>L_*</fp>
-        <fp>*Ferrite*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">FB</field>
-        <field name="Value">FerriteBead</field>
-        <field name="Datasheet">~</field>
-      </fields>
-      <pins>
-        <pin num="1" name="" type="passive"/>
-        <pin num="2" name="" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Diode" part="BZV55B3V3">
@@ -2022,14 +2145,11 @@
     <library logical="000_Switches_Immo">
       <uri>D:\0001.KICAD.7\7.0\share\kicad\symbols\/000_Switches_Immo.kicad_sym</uri>
     </library>
+    <library logical="000_inductors_immo">
+      <uri>D:\0001.KICAD.7\7.0\share\kicad\symbols\/000_inductors_immo.kicad_sym</uri>
+    </library>
     <library logical="Battery_Management">
       <uri>D:\0001.KICAD.7\7.0\share\kicad\symbols\/Battery_Management.kicad_sym</uri>
-    </library>
-    <library logical="Connector">
-      <uri>D:\0001.KICAD.7\7.0\share\kicad\symbols\/Connector.kicad_sym</uri>
-    </library>
-    <library logical="Device">
-      <uri>D:\0001.KICAD.7\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
     </library>
     <library logical="Diode">
       <uri>D:\0001.KICAD.7\7.0\share\kicad\symbols\/Diode.kicad_sym</uri>
