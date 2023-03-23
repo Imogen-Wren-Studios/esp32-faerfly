@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>D:\KiCAD 6.0\KiCad6.0 PROJECTS\imogen-wren-card-pcb\ImogenWren.kicad_sch</source>
-    <date>22/03/2023 11:53:16 PM</date>
+    <source>D:\KiCAD 6.0\KiCad6.0 PROJECTS\esp32-faerfly\pcb-esp32-faerfly\ImogenWren.kicad_sch</source>
+    <date>23/03/2023 11:50:54 PM</date>
     <tool>Eeschema 7.0.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -473,8 +473,14 @@
     </comp>
     <comp ref="D1">
       <value>Blue</value>
-      <footprint>LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <libsource lib="000_Diodes_Immo" part="LED_0805_smd" description="Light emitting diode"/>
+      <footprint>Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Cost">0.0158</field>
+        <field name="JLCpart">C84261</field>
+      </fields>
+      <libsource lib="000_Diodes_Immo" part="LED_0805_Yellow" description="Light emitting diode"/>
+      <property name="JLCpart" value="C84261"/>
+      <property name="Cost" value="0.0158"/>
       <property name="Sheetname" value="ESP32"/>
       <property name="Sheetfile" value="ISOpower_ESP32.kicad_sch"/>
       <property name="ki_description" value="Light emitting diode"/>
@@ -486,10 +492,16 @@
       <value>BZV55B3V3</value>
       <footprint>Diode_SMD:D_MiniMELF</footprint>
       <datasheet>https://assets.nexperia.com/documents/data-sheet/BZV55_SER.pdf</datasheet>
-      <libsource lib="Diode" part="BZV55B3V3" description="3.3V, 500mW, 2%, Zener diode, MiniMELF"/>
+      <fields>
+        <field name="Cost">0.0221</field>
+        <field name="JLCpart">C268735</field>
+      </fields>
+      <libsource lib="000_Diodes_Immo" part="zener_diode_2v7" description="2v7, 500mW, 2%, Zener diode, MiniMELF"/>
+      <property name="JLCpart" value="C268735"/>
+      <property name="Cost" value="0.0221"/>
       <property name="Sheetname" value="ESP32"/>
       <property name="Sheetfile" value="ISOpower_ESP32.kicad_sch"/>
-      <property name="ki_description" value="3.3V, 500mW, 2%, Zener diode, MiniMELF"/>
+      <property name="ki_description" value="2v7, 500mW, 2%, Zener diode, MiniMELF"/>
       <property name="ki_keywords" value="zener diode"/>
       <sheetpath names="/ESP32/" tstamps="/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0/"/>
       <tstamps>0b0f8971-5c07-4033-91fa-95f9b1612529</tstamps>
@@ -498,10 +510,16 @@
       <value>BZV55B3V3</value>
       <footprint>Diode_SMD:D_MiniMELF</footprint>
       <datasheet>https://assets.nexperia.com/documents/data-sheet/BZV55_SER.pdf</datasheet>
-      <libsource lib="Diode" part="BZV55B3V3" description="3.3V, 500mW, 2%, Zener diode, MiniMELF"/>
+      <fields>
+        <field name="Cost">0.0221</field>
+        <field name="JLCpart">C268735</field>
+      </fields>
+      <libsource lib="000_Diodes_Immo" part="zener_diode_2v7" description="2v7, 500mW, 2%, Zener diode, MiniMELF"/>
+      <property name="JLCpart" value="C268735"/>
+      <property name="Cost" value="0.0221"/>
       <property name="Sheetname" value="ESP32"/>
       <property name="Sheetfile" value="ISOpower_ESP32.kicad_sch"/>
-      <property name="ki_description" value="3.3V, 500mW, 2%, Zener diode, MiniMELF"/>
+      <property name="ki_description" value="2v7, 500mW, 2%, Zener diode, MiniMELF"/>
       <property name="ki_keywords" value="zener diode"/>
       <sheetpath names="/ESP32/" tstamps="/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0/"/>
       <tstamps>c4075a3e-cf44-4e57-a754-fc2968d1b9c1</tstamps>
@@ -612,7 +630,7 @@
         <field name="PIN3">DAC_2</field>
         <field name="PIN4">DAC_1</field>
       </fields>
-      <libsource lib="" part="4-pin-edge-touch_1" description="PCI Express bus connector x1"/>
+      <libsource lib="000-edge-connectors-immo" part="4-pin-edge-touch" description="PCI Express bus connector x1"/>
       <property name="PIN1" value="gnd"/>
       <property name="PIN2" value="3v3"/>
       <property name="PIN3" value="DAC_2"/>
@@ -673,7 +691,13 @@
     <comp ref="R7">
       <value>330r</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
-      <libsource lib="000_Resistors_Immo" part="Resistor_0805" description="Resistor"/>
+      <fields>
+        <field name="Cost">0.0016</field>
+        <field name="JLCpart">C3017834</field>
+      </fields>
+      <libsource lib="000_Resistors_Immo" part="330r" description="Resistor"/>
+      <property name="JLCpart" value="C3017834"/>
+      <property name="Cost" value="0.0016"/>
       <property name="Sheetname" value="ESP32"/>
       <property name="Sheetfile" value="ISOpower_ESP32.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -718,7 +742,13 @@
     <comp ref="R13">
       <value>1k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
-      <libsource lib="000_Resistors_Immo" part="Resistor_0805" description="Resistor"/>
+      <fields>
+        <field name="Cost">0.0082</field>
+        <field name="JLCpart">C218388</field>
+      </fields>
+      <libsource lib="000_Resistors_Immo" part="1k" description="Resistor"/>
+      <property name="JLCpart" value="C218388"/>
+      <property name="Cost" value="0.0082"/>
       <property name="Sheetname" value="ESP32"/>
       <property name="Sheetfile" value="ISOpower_ESP32.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -729,7 +759,13 @@
     <comp ref="R14">
       <value>1k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
-      <libsource lib="000_Resistors_Immo" part="Resistor_0805" description="Resistor"/>
+      <fields>
+        <field name="Cost">0.0082</field>
+        <field name="JLCpart">C218388</field>
+      </fields>
+      <libsource lib="000_Resistors_Immo" part="1k" description="Resistor"/>
+      <property name="JLCpart" value="C218388"/>
+      <property name="Cost" value="0.0082"/>
       <property name="Sheetname" value="ESP32"/>
       <property name="Sheetfile" value="ISOpower_ESP32.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -740,7 +776,13 @@
     <comp ref="R15">
       <value>100r</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
-      <libsource lib="000_Resistors_Immo" part="Resistor_0805" description="Resistor"/>
+      <fields>
+        <field name="Cost">0.0093</field>
+        <field name="JLCpart">C217766</field>
+      </fields>
+      <libsource lib="000_Resistors_Immo" part="100r" description="Resistor"/>
+      <property name="JLCpart" value="C217766"/>
+      <property name="Cost" value="0.0093"/>
       <property name="Sheetname" value="ESP32"/>
       <property name="Sheetfile" value="ISOpower_ESP32.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -751,7 +793,13 @@
     <comp ref="R16">
       <value>100r</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
-      <libsource lib="000_Resistors_Immo" part="Resistor_0805" description="Resistor"/>
+      <fields>
+        <field name="Cost">0.0093</field>
+        <field name="JLCpart">C217766</field>
+      </fields>
+      <libsource lib="000_Resistors_Immo" part="100r" description="Resistor"/>
+      <property name="JLCpart" value="C217766"/>
+      <property name="Cost" value="0.0093"/>
       <property name="Sheetname" value="ESP32"/>
       <property name="Sheetfile" value="ISOpower_ESP32.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -762,7 +810,13 @@
     <comp ref="R17">
       <value>1k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
-      <libsource lib="000_Resistors_Immo" part="Resistor_0805" description="Resistor"/>
+      <fields>
+        <field name="Cost">0.0082</field>
+        <field name="JLCpart">C218388</field>
+      </fields>
+      <libsource lib="000_Resistors_Immo" part="1k" description="Resistor"/>
+      <property name="JLCpart" value="C218388"/>
+      <property name="Cost" value="0.0082"/>
       <property name="Sheetname" value="ESP32"/>
       <property name="Sheetfile" value="ISOpower_ESP32.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -774,7 +828,13 @@
       <value>AMS1117-3.3</value>
       <footprint>Package_TO_SOT_SMD:SOT-223-3_TabPin2</footprint>
       <datasheet>http://www.advanced-monolithic.com/pdf/ds1117.pdf</datasheet>
-      <libsource lib="Regulator_Linear" part="AMS1117-3.3" description="1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"/>
+      <fields>
+        <field name="Cost">0.0488</field>
+        <field name="JLCpart">C2992570</field>
+      </fields>
+      <libsource lib="000_IC_immo" part="AMS1117-3.3" description="1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"/>
+      <property name="JLCpart" value="C2992570"/>
+      <property name="Cost" value="0.0488"/>
       <property name="Sheetname" value="ESP32"/>
       <property name="Sheetfile" value="ISOpower_ESP32.kicad_sch"/>
       <property name="ki_description" value="1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"/>
@@ -786,7 +846,13 @@
       <value>ESP32-WROOM-32</value>
       <footprint>RF_Module:ESP32-WROOM-32</footprint>
       <datasheet>https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf</datasheet>
+      <fields>
+        <field name="Cost">3.5016</field>
+        <field name="JLCpart">C473012 - C529577</field>
+      </fields>
       <libsource lib="000_MCU_microcontrollers_Immo" part="ESP32-WROOM-32_2" description="RF Module, ESP32-D0WDQ6 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 2.7-3.6V, onboard antenna, SMD"/>
+      <property name="JLCpart" value="C473012 - C529577"/>
+      <property name="Cost" value="3.5016"/>
       <property name="Sheetname" value="ESP32"/>
       <property name="Sheetfile" value="ISOpower_ESP32.kicad_sch"/>
       <property name="ki_description" value="RF Module, ESP32-D0WDQ6 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 2.7-3.6V, onboard antenna, SMD"/>
@@ -1407,25 +1473,6 @@
     </comp>
   </components>
   <libparts>
-    <libpart lib="" part="4-pin-edge-touch_1">
-      <description>PCI Express bus connector x1</description>
-      <docs>http://www.ritrontek.com/uploadfile/2016/1026/20161026105231124.pdf#page=63</docs>
-      <footprints>
-        <fp>*PCIexpress*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">J2</field>
-        <field name="Value">4-pin-edge-touch</field>
-        <field name="Footprint">000-edge-connectors-immo:4-pin-edge</field>
-        <field name="Datasheet">http://www.ritrontek.com/uploadfile/2016/1026/20161026105231124.pdf#page=63</field>
-      </fields>
-      <pins>
-        <pin num="A1" name="A1" type="passive"/>
-        <pin num="A2" name="A2" type="passive"/>
-        <pin num="A3" name="A3" type="passive"/>
-        <pin num="A4" name="A4" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="000-edge-connectors-immo" part="1-pin-edge-touch-XL">
       <description>PCI Express bus connector x1</description>
       <docs>http://www.ritrontek.com/uploadfile/2016/1026/20161026105231124.pdf#page=63</docs>
@@ -1779,7 +1826,7 @@
         <pin num="S1" name="SHIELD" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="000_Diodes_Immo" part="LED_0805_smd">
+    <libpart lib="000_Diodes_Immo" part="LED_0805_Yellow">
       <description>Light emitting diode</description>
       <docs>~</docs>
       <footprints>
@@ -1789,9 +1836,11 @@
       </footprints>
       <fields>
         <field name="Reference">D</field>
-        <field name="Value">LED_0805_smd</field>
+        <field name="Value">LED_0805_Yellow</field>
         <field name="Footprint">Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder</field>
         <field name="Datasheet">~</field>
+        <field name="JLCpart">C84261</field>
+        <field name="Cost">0.0158</field>
       </fields>
       <pins>
         <pin num="1" name="K" type="passive"/>
@@ -1817,6 +1866,45 @@
         <pin num="4" name="DIN" type="input"/>
       </pins>
     </libpart>
+    <libpart lib="000_Diodes_Immo" part="zener_diode_2v7">
+      <description>2v7, 500mW, 2%, Zener diode, MiniMELF</description>
+      <docs>https://assets.nexperia.com/documents/data-sheet/BZV55_SER.pdf</docs>
+      <footprints>
+        <fp>D*MiniMELF*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">zener_diode_2v7</field>
+        <field name="Footprint">Diode_SMD:D_MiniMELF</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/BZV55_SER.pdf</field>
+        <field name="JLCpart">C268735</field>
+        <field name="Cost">0.0221</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="000_IC_immo" part="AMS1117-3.3">
+      <description>1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223</description>
+      <docs>http://www.advanced-monolithic.com/pdf/ds1117.pdf</docs>
+      <footprints>
+        <fp>SOT?223*TabPin2*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AMS1117-3.3</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-223-3_TabPin2</field>
+        <field name="Datasheet">http://www.advanced-monolithic.com/pdf/ds1117.pdf</field>
+        <field name="JLCpart">C2992570</field>
+        <field name="Cost">0.0488</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VO" type="power_out"/>
+        <pin num="3" name="VI" type="power_in"/>
+      </pins>
+    </libpart>
     <libpart lib="000_MCU_microcontrollers_Immo" part="ESP32-WROOM-32_2">
       <description>RF Module, ESP32-D0WDQ6 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 2.7-3.6V, onboard antenna, SMD</description>
       <docs>https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf</docs>
@@ -1828,6 +1916,8 @@
         <field name="Value">ESP32-WROOM-32</field>
         <field name="Footprint">RF_Module:ESP32-WROOM-32</field>
         <field name="Datasheet">https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf</field>
+        <field name="JLCpart">C473012 - C529577</field>
+        <field name="Cost">3.5016</field>
       </fields>
       <pins>
         <pin num="1" name="GND" type="power_in"/>
@@ -1871,6 +1961,25 @@
         <pin num="39" name="GND" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="000_Resistors_Immo" part="100r">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R?</field>
+        <field name="Value">100r</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="JLCpart">C217766</field>
+        <field name="Cost">0.0093</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="000_Resistors_Immo" part="10k">
       <description>Resistor</description>
       <docs>~</docs>
@@ -1884,6 +1993,44 @@
         <field name="Datasheet">~</field>
         <field name="JLCpart">C2930231</field>
         <field name="Cost">0.002</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="000_Resistors_Immo" part="1k">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R?</field>
+        <field name="Value">1k</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="JLCpart">C218388</field>
+        <field name="Cost">0.0082</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="000_Resistors_Immo" part="330r">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R?</field>
+        <field name="Value">330r</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</field>
+        <field name="Datasheet">~</field>
+        <field name="JLCpart">C3017834</field>
+        <field name="Cost">0.0016</field>
       </fields>
       <pins>
         <pin num="1" name="" type="passive"/>
@@ -2018,23 +2165,6 @@
         <pin num="5" name="PROG" type="input"/>
       </pins>
     </libpart>
-    <libpart lib="Diode" part="BZV55B3V3">
-      <description>3.3V, 500mW, 2%, Zener diode, MiniMELF</description>
-      <docs>https://assets.nexperia.com/documents/data-sheet/BZV55_SER.pdf</docs>
-      <footprints>
-        <fp>D*MiniMELF*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">D</field>
-        <field name="Value">BZV55B3V3</field>
-        <field name="Footprint">Diode_SMD:D_MiniMELF</field>
-        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/BZV55_SER.pdf</field>
-      </fields>
-      <pins>
-        <pin num="1" name="K" type="passive"/>
-        <pin num="2" name="A" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="Interface_USB" part="CH340C">
       <description>USB serial converter, UART, SOIC-16</description>
       <docs>https://datasheet.lcsc.com/szlcsc/Jiangsu-Qin-Heng-CH340C_C84681.pdf</docs>
@@ -2083,24 +2213,6 @@
         <pin num="3" name="B" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Regulator_Linear" part="AMS1117-3.3">
-      <description>1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223</description>
-      <docs>http://www.advanced-monolithic.com/pdf/ds1117.pdf</docs>
-      <footprints>
-        <fp>SOT?223*TabPin2*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">AMS1117-3.3</field>
-        <field name="Footprint">Package_TO_SOT_SMD:SOT-223-3_TabPin2</field>
-        <field name="Datasheet">http://www.advanced-monolithic.com/pdf/ds1117.pdf</field>
-      </fields>
-      <pins>
-        <pin num="1" name="GND" type="power_in"/>
-        <pin num="2" name="VO" type="power_out"/>
-        <pin num="3" name="VI" type="power_in"/>
-      </pins>
-    </libpart>
     <libpart lib="Transistor_BJT" part="BC817">
       <description>0.8A Ic, 45V Vce, NPN Transistor, SOT-23</description>
       <docs>https://www.onsemi.com/pub/Collateral/BC818-D.pdf</docs>
@@ -2136,6 +2248,9 @@
     <library logical="000_Diodes_Immo">
       <uri>D:\0001.KICAD.7\7.0\share\kicad\symbols\/000_Diodes_Immo.kicad_sym</uri>
     </library>
+    <library logical="000_IC_immo">
+      <uri>D:\0001.KICAD.7\7.0\share\kicad\symbols\/000_IC_immo.kicad_sym</uri>
+    </library>
     <library logical="000_MCU_microcontrollers_Immo">
       <uri>D:\0001.KICAD.7\7.0\share\kicad\symbols\/000_MCU_microcontrollers_Immo.kicad_sym</uri>
     </library>
@@ -2151,17 +2266,11 @@
     <library logical="Battery_Management">
       <uri>D:\0001.KICAD.7\7.0\share\kicad\symbols\/Battery_Management.kicad_sym</uri>
     </library>
-    <library logical="Diode">
-      <uri>D:\0001.KICAD.7\7.0\share\kicad\symbols\/Diode.kicad_sym</uri>
-    </library>
     <library logical="Interface_USB">
       <uri>D:\0001.KICAD.7\7.0\share\kicad\symbols\/Interface_USB.kicad_sym</uri>
     </library>
     <library logical="Jumper">
       <uri>D:\0001.KICAD.7\7.0\share\kicad\symbols\/Jumper.kicad_sym</uri>
-    </library>
-    <library logical="Regulator_Linear">
-      <uri>D:\0001.KICAD.7\7.0\share\kicad\symbols\/Regulator_Linear.kicad_sym</uri>
     </library>
     <library logical="Transistor_BJT">
       <uri>D:\0001.KICAD.7\7.0\share\kicad\symbols\/Transistor_BJT.kicad_sym</uri>
@@ -2187,7 +2296,7 @@
       <node ref="U4" pin="16" pinfunction="VCC" pintype="power_in"/>
     </net>
     <net code="3" name="/CHARGE_STATUS">
-      <node ref="R17" pin="1" pintype="passive"/>
+      <node ref="R17" pin="2" pintype="passive"/>
       <node ref="U1" pin="1" pinfunction="STAT" pintype="output"/>
       <node ref="U3" pin="6" pinfunction="IO34" pintype="input"/>
     </net>
@@ -2197,7 +2306,9 @@
       <node ref="J4" pin="A2" pinfunction="A2" pintype="passive"/>
       <node ref="J7" pin="A2" pinfunction="A2" pintype="passive"/>
       <node ref="J9" pin="A4" pinfunction="A4" pintype="passive"/>
-      <node ref="R17" pin="2" pintype="passive"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
       <node ref="U2" pin="2" pinfunction="VO" pintype="power_out"/>
       <node ref="U3" pin="2" pinfunction="VDD" pintype="power_in"/>
     </net>
@@ -2350,9 +2461,9 @@
       <node ref="JP1" pin="2" pinfunction="C" pintype="passive"/>
       <node ref="R1" pin="2" pintype="passive"/>
       <node ref="R12" pin="1" pintype="passive"/>
-      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
       <node ref="R16" pin="1" pintype="passive"/>
-      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
       <node ref="SW2" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="SW3" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U1" pin="2" pinfunction="V_{SS}" pintype="power_in"/>
@@ -2385,7 +2496,7 @@
     </net>
     <net code="25" name="Net-(D1-K)">
       <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
-      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
     </net>
     <net code="26" name="Net-(D2-A)">
       <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
@@ -2393,25 +2504,25 @@
     </net>
     <net code="27" name="Net-(D2-K)">
       <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
-      <node ref="R14" pin="2" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
       <node ref="U3" pin="11" pinfunction="GPIO26(DAC_2)" pintype="bidirectional"/>
     </net>
     <net code="28" name="Net-(D3-A)">
       <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
-      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
     </net>
     <net code="29" name="Net-(D3-K)">
       <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
-      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
       <node ref="U3" pin="10" pinfunction="GPIO25(DAC_1)" pintype="bidirectional"/>
     </net>
     <net code="30" name="Net-(J7-PadA3)">
       <node ref="J7" pin="A3" pinfunction="A3" pintype="passive"/>
-      <node ref="R14" pin="1" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
     </net>
     <net code="31" name="Net-(J7-PadA4)">
       <node ref="J7" pin="A4" pinfunction="A4" pintype="passive"/>
-      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
     </net>
     <net code="32" name="Net-(J8-CC1)">
       <node ref="J8" pin="A5" pinfunction="CC1" pintype="bidirectional"/>
@@ -2429,239 +2540,221 @@
       <node ref="J3" pin="A3" pinfunction="A3" pintype="passive"/>
       <node ref="JP3" pin="2" pinfunction="C" pintype="input"/>
     </net>
-    <net code="36" name="Net-(Q1-E)">
+    <net code="36" name="Net-(Q1-B)">
+      <node ref="Q1" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+    </net>
+    <net code="37" name="Net-(Q1-E)">
       <node ref="Q1" pin="2" pinfunction="E" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
       <node ref="U4" pin="13" pinfunction="~{DTR}" pintype="output"/>
     </net>
-    <net code="37" name="Net-(Q2-E)">
+    <net code="38" name="Net-(Q2-B)">
+      <node ref="Q2" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+    </net>
+    <net code="39" name="Net-(Q2-E)">
       <node ref="Q2" pin="2" pinfunction="E" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
       <node ref="U4" pin="14" pinfunction="~{RTS}" pintype="output"/>
     </net>
-    <net code="38" name="Net-(SW1-B)">
+    <net code="40" name="Net-(SW1-B)">
       <node ref="J1" pin="A2" pinfunction="A2" pintype="passive"/>
       <node ref="SW1" pin="2" pinfunction="B" pintype="passive"/>
     </net>
-    <net code="39" name="Net-(U1-PROG)">
+    <net code="41" name="Net-(U1-PROG)">
       <node ref="R1" pin="1" pintype="passive"/>
       <node ref="R2" pin="1" pintype="passive"/>
       <node ref="R3" pin="1" pintype="passive"/>
       <node ref="U1" pin="5" pinfunction="PROG" pintype="input"/>
     </net>
-    <net code="40" name="Net-(U3-GPIO2(T2))">
+    <net code="42" name="Net-(U3-GPIO2(T2))">
       <node ref="J6" pin="A1" pinfunction="A1" pintype="passive"/>
       <node ref="U3" pin="24" pinfunction="GPIO2(T2)" pintype="bidirectional"/>
     </net>
-    <net code="41" name="Net-(U3-GPIO4(T0))">
+    <net code="43" name="Net-(U3-GPIO4(T0))">
       <node ref="J5" pin="A1" pinfunction="A1" pintype="passive"/>
       <node ref="U3" pin="26" pinfunction="GPIO4(T0)" pintype="bidirectional"/>
     </net>
-    <net code="42" name="Net-(U3-GPIO12(T5))">
+    <net code="44" name="Net-(U3-GPIO12(T5))">
       <node ref="J6" pin="A4" pinfunction="A4" pintype="passive"/>
       <node ref="U3" pin="14" pinfunction="GPIO12(T5)" pintype="bidirectional"/>
     </net>
-    <net code="43" name="Net-(U3-GPIO13(T4))">
+    <net code="45" name="Net-(U3-GPIO13(T4))">
       <node ref="J6" pin="A3" pinfunction="A3" pintype="passive"/>
       <node ref="U3" pin="16" pinfunction="GPIO13(T4)" pintype="bidirectional"/>
     </net>
-    <net code="44" name="Net-(U3-GPIO14(T6))">
+    <net code="46" name="Net-(U3-GPIO14(T6))">
       <node ref="J6" pin="A5" pinfunction="A5" pintype="passive"/>
       <node ref="U3" pin="13" pinfunction="GPIO14(T6)" pintype="bidirectional"/>
     </net>
-    <net code="45" name="Net-(U3-GPIO15(T3))">
+    <net code="47" name="Net-(U3-GPIO15(T3))">
       <node ref="J6" pin="A2" pinfunction="A2" pintype="passive"/>
       <node ref="U3" pin="23" pinfunction="GPIO15(T3)" pintype="bidirectional"/>
     </net>
-    <net code="46" name="Net-(U3-GPIO27(T7))">
+    <net code="48" name="Net-(U3-GPIO27(T7))">
       <node ref="J6" pin="A6" pinfunction="A6" pintype="passive"/>
       <node ref="U3" pin="12" pinfunction="GPIO27(T7)" pintype="bidirectional"/>
     </net>
-    <net code="47" name="Net-(U3-GPIO32(T9))">
+    <net code="49" name="Net-(U3-GPIO32(T9))">
       <node ref="J6" pin="A8" pinfunction="A8" pintype="passive"/>
       <node ref="U3" pin="8" pinfunction="GPIO32(T9)" pintype="bidirectional"/>
     </net>
-    <net code="48" name="Net-(U3-GPIO33(T8))">
+    <net code="50" name="Net-(U3-GPIO33(T8))">
       <node ref="J6" pin="A7" pinfunction="A7" pintype="passive"/>
       <node ref="U3" pin="9" pinfunction="GPIO33(T8)" pintype="bidirectional"/>
     </net>
-    <net code="49" name="Net-(U3-SCK{slash}CLK)">
+    <net code="51" name="Net-(U3-SCK{slash}CLK)">
       <node ref="J2" pin="A3" pinfunction="A3" pintype="passive"/>
       <node ref="U3" pin="20" pinfunction="SCK/CLK" pintype="bidirectional"/>
     </net>
-    <net code="50" name="Net-(U3-SCS{slash}CMD)">
+    <net code="52" name="Net-(U3-SCS{slash}CMD)">
       <node ref="J2" pin="A4" pinfunction="A4" pintype="passive"/>
       <node ref="U3" pin="19" pinfunction="SCS/CMD" pintype="bidirectional"/>
     </net>
-    <net code="51" name="Net-(U3-SDI{slash}SD1)">
+    <net code="53" name="Net-(U3-SDI{slash}SD1)">
       <node ref="J2" pin="A1" pinfunction="A1" pintype="passive"/>
       <node ref="U3" pin="22" pinfunction="SDI/SD1" pintype="bidirectional"/>
     </net>
-    <net code="52" name="Net-(U3-SDO{slash}SD0)">
+    <net code="54" name="Net-(U3-SDO{slash}SD0)">
       <node ref="J2" pin="A2" pinfunction="A2" pintype="passive"/>
       <node ref="U3" pin="21" pinfunction="SDO/SD0" pintype="bidirectional"/>
     </net>
-    <net code="53" name="Net-(U3-SENSOR_VN)">
+    <net code="55" name="Net-(U3-SENSOR_VN)">
       <node ref="J10" pin="A2" pinfunction="A2" pintype="passive"/>
       <node ref="U3" pin="5" pinfunction="SENSOR_VN" pintype="input"/>
     </net>
-    <net code="54" name="Net-(U3-SENSOR_VP)">
+    <net code="56" name="Net-(U3-SENSOR_VP)">
       <node ref="J10" pin="A1" pinfunction="A1" pintype="passive"/>
       <node ref="U3" pin="4" pinfunction="SENSOR_VP" pintype="input"/>
     </net>
-    <net code="55" name="Net-(U3-SHD{slash}SD2)">
+    <net code="57" name="Net-(U3-SHD{slash}SD2)">
       <node ref="J2" pin="A6" pinfunction="A6" pintype="passive"/>
       <node ref="U3" pin="17" pinfunction="SHD/SD2" pintype="bidirectional"/>
     </net>
-    <net code="56" name="Net-(U3-SWP{slash}SD3)">
+    <net code="58" name="Net-(U3-SWP{slash}SD3)">
       <node ref="J2" pin="A5" pinfunction="A5" pintype="passive"/>
       <node ref="U3" pin="18" pinfunction="SWP/SD3" pintype="bidirectional"/>
     </net>
-    <net code="57" name="Net-(U4-V3)">
+    <net code="59" name="Net-(U4-V3)">
       <node ref="C7" pin="1" pintype="passive"/>
       <node ref="U4" pin="4" pinfunction="V3" pintype="passive"/>
     </net>
-    <net code="58" name="Net-(WLED1-DOUT)">
+    <net code="60" name="Net-(WLED1-DOUT)">
       <node ref="WLED1" pin="2" pinfunction="DOUT" pintype="output"/>
       <node ref="WLED2" pin="4" pinfunction="DIN" pintype="input"/>
     </net>
-    <net code="59" name="Net-(WLED2-DOUT)">
+    <net code="61" name="Net-(WLED2-DOUT)">
       <node ref="WLED2" pin="2" pinfunction="DOUT" pintype="output"/>
       <node ref="WLED3" pin="4" pinfunction="DIN" pintype="input"/>
     </net>
-    <net code="60" name="Net-(WLED3-DOUT)">
+    <net code="62" name="Net-(WLED3-DOUT)">
       <node ref="WLED3" pin="2" pinfunction="DOUT" pintype="output"/>
       <node ref="WLED4" pin="4" pinfunction="DIN" pintype="input"/>
     </net>
-    <net code="61" name="Net-(WLED4-DOUT)">
+    <net code="63" name="Net-(WLED4-DOUT)">
       <node ref="WLED4" pin="2" pinfunction="DOUT" pintype="output"/>
       <node ref="WLED5" pin="4" pinfunction="DIN" pintype="input"/>
     </net>
-    <net code="62" name="Net-(WLED5-DOUT)">
+    <net code="64" name="Net-(WLED5-DOUT)">
       <node ref="WLED5" pin="2" pinfunction="DOUT" pintype="output"/>
       <node ref="WLED6" pin="4" pinfunction="DIN" pintype="input"/>
     </net>
-    <net code="63" name="Net-(WLED6-DOUT)">
+    <net code="65" name="Net-(WLED6-DOUT)">
       <node ref="WLED6" pin="2" pinfunction="DOUT" pintype="output"/>
       <node ref="WLED7" pin="4" pinfunction="DIN" pintype="input"/>
     </net>
-    <net code="64" name="Net-(WLED7-DOUT)">
+    <net code="66" name="Net-(WLED7-DOUT)">
       <node ref="WLED7" pin="2" pinfunction="DOUT" pintype="output"/>
       <node ref="WLED8" pin="4" pinfunction="DIN" pintype="input"/>
     </net>
-    <net code="65" name="Net-(WLED8-DOUT)">
+    <net code="67" name="Net-(WLED8-DOUT)">
       <node ref="WLED8" pin="2" pinfunction="DOUT" pintype="output"/>
       <node ref="WLED9" pin="4" pinfunction="DIN" pintype="input"/>
     </net>
-    <net code="66" name="Net-(WLED10-DIN)">
+    <net code="68" name="Net-(WLED10-DIN)">
       <node ref="WLED10" pin="4" pinfunction="DIN" pintype="input"/>
       <node ref="WLED9" pin="2" pinfunction="DOUT" pintype="output"/>
     </net>
-    <net code="67" name="Net-(WLED10-DOUT)">
+    <net code="69" name="Net-(WLED10-DOUT)">
       <node ref="WLED10" pin="2" pinfunction="DOUT" pintype="output"/>
       <node ref="WLED11" pin="4" pinfunction="DIN" pintype="input"/>
     </net>
-    <net code="68" name="Net-(WLED11-DOUT)">
+    <net code="70" name="Net-(WLED11-DOUT)">
       <node ref="WLED11" pin="2" pinfunction="DOUT" pintype="output"/>
       <node ref="WLED12" pin="4" pinfunction="DIN" pintype="input"/>
     </net>
-    <net code="69" name="SCL">
+    <net code="71" name="SCL">
       <node ref="J9" pin="A2" pinfunction="A2" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
       <node ref="U3" pin="36" pinfunction="GPIO22" pintype="bidirectional"/>
     </net>
-    <net code="70" name="SDA">
+    <net code="72" name="SDA">
       <node ref="J9" pin="A3" pinfunction="A3" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
       <node ref="U3" pin="33" pinfunction="GPIO21" pintype="bidirectional"/>
     </net>
-    <net code="71" name="unconnected-(J8-CC2-PadB5)">
+    <net code="73" name="unconnected-(J8-CC2-PadB5)">
       <node ref="J8" pin="B5" pinfunction="CC2" pintype="bidirectional"/>
     </net>
-    <net code="72" name="unconnected-(J8-RX1+-PadB11)">
+    <net code="74" name="unconnected-(J8-RX1+-PadB11)">
       <node ref="J8" pin="B11" pinfunction="RX1+" pintype="bidirectional"/>
     </net>
-    <net code="73" name="unconnected-(J8-RX1--PadB10)">
+    <net code="75" name="unconnected-(J8-RX1--PadB10)">
       <node ref="J8" pin="B10" pinfunction="RX1-" pintype="bidirectional"/>
     </net>
-    <net code="74" name="unconnected-(J8-RX2+-PadA11)">
+    <net code="76" name="unconnected-(J8-RX2+-PadA11)">
       <node ref="J8" pin="A11" pinfunction="RX2+" pintype="bidirectional"/>
     </net>
-    <net code="75" name="unconnected-(J8-RX2--PadA10)">
+    <net code="77" name="unconnected-(J8-RX2--PadA10)">
       <node ref="J8" pin="A10" pinfunction="RX2-" pintype="bidirectional"/>
     </net>
-    <net code="76" name="unconnected-(J8-SBU1-PadA8)">
+    <net code="78" name="unconnected-(J8-SBU1-PadA8)">
       <node ref="J8" pin="A8" pinfunction="SBU1" pintype="bidirectional"/>
     </net>
-    <net code="77" name="unconnected-(J8-SBU2-PadB8)">
+    <net code="79" name="unconnected-(J8-SBU2-PadB8)">
       <node ref="J8" pin="B8" pinfunction="SBU2" pintype="bidirectional"/>
     </net>
-    <net code="78" name="unconnected-(J8-TX1+-PadA2)">
+    <net code="80" name="unconnected-(J8-TX1+-PadA2)">
       <node ref="J8" pin="A2" pinfunction="TX1+" pintype="bidirectional"/>
     </net>
-    <net code="79" name="unconnected-(J8-TX1--PadA3)">
+    <net code="81" name="unconnected-(J8-TX1--PadA3)">
       <node ref="J8" pin="A3" pinfunction="TX1-" pintype="bidirectional"/>
     </net>
-    <net code="80" name="unconnected-(J8-TX2+-PadB2)">
+    <net code="82" name="unconnected-(J8-TX2+-PadB2)">
       <node ref="J8" pin="B2" pinfunction="TX2+" pintype="bidirectional"/>
     </net>
-    <net code="81" name="unconnected-(J8-TX2--PadB3)">
+    <net code="83" name="unconnected-(J8-TX2--PadB3)">
       <node ref="J8" pin="B3" pinfunction="TX2-" pintype="bidirectional"/>
     </net>
-    <net code="82" name="unconnected-(Q1-B-Pad1)">
-      <node ref="Q1" pin="1" pinfunction="B" pintype="input"/>
-    </net>
-    <net code="83" name="unconnected-(Q2-B-Pad1)">
-      <node ref="Q2" pin="1" pinfunction="B" pintype="input"/>
-    </net>
-    <net code="84" name="unconnected-(R8-Pad1)">
-      <node ref="R8" pin="1" pintype="passive"/>
-    </net>
-    <net code="85" name="unconnected-(R8-Pad2)">
-      <node ref="R8" pin="2" pintype="passive"/>
-    </net>
-    <net code="86" name="unconnected-(R9-Pad1)">
-      <node ref="R9" pin="1" pintype="passive"/>
-    </net>
-    <net code="87" name="unconnected-(R9-Pad2)">
-      <node ref="R9" pin="2" pintype="passive"/>
-    </net>
-    <net code="88" name="unconnected-(R10-Pad1)">
-      <node ref="R10" pin="1" pintype="passive"/>
-    </net>
-    <net code="89" name="unconnected-(R10-Pad2)">
-      <node ref="R10" pin="2" pintype="passive"/>
-    </net>
-    <net code="90" name="unconnected-(R11-Pad1)">
-      <node ref="R11" pin="1" pintype="passive"/>
-    </net>
-    <net code="91" name="unconnected-(R11-Pad2)">
-      <node ref="R11" pin="2" pintype="passive"/>
-    </net>
-    <net code="92" name="unconnected-(SW1-C-Pad3)">
+    <net code="84" name="unconnected-(SW1-C-Pad3)">
       <node ref="SW1" pin="3" pinfunction="C" pintype="passive"/>
     </net>
-    <net code="93" name="unconnected-(U3-IO35-Pad7)">
+    <net code="85" name="unconnected-(U3-IO35-Pad7)">
       <node ref="U3" pin="7" pinfunction="IO35" pintype="input+no_connect"/>
     </net>
-    <net code="94" name="unconnected-(U3-NC-Pad32)">
+    <net code="86" name="unconnected-(U3-NC-Pad32)">
       <node ref="U3" pin="32" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="95" name="unconnected-(U4-NC-Pad7)">
+    <net code="87" name="unconnected-(U4-NC-Pad7)">
       <node ref="U4" pin="7" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="96" name="unconnected-(U4-NC-Pad8)">
+    <net code="88" name="unconnected-(U4-NC-Pad8)">
       <node ref="U4" pin="8" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="97" name="unconnected-(U4-R232-Pad15)">
+    <net code="89" name="unconnected-(U4-R232-Pad15)">
       <node ref="U4" pin="15" pinfunction="R232" pintype="input+no_connect"/>
     </net>
-    <net code="98" name="unconnected-(U4-~{CTS}-Pad9)">
+    <net code="90" name="unconnected-(U4-~{CTS}-Pad9)">
       <node ref="U4" pin="9" pinfunction="~{CTS}" pintype="input+no_connect"/>
     </net>
-    <net code="99" name="unconnected-(U4-~{DCD}-Pad12)">
+    <net code="91" name="unconnected-(U4-~{DCD}-Pad12)">
       <node ref="U4" pin="12" pinfunction="~{DCD}" pintype="input+no_connect"/>
     </net>
-    <net code="100" name="unconnected-(U4-~{DSR}-Pad10)">
+    <net code="92" name="unconnected-(U4-~{DSR}-Pad10)">
       <node ref="U4" pin="10" pinfunction="~{DSR}" pintype="input+no_connect"/>
     </net>
-    <net code="101" name="unconnected-(U4-~{RI}-Pad11)">
+    <net code="93" name="unconnected-(U4-~{RI}-Pad11)">
       <node ref="U4" pin="11" pinfunction="~{RI}" pintype="input+no_connect"/>
     </net>
   </nets>
