@@ -2197,7 +2197,7 @@
   )
 
   (symbol (lib_id "000-edge-connectors-immo:1-pin-edge-touch-XL") (at 200.66 115.57 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid 10a67ff5-4995-429f-8162-2ac8ae1ff38d)
     (property "Reference" "J5" (at 190.5 94.615 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -2225,7 +2225,7 @@
   )
 
   (symbol (lib_id "000-edge-connectors-immo:5-pin-edge-touch") (at 257.175 146.685 0) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid 14a6be02-7c8b-4bcb-997c-2406235580c2)
     (property "Reference" "J9" (at 250.19 146.05 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -2371,7 +2371,7 @@
   )
 
   (symbol (lib_id "000-edge-connectors-immo:4-pin-edge-touch") (at 60.96 138.43 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid 2bd550be-0fc9-4cfa-94b2-e17b4344d1c4)
     (property "Reference" "J7" (at 57.785 129.54 0)
       (effects (font (size 1.27 1.27)))
@@ -2507,7 +2507,7 @@
   )
 
   (symbol (lib_id "000-edge-connectors-immo:4-pin-edge-touch") (at 73.025 75.565 0) (mirror y) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid 6ce20223-fbcd-4013-90d9-9c849cc9a80e)
     (property "Reference" "J10" (at 76.2 66.04 0)
       (effects (font (size 1.27 1.27)))
@@ -2579,7 +2579,7 @@
   )
 
   (symbol (lib_id "000-edge-connectors-immo:8-pin-edge-touch") (at 200.66 127 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid 7e913a6d-7728-4428-8a22-2ca92eaf22e8)
     (property "Reference" "J6" (at 194.31 135.89 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -2724,7 +2724,7 @@
   )
 
   (symbol (lib_id "000-edge-connectors-immo:6-pin-edge-touch") (at 100.33 118.11 0) (mirror y) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid b597f313-8315-4c7e-80b4-798b69973cd2)
     (property "Reference" "J2" (at 103.505 96.52 0)
       (effects (font (size 1.27 1.27)))
@@ -2996,7 +2996,7 @@
   )
 
   (symbol (lib_id "000-edge-connectors-immo:5-pin-edge-touch") (at 106.68 166.37 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid e95ff523-5923-4ea4-9972-94e8b0f6dfd8)
     (property "Reference" "J4" (at 113.665 166.37 0)
       (effects (font (size 1.27 1.27)) (justify left))
