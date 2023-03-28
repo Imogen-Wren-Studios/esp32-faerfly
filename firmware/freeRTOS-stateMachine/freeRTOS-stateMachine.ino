@@ -26,7 +26,27 @@
 
 #include <autoDelay.h>
 
+
+#define UPDATES_PER_SECOND 30
+#define HUE_STEPS 5  // Number of steps to advance through palette between each for loop. Origionally 3
+
 autoDelay autoDelay;
+
+
+// Fast LED
+#include <FastLED.h>
+#define LED_PIN 0
+#define NUM_LEDS 16
+#define BRIGHTNESS 255
+#define LED_TYPE WS2811
+#define COLOR_ORDER GRB
+CRGBArray<NUM_LEDS> leds;
+uint8_t updates_per_second = 30;
+
+#include "globals.h"
+#include "pride_palettes.h"
+
+
 
 // Define state machine task
 void TaskStateMachine(void *pvParameters);
@@ -45,7 +65,7 @@ void setup() {
   Serial.println("-ESP32-FreeRTOS- Booting");
   setupOTA("ESP32 - FaerFly", ssid, password);
 
-
+  fastled_setup();
 
   // Now set up two tasks to run independently.
   xTaskCreatePinnedToCore(
@@ -74,7 +94,7 @@ void setup() {
     ,
     &xSensorHandle, ARDUINO_RUNNING_CORE);
 
-  
+
 
   // Now the task scheduler, which takes over control of scheduling individual tasks, is automatically started.
   vTaskSuspend(xSensorHandle);  // Stops the sensor task before it starts
