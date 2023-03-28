@@ -31,10 +31,10 @@ autoDelay autoDelay;
 // Define state machine task
 void TaskStateMachine(void *pvParameters);
 // define two tasks for Blink & AnalogRead
-void TaskBlink( void *pvParameters );
-void TaskAnalogReadA3( void *pvParameters );
+void TaskBlink(void *pvParameters);
+void TaskAnalogReadA3(void *pvParameters);
 
-TaskHandle_t xBlinkHandle;   // Handler for task is passed as argument to task. Only needed for task control if required
+TaskHandle_t xBlinkHandle;  // Handler for task is passed as argument to task. Only needed for task control if required
 TaskHandle_t xSensorHandle;
 
 // the setup function runs once when you press reset or power the board
@@ -49,36 +49,35 @@ void setup() {
 
   // Now set up two tasks to run independently.
   xTaskCreatePinnedToCore(
-    TaskStateMachine
-    ,"StateMachineTask"
-    , 1024
-    , NULL
-    , 3  // Priority 
-    , NULL // State machine should always be active
-    , ARDUINO_RUNNING_CORE)
+    TaskStateMachine, "StateMachineTask", 2048, NULL, 1  // Priority
+    ,
+    NULL  // State machine should always be active
+    ,
+    ARDUINO_RUNNING_CORE);
 
   xTaskCreatePinnedToCore(
-    TaskBlink
-    ,  "TaskBlink"   // A name just for humans
-    ,  1024  // This stack size can be checked & adjusted by reading the Stack Highwater
-    ,  NULL
-    ,  2  // Priority, with 3 (configMAX_PRIORITIES - 1) being the highest, and 0 being the lowest.
-    ,  &xBlinkHandle    // &xHandle // Set to NULL if handler not required
-    ,  ARDUINO_RUNNING_CORE);
-
+    TaskBlink, "TaskBlink"  // A name just for humans
+    ,
+    1024  // This stack size can be checked & adjusted by reading the Stack Highwater
+    ,
+    NULL, 2  // Priority, with 3 (configMAX_PRIORITIES - 1) being the highest, and 0 being the lowest.
+    ,
+    &xBlinkHandle  // &xHandle // Set to NULL if handler not required
+    ,
+    ARDUINO_RUNNING_CORE);
 
 
   xTaskCreatePinnedToCore(
-    TaskAnalogReadA3
-    ,  "AnalogReadA3"
-    ,  1024  // Stack size
-    ,  NULL
-    ,  1  // Priority
-    ,  &xSensorHandle
-    ,  ARDUINO_RUNNING_CORE);
+    TaskAnalogReadA3, "AnalogReadA3", 1024  // Stack size
+    ,
+    NULL, 1  // Priority
+    ,
+    &xSensorHandle, ARDUINO_RUNNING_CORE);
+
+  
 
   // Now the task scheduler, which takes over control of scheduling individual tasks, is automatically started.
-    vTaskSuspend(xSensorHandle);   // Stops the sensor task before it starts
+  vTaskSuspend(xSensorHandle);  // Stops the sensor task before it starts
 }
 
 void loop() {
@@ -88,15 +87,6 @@ void loop() {
 #else
   ArduinoOTA.handle();
 #endif
-
-  if (autoDelay.secondsDelay(2)) {  // Testing Task Control Methods
-    if (eTaskGetState(xBlinkHandle) == 2){     // enum returned:(0 eReady,1 eRunning,2 eBlocked,3 eSuspended,4 eDeleted)
-       vTaskSuspend(xBlinkHandle);
-    } else {
-       vTaskResume(xBlinkHandle);
-    }   
-  }
-  
 }
 
 
@@ -106,17 +96,23 @@ void loop() {
 /*---------------------- Tasks ---------------------*/
 /*--------------------------------------------------*/
 
-void TaskStateMachine(void *pvParamters){
-  (void) pvParamters;   // No Idea what this does why does it here?
-
-
-  
+void TaskStateMachine(void *pvParamters) {
+  (void)pvParamters;  // No Idea what this does why does it here?
+  for (;;) {
+    if (autoDelay.secondsDelay(2)) {           // Testing Task Control Methods
+      if (eTaskGetState(xBlinkHandle) == 2) {  // enum returned:(0 eReady,1 eRunning,2 eBlocked,3 eSuspended,4 eDeleted)
+        vTaskSuspend(xBlinkHandle);
+      } else {
+        vTaskResume(xBlinkHandle);
+      }
+    }
+  }
 }
 
 
 void TaskBlink(void *pvParameters)  // This is a task.
 {
-  (void) pvParameters;
+  (void)pvParameters;
 
   /*
     Blink
@@ -129,18 +125,20 @@ void TaskBlink(void *pvParameters)  // This is a task.
   // initialize digital LED_BUILTIN on pin 13 as an output.
   pinMode(LED_BUILTIN, OUTPUT);
 
-  for (;;) // A Task shall never return or exit.
+  for (;;)  // A Task shall never return or exit.
   {
-    digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
-    vTaskDelay(50);  // one tick delay (15ms) in between reads for stability
-    digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
-    vTaskDelay(70);  // one tick delay (15ms) in between reads for stability
+    digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
+    vTaskDelay(50);                   // one tick delay (15ms) in between reads for stability
+    digitalWrite(LED_BUILTIN, LOW);   // turn the LED off by making the voltage LOW
+    vTaskDelay(70);                   // one tick delay (15ms) in between reads for stability
   }
 }
 
+
+
 void TaskAnalogReadA3(void *pvParameters)  // This is a task.
 {
-  (void) pvParameters;
+  (void)pvParameters;
 
   /*
     AnalogReadSerial
@@ -151,7 +149,7 @@ void TaskAnalogReadA3(void *pvParameters)  // This is a task.
     This example code is in the public domain.
   */
 
-  for (;;)  {
+  for (;;) {
     // read the input on analog pin A3:
     int sensorValueA3 = analogRead(A3);
     // print out the value you read:
