@@ -24,18 +24,12 @@ void fastled_setup(){
 
   randomSeed(analogRead(0));   // psudo random number generator for randomness & chaos
 
-  leds(0, 9) = CHSV(255, 255, 0);
+  leds(0, NUM_LEDS) = CHSV(230, 50, 100);
 
  // Serial.println("               Weaving Colours...  \n     ...Selecting Pigments\n");
   delay(500);
 //  Serial.println("Chroma Paintbrush Initialised:  Luminescence Matrix Applied.\n Starting Visual Light Imbument\n ");
-
-
-  FastLED.show();
-
-
-
-  
+  FastLED.show();  
 }
 
 
@@ -46,6 +40,16 @@ TBlendType    currentBlending;
 
 CRGBPalette16 nextPalette;
 //TBlendType    currentBlending;
+
+
+
+void fastLEDcontroller(){
+
+
+  
+}
+
+
 
 
 

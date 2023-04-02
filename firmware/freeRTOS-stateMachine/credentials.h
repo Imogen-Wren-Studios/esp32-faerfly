@@ -1,3 +1,3 @@
 #pragma once
-const char* ssid = "SSID of your AP";
-const char* password = "Password of your AP";
+const char* ssid = "EE-Hub-G3ge";
+const char* password = "stock-led-HALF";

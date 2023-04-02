@@ -35,8 +35,8 @@ autoDelay autoDelay;
 
 // Fast LED
 #include <FastLED.h>
-#define LED_PIN 0
-#define NUM_LEDS 16
+#define LED_PIN 5
+#define NUM_LEDS 8
 #define BRIGHTNESS 255
 #define LED_TYPE WS2811
 #define COLOR_ORDER GRB
@@ -50,11 +50,15 @@ uint8_t updates_per_second = 30;
 
 // Define state machine task
 void TaskStateMachine(void *pvParameters);
+// Define task for the WS2821b controller
+void TaskLEDcontrol(void *pvParameters);
+
 // define two tasks for Blink & AnalogRead
 void TaskBlink(void *pvParameters);
 void TaskAnalogReadA3(void *pvParameters);
 
 TaskHandle_t xBlinkHandle;  // Handler for task is passed as argument to task. Only needed for task control if required
+TaskHandle_t xLEDHandle;
 TaskHandle_t xSensorHandle;
 
 // the setup function runs once when you press reset or power the board
@@ -73,6 +77,17 @@ void setup() {
     ,
     NULL  // State machine should always be active
     ,
+    ARDUINO_RUNNING_CORE);
+
+
+  xTaskCreatePinnedToCore(
+    TaskLEDcontrol, "LEDcontrol",
+    1024  // Stack size
+    ,
+    NULL,
+    1  // Priority
+    ,
+    &xLEDHandle,
     ARDUINO_RUNNING_CORE);
 
   xTaskCreatePinnedToCore(
@@ -129,6 +144,16 @@ void TaskStateMachine(void *pvParamters) {
   }
 }
 
+
+
+
+void TaskLEDcontrol(void *pvParameters) {
+  (void)pvParameters;
+  for (;;) {
+    Serial.print("LED TASK");
+    vTaskDelay(10000);  // one tick delay (15ms) in between reads for stability
+  }
+}
 
 void TaskBlink(void *pvParameters)  // This is a task.
 {
