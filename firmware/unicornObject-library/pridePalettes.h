@@ -206,7 +206,7 @@ DEFINE_GRADIENT_PALETTE( black_black) {
 
 // Function to call planet palettes
 
-
+/*
 
 byte current_flag = 0;
 
@@ -281,7 +281,7 @@ CRGBPalette16 select_flag() {
 }
 
 
-
+*/
 
 
 

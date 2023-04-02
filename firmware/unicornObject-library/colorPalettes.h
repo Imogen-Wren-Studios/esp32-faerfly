@@ -6,8 +6,12 @@
 */
 
 
-//#include "globals.h"
-#include "pridePalettes.h"
+
+
+
+#ifndef colorPalettes_h
+#define colorPalettes_h
+
 
 
 DEFINE_GRADIENT_PALETTE( tropicalPalette ) {
@@ -115,14 +119,8 @@ DEFINE_GRADIENT_PALETTE( angry_red ) {
 
 
 
-// This function fills the palette with totally random colors.
-void SetupTotallyRandomPalette() {
-  for ( int i = 0; i < 16; i++) {
-    currentPalette[i] = CHSV( random8(), 255, 255);
-  }
-}
 
-
+/*
 // This function fills the palette with totally random colors.
 CRGBPalette16 returnRandomPalette() {
   CRGBPalette16  randomPalette;
@@ -134,9 +132,6 @@ CRGBPalette16 returnRandomPalette() {
 
 
 #define NUM_FX 17
-
-
-
 // Function to call palettes above
 
 CRGBPalette16 select_palette(byte number) {
@@ -223,3 +218,6 @@ CRGBPalette16 select_palette(byte number) {
   //return green_white;
   return outputPalette;
 }
+*/
+
+#endif
