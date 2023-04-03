@@ -1,4 +1,4 @@
-/* ) . . o o 0 0 0 0 . Pride Palettes  ) . . o o 0 0 0 0 .
+/*/// ) . . o o 0 0 0 0 . Pride Palettes  ) . . o o 0 0 0 0 .
 
 
    Take a tour through the solar system
@@ -13,82 +13,82 @@
 #include <FastLED.h>
 
 
-
+/*
 
  extern DEFINE_GRADIENT_PALETTE(pride){
-    0, 255, 0, 0,     /*Red) */
-    40, 255, 100, 0,  /* Orange */
-    80, 255, 255, 0,  /* Yellow */
-    120, 0, 255, 0,   /* Green*/
-    160, 0, 255, 255, /* teal */
-    200, 0, 0, 255,   /* Blue */
-    255, 255, 0, 255  /* Purple */
+    0, 255, 0, 0,     //Red) //
+    40, 255, 100, 0,  // Orange //
+    80, 255, 255, 0,  // Yellow //
+    120, 0, 255, 0,   // Green//
+    160, 0, 255, 255, // teal //
+    200, 0, 0, 255,   // Blue //
+    255, 255, 0, 255  // Purple //
   };
 
 
   extern DEFINE_GRADIENT_PALETTE(lesbian){
-    0, 255, 100, 0,     /* Dark Orange*/
-    32, 255, 255, 0,    /* Light Orange */
-    64, 255, 255, 100,  /* Pumkin */
-    98, 255, 255, 255,  /* White/Cream*/
-    130, 255, 197, 255, /* Pink */
-    162, 255, 150, 255, /*Purple/Mauve*/
-    194, 255, 0, 255,   /* Red Pink */
-    255, 255, 0, 100    /* Deep Pink*/
+    0, 255, 100, 0,     // Dark Orange//
+    32, 255, 255, 0,    // Light Orange //
+    64, 255, 255, 100,  // Pumkin //
+    98, 255, 255, 255,  // White/Cream//
+    130, 255, 197, 255, // Pink //
+    162, 255, 150, 255, //Purple/Mauve//
+    194, 255, 0, 255,   // Red Pink //
+    255, 255, 0, 100    // Deep Pink//
   };
 
   // Not used yet
  extern  DEFINE_GRADIENT_PALETTE(gay){
-    0, 190, 190, 120,                                     /* at index 0, blue(0,0,0) */
-    5, 230, 200, 70,                                      /* at index 0, blue(0,0,0) */
-    10, 230, 200, 10,                                     /* at index 0, blue(0,0,0) */
-    15, 150, 120, 70,                                     /* at index 0, blue(0,0,0) */
-    110, 70, 50, 30,                                      /* at index 0, blue(0,0,0) */
-    120, 220, 190, 130,                                   /* at index 0, green(0,0,0) */
-    140, 150, 100, 40,                                    /* at index 0, green(0,0,0) */
-    150, 200, 190, 20,                                    /* at index 0, blue(0,0,0) */
-    200, 250, 70, 0,                                      /* at index 0, green(0,0,0) */
-    210, 150, 100, 0,                                     /* at index 0, green(0,0,0) */
-    235, 140, 65, 1,                                      /* at index 0, desertbrown(0,0,0) */
-    240, 30, 30, 0, /* at index 0, desertbrown(0,0,0) */  // last entry must be for index 255
-    245, 145, 120, 30,                                    /* at index 255, desertbright(255,255,255) */
-    255, 120, 100, 100 /* at index 0, blue(0,0,0) */      // last entry must be for index 255
+    0, 190, 190, 120,                                     // at index 0, blue(0,0,0) //
+    5, 230, 200, 70,                                      // at index 0, blue(0,0,0) //
+    10, 230, 200, 10,                                     // at index 0, blue(0,0,0) //
+    15, 150, 120, 70,                                     // at index 0, blue(0,0,0) //
+    110, 70, 50, 30,                                      // at index 0, blue(0,0,0) //
+    120, 220, 190, 130,                                   // at index 0, green(0,0,0) //
+    140, 150, 100, 40,                                    // at index 0, green(0,0,0) //
+    150, 200, 190, 20,                                    // at index 0, blue(0,0,0) //
+    200, 250, 70, 0,                                      // at index 0, green(0,0,0) //
+    210, 150, 100, 0,                                     // at index 0, green(0,0,0) //
+    235, 140, 65, 1,                                      // at index 0, desertbrown(0,0,0) //
+    240, 30, 30, 0, // at index 0, desertbrown(0,0,0) //  // last entry must be for index 255
+    245, 145, 120, 30,                                    // at index 255, desertbright(255,255,255) //
+    255, 120, 100, 100 // at index 0, blue(0,0,0) //      // last entry must be for index 255
   };
 
 
 
 
   extern DEFINE_GRADIENT_PALETTE(bisexual){
-    0, 255, 0, 100,   /* RedPink */
-    130, 255, 0, 150, /* RedPink */
-    120, 255, 0, 255, /* Purple*/
-    140, 150, 0, 255, /*Bluepurple */
-    255, 100, 0, 255  /*Bluepurple */
+    0, 255, 0, 100,   // RedPink //
+    130, 255, 0, 150, // RedPink //
+    120, 255, 0, 255, // Purple//
+    140, 150, 0, 255, //Bluepurple //
+    255, 100, 0, 255  //Bluepurple //
 
   };
 
 
 
   extern DEFINE_GRADIENT_PALETTE(enby){
-    0, 230, 255, 0,     /* Yellow*/
-    32, 255, 255, 255,  /* White*/
-    64, 255, 0, 255,    /* Purple */
-    98, 0, 0, 0,        /*Black */
-    130, 255, 255, 255, /* White*/
-    162, 255, 0, 255,   /* Purple */
-    194, 230, 255, 0,   /* Yellow */
-    255, 0, 0, 0        /* Black*/
+    0, 230, 255, 0,     // Yellow//
+    32, 255, 255, 255,  // White//
+    64, 255, 0, 255,    // Purple //
+    98, 0, 0, 0,        //Black //
+    130, 255, 255, 255, // White//
+    162, 255, 0, 255,   // Purple //
+    194, 230, 255, 0,   // Yellow //
+    255, 0, 0, 0        // Black//
   };
 
 
 
   // Would prefer an HSV way of specifying this.
   extern  DEFINE_GRADIENT_PALETTE(trans){
-    0, 0, 40, 255,     /* Baby Blue */
-    8, 200, 20, 150,   /* Baby Pink */
-    10, 255, 255, 255, /* White */
-    13, 200, 20, 150,  /* Baby Pink*/
-    255, 0, 40, 255    /* Baby Blue */
+    0, 0, 40, 255,     // Baby Blue //
+    8, 200, 20, 150,   // Baby Pink //
+    10, 255, 255, 255, // White //
+    13, 200, 20, 150,  // Baby Pink//
+    255, 0, 40, 255    // Baby Blue //
   };
 
 
@@ -193,23 +193,23 @@
 
 
  extern  DEFINE_GRADIENT_PALETTE(colour_tester){
-    0, 139, 75, 1, /* at index 0, blue(0,0,0) */
+    0, 139, 75, 1, // at index 0, blue(0,0,0) //
 
-    255, 139, 75, 15 /* at index 0, blue(0,0,0) */  // last entry must be for index 255
+    255, 139, 75, 15 // at index 0, blue(0,0,0) //  // last entry must be for index 255
   };
 
 
  extern  DEFINE_GRADIENT_PALETTE(black_black){
-    0, 0, 0, 0, /* at index 0, blue(0,0,0) */
+    0, 0, 0, 0, // at index 0, blue(0,0,0) //
 
-    255, 0, 0, 0 /* at index 0, blue(0,0,0) */  // last entry must be for index 255
+    255, 0, 0, 0 // at index 0, blue(0,0,0) //  // last entry must be for index 255
   };
 
 
 
 // Function to call planet palettes
 
-/*
+//
 
 byte current_flag = 0;
 
@@ -284,7 +284,7 @@ CRGBPalette16 select_flag() {
 }
 
 
-*/
+//
 
 
 
@@ -296,7 +296,7 @@ CRGBPalette16 select_flag() {
 
 
 
-/* Not controlable enough Shame
+// Not controlable enough Shame
   CRGBPalette16 planet_jupiter() {
 
   CRGB cloud  = CHSV( 0, 0, 255);
@@ -322,7 +322,7 @@ CRGBPalette16 select_flag() {
 
 
   }
+//
 */
-
 
 #endif
