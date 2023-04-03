@@ -15,9 +15,10 @@
 #include <wProgram.h>
 #endif
 
+#include <FastLED.h>
 #include "pridePalettes.h"
 #include "colorPalettes.h"
-#include <FastLED.h>
+
 //#include "pridePalettes.h"
 //#include "colorPalettes.h"
 
@@ -48,10 +49,7 @@ public:
   // tell FastLED about the LED strip configuration
   {
   }
-
-
-
-
+  
 
   // Methods
 
@@ -73,6 +71,8 @@ public:
   bool ledDirection = true;
 
   void fillBufferPaletteColors(CRGBPalette16 newPalette);
+
+
 
 private:
 
