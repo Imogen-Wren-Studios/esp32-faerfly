@@ -33,8 +33,8 @@ void setup() {
   Serial.begin(115200);
 
   unicorn.begin();
-  // unicorn.currentPalette = START_PALETTE;
-  // unicorn.nextPalette = SECOND_PALETTE;
+  unicorn.currentPalette = START_PALETTE;
+ // unicorn.nextPalette = SECOND_PALETTE;
   unicorn.paintRGB(255, 255, 0);
   
 
