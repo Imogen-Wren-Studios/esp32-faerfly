@@ -18,9 +18,11 @@
 #include <FastLED.h>
 #include "pridePalettes.h"
 #include "colorPalettes.h"
-
+<<<<<<< HEAD
+#include <FastLED.h>
 #include <autoDelay.h>
-
+=======
+>>>>>>> aed9e8b1bd6262c663b5d1dece955dd8eafa3b6f
 
 //#include "pridePalettes.h"
 //#include "colorPalettes.h"
@@ -49,7 +51,7 @@ public:
 
   //Constructor
 
-
+<<<<<<< HEAD
   unicornObject(){};
 
   autoDelay colorDelay;
@@ -58,12 +60,13 @@ public:
 
 
 
+=======
   unicornObject()
   // tell FastLED about the LED strip configuration
   {
   }
   
-
+>>>>>>> aed9e8b1bd6262c663b5d1dece955dd8eafa3b6f
 
   // Methods
 

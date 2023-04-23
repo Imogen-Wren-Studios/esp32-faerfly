@@ -1,2 +1,2 @@
-
+CRGBPalette16 pride;
 
