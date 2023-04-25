@@ -460,7 +460,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../3D-cad/esp32-faerfly-model.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""

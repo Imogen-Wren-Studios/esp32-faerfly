@@ -39,6 +39,8 @@ void unicornObject::paintHSV(uint8_t hue, uint8_t saturation, uint8_t value) {
 
 // Update the output with any changes to the buffer
 void unicornObject::update() {
+  // n blend towards pallet
+  nblendPaletteTowardPalette(currentPalette, nextPalette, ANIMATION_BLEND_SPEED);
   //  FastLED.show();
   FastLED.delay(1000 / updates_per_second);  // This isnt doing its job here
 }
@@ -57,7 +59,7 @@ void unicornObject::fillBufferPaletteColors(CRGBPalette16 newPalette) {  // Colo
   for (int i = 0; i < NUM_LEDS; i++) {
     ledRing[i] = ColorFromPalette(newPalette, currentIndex, BRIGHTNESS, currentBlending);
     if (ledDirection) {
-      currentIndex += 1 ; //Motion Speed currentIndex is the COLOUR index, not the LED array Index
+      currentIndex += 1;  //Motion Speed currentIndex is the COLOUR index, not the LED array Index
     } else {
       currentIndex += 1;  // Tried -= but made more jumps not good.
     }
@@ -71,6 +73,9 @@ void unicornObject::fillBufferSmooth(CRGBPalette16 newPalette, int16_t speed) {
   }
 }
 
+void unicornObject::setBrightness(uint8_t brightness) {
+  FastLED.setBrightness(brightness);
+}
 
 /*
 // Fills led buffer from palette

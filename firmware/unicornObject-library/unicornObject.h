@@ -76,6 +76,8 @@ public:
 
   void update();
 
+  void setBrightness(uint8_t brightness =  255);
+
   void makeRandomSaturatedPallet();
 
   CRGBPalette16 currentPalette;

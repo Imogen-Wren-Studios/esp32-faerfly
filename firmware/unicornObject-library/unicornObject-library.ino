@@ -29,6 +29,7 @@ void setup() {
   unicorn.paintRGB(255, 255, 0);
 
   delay(500);
+  unicorn.setBrightness(50); 
 }
 
 
@@ -36,12 +37,15 @@ void setup() {
 
 void loop() {
   //unicorn.paintRGB(250, 250, 250);
- // unicorn.nblendPaletteTowardPalette(currentPalette, nextPalette, ANIMATION_BLEND_SPEED);
 
-  unicorn.fillBufferSmooth(START_PALETTE, 1000);
 
-  // unicorn.fillBufferPaletteColors(START_PALETTE);
+ unicorn.fillBufferSmooth(START_PALETTE,100);
+
+ //  unicorn.fillBufferPaletteColors(START_PALETTE);
 
 
   unicorn.update();
 }
+
+
+
