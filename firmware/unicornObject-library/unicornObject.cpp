@@ -16,13 +16,13 @@ void unicornObject::begin() {
 
   //FastLED.addLeds<LED_TYPE, LED_PIN, COLOR_ORDER>(ledRing, NUM_LEDS).setCorrection(TypicalLEDStrip);
   // Serial.println("...Processing Light Threads...");
-  FastLED.setBrightness(BRIGHTNESS);
+  FastLED.setBrightness(currentBrightness);
   randomSeed(analogRead(0));  // psudo random number generator for randomness & chaos
   ledRing(0, NUM_LEDS - 1) = CHSV(255, 255, 0);
   // Serial.println("               Weaving Colours...  \n     ...Selecting Pigments\n");
   //  Serial.println("Chroma Paintbrush Initialised:  Luminescence Matrix Applied.\n Starting Visual Light Imbument\n ");
   FastLED.show();
-  delay(500);
+ // delay(500);
 }
 
 
@@ -41,7 +41,7 @@ void unicornObject::paintHSV(uint8_t hue, uint8_t saturation, uint8_t value) {
 void unicornObject::update() {
   // n blend towards pallet
   nblendPaletteTowardPalette(currentPalette, nextPalette, blendSpeed);  // This updates currentPalette with colours from nextPalette so it acts on the currentPalette variable
-  //  FastLED.show();   // show is called by delay
+  FastLED.show();   // show is called by delay
   FastLED.delay(1000 / updates_per_second);  // This isnt doing its job here Why are animations running so fast?? is it because of faster processor on ESP?
 }
 
@@ -56,13 +56,13 @@ CRGBPalette16 unicornObject::makeRandomSaturatedPallet() {
 }
 
 
-void unicornObject::fillBufferPaletteColors() {
+void unicornObject::fillBufferPaletteColors(uint8_t colorIndex) {
   for (int i = 0; i < NUM_LEDS; i++) {
-    ledRing[i] = ColorFromPalette(currentPalette, currentIndex, currentBrightness, currentBlending);
+    ledRing[i] = ColorFromPalette(currentPalette, colorIndex, currentBrightness, currentBlending);
     if (ledDirection) {
-      currentIndex += 1;  //Motion Speed currentIndex is the COLOUR index, not the LED array Index
+      colorIndex += 1;  //Motion Speed currentIndex is the COLOUR index, not the LED array Index
     } else {
-      currentIndex += 1;  // Tried -= but made more jumps not good.
+      colorIndex += 1;  // Tried -= but made more jumps not good.
     }
   }
 }
@@ -72,7 +72,7 @@ void unicornObject::fillBufferPaletteColors() {
 void unicornObject::fillBufferSmooth(int16_t speed) {
 
   if (colorDelay.millisDelay(speed)) {
-    unicornObject::fillBufferPaletteColors();
+    unicornObject::fillBufferPaletteColors(currentIndex);   // this is now likely wrong but compiles. does this function even needed if fill buffer is fixed? we can name nicer later
   }
 }
 

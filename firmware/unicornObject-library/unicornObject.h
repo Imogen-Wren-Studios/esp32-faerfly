@@ -29,7 +29,7 @@
 
 #define LED_PIN 5
 #define NUM_LEDS 12
-#define BRIGHTNESS 20
+#define BRIGHTNESS 50
 #define LED_TYPE WS2811
 #define COLOR_ORDER GRB
 
@@ -78,6 +78,8 @@ public:
 
   void setBrightness(uint8_t brightness =  255);
 
+  void changeHueSteps(uint8_t newHueSteps = 1);   // No method written yet might not need it looks good as is
+
   CRGBPalette16 makeRandomSaturatedPallet();
 
   CRGBPalette16 currentPalette;
@@ -88,11 +90,11 @@ public:
   bool ledDirection = true;
 
 
-  void fillBufferPaletteColors();
+  void fillBufferPaletteColors(uint8_t colorIndex);
 
   void fillBufferSmooth(int16_t speed);
 
-
+  uint8_t currentIndex = 0;  // make this private once moved everything into class
 
 
 private:
@@ -102,13 +104,13 @@ private:
   int hue_steps = 1;
   uint32_t hue_shift_timing = 5000;
 
-  uint8_t blendSpeed = 12;
+  uint8_t blendSpeed = 2;
 
   uint8_t currentBrightness = 255;
 
 
 
-  uint8_t currentIndex = 0;
+
 
 
   uint8_t updates_per_second = 30;
