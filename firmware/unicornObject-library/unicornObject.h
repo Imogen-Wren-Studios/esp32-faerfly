@@ -88,7 +88,8 @@ public:
   bool ledDirection = true;
 
 
-  void fillBufferPaletteColors(CRGBPalette16 newPalette);
+  void fillBufferPaletteColors();
+
   void fillBufferSmooth(CRGBPalette16 newPalette, int16_t speed);
 
 
@@ -101,6 +102,9 @@ private:
   int hue_steps = 1;
   uint32_t hue_shift_timing = 5000;
 
+  uint8_t blendSpeed = 12;
+
+  uint8_t currentBrightness = 255;
 
 
 
