@@ -28,8 +28,8 @@
 //#include "colorPalettes.h"
 
 #define LED_PIN 5
-#define NUM_LEDS 8
-#define BRIGHTNESS 255
+#define NUM_LEDS 12
+#define BRIGHTNESS 20
 #define LED_TYPE WS2811
 #define COLOR_ORDER GRB
 
