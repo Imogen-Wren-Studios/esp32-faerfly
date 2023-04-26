@@ -39,6 +39,8 @@ void unicornObject::paintHSV(uint8_t hue, uint8_t saturation, uint8_t value) {
 
 // Update the output with any changes to the buffer
 void unicornObject::update() {
+  // n blend towards pallet
+  nblendPaletteTowardPalette(currentPalette, nextPalette, blendSpeed);   // This updates currentPalette with colours from nextPalette so it acts on the currentPalette variable
   //  FastLED.show();
   FastLED.delay(1000 / updates_per_second);  // This isnt doing its job here
 }
@@ -47,30 +49,35 @@ void unicornObject::update() {
 // This function fills the palette with totally random colors.
 void unicornObject::makeRandomSaturatedPallet() {
   for (int i = 0; i < 16; i++) {
-
     currentPalette[i] = CHSV(random8(), 255, 255);
   }
 }
 
 
-void unicornObject::fillBufferPaletteColors(CRGBPalette16 newPalette) {  // Colour index is passed as the starting point for the blending effect
+void unicornObject::fillBufferPaletteColors() {  
   for (int i = 0; i < NUM_LEDS; i++) {
-    ledRing[i] = ColorFromPalette(newPalette, currentIndex, BRIGHTNESS, currentBlending);
+    ledRing[i] = ColorFromPalette(currentPalette, currentIndex, currentBrightness, currentBlending);
     if (ledDirection) {
-      currentIndex += 1 ; //Motion Speed currentIndex is the COLOUR index, not the LED array Index
+      currentIndex += 1;  //Motion Speed currentIndex is the COLOUR index, not the LED array Index
     } else {
       currentIndex += 1;  // Tried -= but made more jumps not good.
     }
   }
 }
 
+
+// This is wrong but shouldnt be broken just not worthwhile
 void unicornObject::fillBufferSmooth(CRGBPalette16 newPalette, int16_t speed) {
 
   if (colorDelay.millisDelay(speed)) {
-    unicornObject::fillBufferPaletteColors(newPalette);
+    unicornObject::fillBufferPaletteColors();
   }
 }
 
+void unicornObject::setBrightness(uint8_t brightness) {
+  currentBrightness = brightness;
+  FastLED.setBrightness(brightness);
+}
 
 /*
 // Fills led buffer from palette

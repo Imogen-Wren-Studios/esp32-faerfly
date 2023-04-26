@@ -11,9 +11,8 @@
 #ifndef pridePalettes_h
 #define pridePalettes_h
 
-/*
 
-class pridePalettes() {
+
 
 
   DEFINE_GRADIENT_PALETTE(pride){
@@ -205,7 +204,8 @@ class pridePalettes() {
 
     255, 0, 0, 0  //  at index 0, blue(0,0,0) //       // last entry must be for index 255
   };
-};
+
+
 
   /*
 // Function to call planet palettes

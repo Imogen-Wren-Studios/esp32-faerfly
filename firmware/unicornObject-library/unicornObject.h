@@ -28,8 +28,8 @@
 //#include "colorPalettes.h"
 
 #define LED_PIN 5
-#define NUM_LEDS 8
-#define BRIGHTNESS 255
+#define NUM_LEDS 12
+#define BRIGHTNESS 20
 #define LED_TYPE WS2811
 #define COLOR_ORDER GRB
 
@@ -76,6 +76,8 @@ public:
 
   void update();
 
+  void setBrightness(uint8_t brightness =  255);
+
   void makeRandomSaturatedPallet();
 
   CRGBPalette16 currentPalette;
@@ -86,7 +88,8 @@ public:
   bool ledDirection = true;
 
 
-  void fillBufferPaletteColors(CRGBPalette16 newPalette);
+  void fillBufferPaletteColors();
+
   void fillBufferSmooth(CRGBPalette16 newPalette, int16_t speed);
 
 
@@ -99,6 +102,9 @@ private:
   int hue_steps = 1;
   uint32_t hue_shift_timing = 5000;
 
+  uint8_t blendSpeed = 12;
+
+  uint8_t currentBrightness = 255;
 
 
 

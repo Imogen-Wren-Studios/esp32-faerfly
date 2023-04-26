@@ -36,7 +36,7 @@ void setup() {
 
 void loop() {
   //unicorn.paintRGB(250, 250, 250);
- // unicorn.nblendPaletteTowardPalette(currentPalette, nextPalette, ANIMATION_BLEND_SPEED);
+ // 
 
   unicorn.fillBufferSmooth(START_PALETTE, 1000);
 
