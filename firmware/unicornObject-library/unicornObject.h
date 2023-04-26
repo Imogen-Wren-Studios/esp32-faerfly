@@ -37,7 +37,7 @@
 #define HUE_STEPS 1  // Number of steps to advance through palette between each for loop. Origionally 3
 
 #define ANIMATION_BLEND_SPEED 128
-#define NORMAL_BLEND_SPEED 12
+#define NORMAL_BLEND_SPEED 2
 
 
 // I would love to try and initialise a unicorn object with the variables to create an fastLED object, however
@@ -78,7 +78,7 @@ public:
 
   void setBrightness(uint8_t brightness =  255);
 
-  void makeRandomSaturatedPallet();
+  CRGBPalette16 makeRandomSaturatedPallet();
 
   CRGBPalette16 currentPalette;
   TBlendType currentBlending = LINEARBLEND;
@@ -90,14 +90,14 @@ public:
 
   void fillBufferPaletteColors();
 
-  void fillBufferSmooth(CRGBPalette16 newPalette, int16_t speed);
+  void fillBufferSmooth(int16_t speed);
 
 
 
 
 private:
 
-
+  CRGBPalette16 paletteBuffer;  // empty pallette can be used for moving palettes around if needed (try not to use - use local variable insread)
 
   int hue_steps = 1;
   uint32_t hue_shift_timing = 5000;

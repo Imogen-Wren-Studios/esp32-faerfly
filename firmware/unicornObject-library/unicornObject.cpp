@@ -40,21 +40,23 @@ void unicornObject::paintHSV(uint8_t hue, uint8_t saturation, uint8_t value) {
 // Update the output with any changes to the buffer
 void unicornObject::update() {
   // n blend towards pallet
-  nblendPaletteTowardPalette(currentPalette, nextPalette, blendSpeed);   // This updates currentPalette with colours from nextPalette so it acts on the currentPalette variable
-  //  FastLED.show();
-  FastLED.delay(1000 / updates_per_second);  // This isnt doing its job here
+  nblendPaletteTowardPalette(currentPalette, nextPalette, blendSpeed);  // This updates currentPalette with colours from nextPalette so it acts on the currentPalette variable
+  //  FastLED.show();   // show is called by delay
+  FastLED.delay(1000 / updates_per_second);  // This isnt doing its job here Why are animations running so fast?? is it because of faster processor on ESP?
 }
 
 
-// This function fills the palette with totally random colors.
-void unicornObject::makeRandomSaturatedPallet() {
+// This function returns palette with totally random saturated colors.
+CRGBPalette16 unicornObject::makeRandomSaturatedPallet() {
+    CRGBPalette16 newPalette;
   for (int i = 0; i < 16; i++) {
-    currentPalette[i] = CHSV(random8(), 255, 255);
+    newPalette[i] = CHSV(random8(), 255, 255);
   }
+  return newPalette;
 }
 
 
-void unicornObject::fillBufferPaletteColors() {  
+void unicornObject::fillBufferPaletteColors() {
   for (int i = 0; i < NUM_LEDS; i++) {
     ledRing[i] = ColorFromPalette(currentPalette, currentIndex, currentBrightness, currentBlending);
     if (ledDirection) {
@@ -67,7 +69,7 @@ void unicornObject::fillBufferPaletteColors() {
 
 
 // This is wrong but shouldnt be broken just not worthwhile
-void unicornObject::fillBufferSmooth(CRGBPalette16 newPalette, int16_t speed) {
+void unicornObject::fillBufferSmooth(int16_t speed) {
 
   if (colorDelay.millisDelay(speed)) {
     unicornObject::fillBufferPaletteColors();
