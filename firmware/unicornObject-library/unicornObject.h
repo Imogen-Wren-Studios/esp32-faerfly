@@ -96,12 +96,12 @@ public:
 
   uint8_t currentIndex = 0;  // make this private once moved everything into class
 
-
+ int hue_steps = 1; // Make this private once everything hidden in class
 private:
 
   CRGBPalette16 paletteBuffer;  // empty pallette can be used for moving palettes around if needed (try not to use - use local variable insread)
 
-  int hue_steps = 1;
+ 
   uint32_t hue_shift_timing = 5000;
 
   uint8_t blendSpeed = 2;
