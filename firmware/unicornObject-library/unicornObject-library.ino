@@ -14,20 +14,17 @@
 #include <autoDelay.h>
 
 autoDelay paletteDelay;
-
-
-
-
 unicornObject unicorn;
 
 
+#define BRIGHTNESS 255
 
 void setup() {
   Serial.begin(115200);
   unicorn.begin();
   unicorn.currentPalette = START_PALETTE;
   unicorn.nextPalette = SECOND_PALETTE;
-  unicorn.setBrightness(50);
+  unicorn.setBrightness(BRIGHTNESS);
   unicorn.paintRGB(255, 255, 0);
   // delay(500);
   
