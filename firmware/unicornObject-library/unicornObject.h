@@ -74,11 +74,13 @@ public:
 
   void paintHSV(uint8_t hue, uint8_t saturation, uint8_t value);
 
+  void show();
+
   void update();
 
-  void setBrightness(uint8_t brightness =  255);
+  void setBrightness(uint8_t brightness = 255);
 
-  void changeHueSteps(uint8_t newHueSteps = 1);   // No method written yet might not need it looks good as is
+  void changeHueSteps(uint8_t newHueSteps = 1);  // No method written yet might not need it looks good as is
 
   CRGBPalette16 makeRandomSaturatedPallet();
 
@@ -90,18 +92,56 @@ public:
   bool ledDirection = true;
 
 
-  void fillBufferPaletteColors(uint8_t colorIndex);
+  void fillBufferPaletteColors();
 
   void fillBufferSmooth(int16_t speed);
 
-  uint8_t currentIndex = 0;  // make this private once moved everything into class
+  void printNameHSV(uint8_t hue, uint8_t saturation, uint8_t value);
 
- int hue_steps = 1; // Make this private once everything hidden in class
+  uint8_t currentIndex = 0;  // make this private once moved everything into class // Being replaced entirely with globalIndex
 
-/*
-char c_red[12] = {"red"};
+  uint8_t globalIndex = 0;  // variable to track the global starting point for new hue update
 
-  char colorNames[18][12] = { "red", "red-orange", "orange", "yellow-orange", "yellow", "lime-green", "green", "blue-green", "cyan", "sky-blue", "blue", "dark-blue", "mouve", "purple", "pink", "white" };
+  int hue_steps = 1;  // Make this private once everything hidden in class
+
+
+  char red_s[16] = "red";
+  char red_o_s[16] = "red-orange";
+  char orange_s[16] = "orange";
+  char yellow_o_s[16] = "yellow-orange";
+  char yellow_s[16] = "yellow";
+  char lime_s[16] = "lime-green";
+  char green_s[16] = "green";
+  char blue_g_s[16] = "blue-green";
+  char cyan_s[16] = "cyan";
+  char sky_s[16] = "sky-blue";
+  char blue_s[16] = "blue";
+  char darkblue_s[16] = "dark-blue";
+  char mouve_s[16] = "mouve";
+  char purple_s[16] = "purple";
+  char pink_s[16] = "pink";
+  char hotpink_s[16] = "hot-pink";
+  char redpink_s[16] = "red-pink";
+
+  char *colorNames[17] = {
+    red_s,
+    red_o_s,
+    orange_s,
+    yellow_o_s,
+    yellow_s,
+    lime_s,
+    green_s,
+    blue_g_s,
+    cyan_s,
+    sky_s,
+    blue_s,
+    darkblue_s,
+    mouve_s,
+    purple_s,
+    pink_s,
+    hotpink_s,
+    redpink_s
+  };
 
   enum colorEnum {
     RED,
@@ -119,13 +159,16 @@ char c_red[12] = {"red"};
     MOUVE,
     PURPLE,
     PINK,
-    WHITE
+    HOT_PINK,
+    RED_PINK
   };
- 
- colorEnum colorName = RED;
 
-void printColorName(int colorName);
-*/
+  colorEnum colorName = RED;
+
+  void printColorName(colorEnum index);
+
+  void printColorName(int colorName);
+
 
 
 
@@ -133,7 +176,7 @@ private:
 
   CRGBPalette16 paletteBuffer;  // empty pallette can be used for moving palettes around if needed (try not to use - use local variable insread)
 
- 
+
   uint32_t hue_shift_timing = 5000;
 
   uint8_t blendSpeed = 2;

@@ -22,7 +22,7 @@ void unicornObject::begin() {
   // Serial.println("               Weaving Colours...  \n     ...Selecting Pigments\n");
   //  Serial.println("Chroma Paintbrush Initialised:  Luminescence Matrix Applied.\n Starting Visual Light Imbument\n ");
   FastLED.show();
- // delay(500);
+  // delay(500);
 }
 
 
@@ -36,33 +36,57 @@ void unicornObject::paintHSV(uint8_t hue, uint8_t saturation, uint8_t value) {
 }
 
 
+// Update the output with any changes to the buffer
+void unicornObject::show() {
+  FastLED.show();                                                       // show is called by delay
+}
 
 // Update the output with any changes to the buffer
 void unicornObject::update() {
   // n blend towards pallet
   nblendPaletteTowardPalette(currentPalette, nextPalette, blendSpeed);  // This updates currentPalette with colours from nextPalette so it acts on the currentPalette variable
-  FastLED.show();   // show is called by delay
-  FastLED.delay(1000 / updates_per_second);  // This isnt doing its job here Why are animations running so fast?? is it because of faster processor on ESP?
+  FastLED.show();                                                       // show is called by delay
+  FastLED.delay(1000 / updates_per_second);                             // This isnt doing its job here Why are animations running so fast?? is it because of faster processor on ESP?
 }
 
 
 // This function returns palette with totally random saturated colors.
 CRGBPalette16 unicornObject::makeRandomSaturatedPallet() {
-    CRGBPalette16 newPalette;
+  CRGBPalette16 newPalette;
   for (int i = 0; i < 16; i++) {
-    newPalette[i] = CHSV(random8(), 255, 255);
+    uint8_t newHueIndex = random8();
+    Serial.print("New HSV Colour: ");
+    Serial.println(newHueIndex);
+    newPalette[i] = CHSV(newHueIndex, 255, 255);
   }
   return newPalette;
 }
 
 
-void unicornObject::fillBufferPaletteColors(uint8_t colorIndex) {
+
+/*
+
+To make this pattern work correctly the following numbers need to be passed somehow.
+
+globalIndex = n
+localIndex = n + (iterate over each LED to a max value of n + NUM_LEDS)
+
+over the next run through value passed are
+
+globalIndex = n + 1
+
+
+
+*/
+void unicornObject::fillBufferPaletteColors() {
+  uint8_t localIndex = globalIndex;
+  globalIndex += hue_steps;  // this value could be changed programatically later
   for (int i = 0; i < NUM_LEDS; i++) {
-    ledRing[i] = ColorFromPalette(currentPalette, colorIndex, currentBrightness, currentBlending);
+    ledRing[i] = ColorFromPalette(currentPalette, localIndex, currentBrightness, currentBlending);
     if (ledDirection) {
-      colorIndex += 1;  //Motion Speed currentIndex is the COLOUR index, not the LED array Index
+      localIndex += 1;  //Motion Speed currentIndex is the COLOUR index, not the LED array Index
     } else {
-      colorIndex += 1;  // Tried -= but made more jumps not good.
+      localIndex += 1;  // Tried -= but made more jumps not good.
     }
   }
 }
@@ -72,13 +96,32 @@ void unicornObject::fillBufferPaletteColors(uint8_t colorIndex) {
 void unicornObject::fillBufferSmooth(int16_t speed) {
 
   if (colorDelay.millisDelay(speed)) {
-    unicornObject::fillBufferPaletteColors(currentIndex);   // this is now likely wrong but compiles. does this function even needed if fill buffer is fixed? we can name nicer later
+    unicornObject::fillBufferPaletteColors();  // this is now likely wrong but compiles. does this function even needed if fill buffer is fixed? we can name nicer later
   }
 }
 
 void unicornObject::setBrightness(uint8_t brightness) {
   currentBrightness = brightness;
   FastLED.setBrightness(brightness);
+}
+
+
+void unicornObject::printNameHSV(uint8_t hue, uint8_t saturation, uint8_t value) {   // This is not that accurate could be dialed in slighty
+  uint8_t index = map(hue, 0, 255, 0, 16);
+ // if (index == 16){
+ //   index = 0;
+//  }
+  Serial.print(index);
+  Serial.print("  Colour Name: ");
+  if (saturation < 150) {
+    Serial.print("pastel ");
+  }
+  Serial.println(colorNames[index]);
+}
+
+void unicornObject::printColorName(colorEnum index) {
+  Serial.print("Colour Name: ");
+  Serial.println(colorNames[index]);
 }
 
 /*
