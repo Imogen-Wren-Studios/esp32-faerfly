@@ -1,11 +1,34 @@
+/* unicornObject Library Example
+
+    Imogen Wren
+    30/04/2023
+
+    unicornObject is an attempt to further abstract and simplify lighting shows using the FastLED library
+
+    The Targest is a basic API that can be accessed to trigger a range of different animation types
 
 
+*/
 
+/*
+// FastLED definitions MUST come before #include "unicornObject.h"
+#define LED_PIN 5
+#define NUM_LEDS 12
+
+#define LED_TYPE WS2811
+#define COLOR_ORDER GRB
+
+#define UPDATES_PER_SECOND 30
+#define HUE_STEPS 1  // Number of steps to advance through palette between each for loop. Origionally 3
+
+#define ANIMATION_BLEND_SPEED 128
+#define NORMAL_BLEND_SPEED 2
+*/
 
 #include "unicornObject.h"
 
 
-//#include "pridePalettes.h"
+
 
 #define START_PALETTE RainbowColors_p  // Sterile while palette to start with
 #define SECOND_PALETTE trans
@@ -13,15 +36,17 @@
 
 #include <autoDelay.h>
 
-autoDelay paletteDelay;
+autoDelay paletteDelay;      // delay for swapping palettes
+autoDelay speedChangeDelay;  // delay for changing framerate and animation speed
+autoDelay globalStepsDelay;  // delay for changing number of global steps
 unicornObject unicorn;
 
 
-#define BRIGHTNESS 150
+#define BRIGHTNESS 140
 
 #define HUE_INIT 0
 #define SAT_INIT 255
-#define VAL_INIT 255
+#define VAL_INIT BRIGHTNESS
 
 void setup() {
   Serial.begin(115200);
@@ -29,39 +54,18 @@ void setup() {
   unicorn.currentPalette = START_PALETTE;
   unicorn.nextPalette = SECOND_PALETTE;
   unicorn.setBrightness(BRIGHTNESS);
-  /*
-  for (int i = 0; i < 25; i++) {
-  unicorn.paintHSV(HUE_INIT + 10*i, SAT_INIT, VAL_INIT);
-  unicorn.printNameHSV(HUE_INI + 10*i, SAT_INIT, VAL_INIT);
-  unicorn.update();
-  delay(10000);
-} */
-  int i = 0;
-  while (i < 440) {
-    unicorn.paintHSV(i, SAT_INIT, VAL_INIT);
-    //   unicorn.printNameHSV(i, SAT_INIT, VAL_INIT);
-    unicorn.show();
-    delay(4);
-    i = i + 1;
-  }
-  unicorn.paintHSV(0, 0, VAL_INIT);
-  unicorn.show();
-  delay(15);
-  i = 255;
-  while (i > 0) {
-    unicorn.paintHSV(0, 0, i);
-    unicorn.show();
-    i = i - 1;
-    delay(4);
-  }
-  delay(15);
+  unicorn.introAnimation(BRIGHTNESS);
 }
 
 #define CHANGE_PALETTE_S 60
+#define CHANGE_STEPS random(5, 20)  // this should be random for best effect
+int8_t change_steps_delay = 20;
 
+
+int8_t lastSteps = 1;  // if the last step was 3 or -3 make it reset to 1
 
 void loop() {
-  //unicorn.paintRGB(250, 250, 250);
+  //unicorn.paintRGB(250, 250, 250);   //// Solid Color Wash
 
 
 
@@ -72,9 +76,30 @@ void loop() {
   }
 
 
+  if (globalStepsDelay.secondsDelay(change_steps_delay)) {
+    int8_t newStepVal = random(-4, 4);
+     change_steps_delay = random(5, 30);
+    if (lastSteps > 1 || lastSteps < -1){    // force it into slower animations more frequently // this is junk but written quickly
+      newStepVal = 1;
+    } 
+    if (newStepVal > 2 || newStepVal < -2){
+       change_steps_delay = random(1,4);
+    }
+    if (newStepVal == 0){
+      change_steps_delay = random(1,2);
+    }
+    Serial.print("  New seconds delay: ");
+    Serial.print(change_steps_delay);
+    Serial.print("  newGlobalStepVal : ");
+    Serial.println(newStepVal);   
+    unicorn.setGlobalSteps(newStepVal);
+    lastSteps = newStepVal;
+  }
 
-  unicorn.fillBufferPaletteColors();
-  // unicorn.fillBufferSmooth(30);   // attempt to slow down animations but I do not think it is correct
+
+
+  // unicorn.fillBufferPaletteColors(); // moved into update method
+
 
   unicorn.update();
 }

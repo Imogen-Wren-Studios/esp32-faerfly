@@ -43,6 +43,7 @@ void unicornObject::show() {
 
 // Update the output with any changes to the buffer
 void unicornObject::update() {
+  unicornObject::fillBufferPaletteColors();
   // n blend towards pallet
   nblendPaletteTowardPalette(currentPalette, nextPalette, blendSpeed);  // This updates currentPalette with colours from nextPalette so it acts on the currentPalette variable
   FastLED.show();                                                       // show is called by delay
@@ -80,13 +81,13 @@ globalIndex = n + 1
 */
 void unicornObject::fillBufferPaletteColors() {
   uint8_t localIndex = globalIndex;
-  globalIndex += hue_steps;  // this value could be changed programatically later
+  globalIndex += g_step;  // this value could be changed programatically later
   for (int i = 0; i < NUM_LEDS; i++) {
     ledRing[i] = ColorFromPalette(currentPalette, localIndex, currentBrightness, currentBlending);
     if (ledDirection) {
-      localIndex += 1;  //Motion Speed currentIndex is the COLOUR index, not the LED array Index
+      localIndex += l_step;  //Motion Speed currentIndex is the COLOUR index, not the LED array Index
     } else {
-      localIndex += 1;  // Tried -= but made more jumps not good.
+      localIndex += l_step;  // Tried -= but made more jumps not good.
     }
   }
 }
@@ -100,11 +101,20 @@ void unicornObject::fillBufferSmooth(int16_t speed) {
   }
 }
 
+
+// Public Methods
+
+
 void unicornObject::setBrightness(uint8_t brightness) {
   currentBrightness = brightness;
   FastLED.setBrightness(brightness);
 }
 
+// Pass low values for best effect
+  void unicornObject::setGlobalSteps(int8_t newGlobalSteps ){
+    // This should probably limit inputs at the very least
+   g_step = newGlobalSteps;
+  }
 
 void unicornObject::printNameHSV(uint8_t hue, uint8_t saturation, uint8_t value) {   // This is not that accurate could be dialed in slighty
   uint8_t index = map(hue, 0, 255, 0, 16);
@@ -137,3 +147,35 @@ void unicornObject::apply_palette() {
   //  fillLEDS_smoothly(startIndex);     // Smoother way of doing it, hopefully. Also simpler
 }
 */
+
+
+void unicornObject::introAnimation(uint8_t initBrightness){
+  /*
+  for (int i = 0; i < 25; i++) {
+  unicorn.paintHSV(HUE_INIT + 10*i, SAT_INIT, VAL_INIT);
+  unicorn.printNameHSV(HUE_INI + 10*i, SAT_INIT, VAL_INIT);
+  unicorn.update();
+  delay(10000);
+} */
+  int i = 0;
+  while (i < 440) {
+    unicornObject::paintHSV(i, 255, initBrightness);
+    //   unicorn.printNameHSV(i, SAT_INIT, VAL_INIT);
+    unicornObject::show();
+    delay(4);
+    i = i + 1;
+  }
+  unicornObject::paintHSV(0, 0, initBrightness);
+  unicornObject::show();
+  delay(15);
+  i = 255;
+  while (i > 0) {
+    unicornObject::paintHSV(0, 0, i);
+    unicornObject::show();
+    i = i - 1;
+    delay(4);
+  }
+  delay(15);
+
+
+}
