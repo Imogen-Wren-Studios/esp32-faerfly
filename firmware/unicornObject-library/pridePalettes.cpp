@@ -1,10 +1,10 @@
 
 
 #include "pridePalettes.h"
+using namespace pridePalettes;
 
 
-
-DEFINE_GRADIENT_PALETTE(pride){
+DEFINE_GRADIENT_PALETTE(pridePalettes::pride){
   0, 255, 0, 0,      //Red) //
   40, 255, 100, 0,   // Orange //
   80, 255, 255, 0,   // Yellow //
@@ -15,7 +15,7 @@ DEFINE_GRADIENT_PALETTE(pride){
 };
 
 
-DEFINE_GRADIENT_PALETTE(lesbian){
+DEFINE_GRADIENT_PALETTE(pridePalettes::lesbian){
   0, 255, 100, 0,      // Dark Orange//
   32, 255, 255, 0,     // Light Orange //
   64, 255, 255, 100,   // Pumkin //
@@ -27,7 +27,7 @@ DEFINE_GRADIENT_PALETTE(lesbian){
 };
 
 // Not used yet
-DEFINE_GRADIENT_PALETTE(gay){
+DEFINE_GRADIENT_PALETTE(pridePalettes::gay){
   0, 190, 190, 120,    // at index 0, blue(0,0,0) //
   5, 230, 200, 70,     // at index 0, blue(0,0,0) //
   10, 230, 200, 10,    // at index 0, blue(0,0,0) //
@@ -47,7 +47,7 @@ DEFINE_GRADIENT_PALETTE(gay){
 
 
 
-DEFINE_GRADIENT_PALETTE(bisexual){
+DEFINE_GRADIENT_PALETTE(pridePalettes::bisexual){
   0, 255, 0, 100,    // RedPink //
   130, 255, 0, 150,  // RedPink //
   120, 255, 0, 255,  // Purple//
@@ -58,7 +58,7 @@ DEFINE_GRADIENT_PALETTE(bisexual){
 
 
 
-DEFINE_GRADIENT_PALETTE(enby){
+DEFINE_GRADIENT_PALETTE(pridePalettes::enby){
   0, 230, 255, 0,      // Yellow//
   32, 255, 255, 255,   // White//
   64, 255, 0, 255,     // Purple //
@@ -72,7 +72,7 @@ DEFINE_GRADIENT_PALETTE(enby){
 
 
 // Would prefer an HSV way of specifying this.
-DEFINE_GRADIENT_PALETTE(trans){
+DEFINE_GRADIENT_PALETTE(pridePalettes::trans){
   0, 0, 40, 255,      // Baby Blue //
   8, 200, 20, 150,    // Baby Pink //
   10, 255, 255, 255,  // White //
@@ -83,7 +83,7 @@ DEFINE_GRADIENT_PALETTE(trans){
 
 
 
-DEFINE_GRADIENT_PALETTE(ace){
+DEFINE_GRADIENT_PALETTE(pridePalettes::ace){
   // Black, Grey, White, Purple
   0, 0, 0, 0,          // Black
   100, 20, 20, 20,     // Grey
@@ -93,7 +93,7 @@ DEFINE_GRADIENT_PALETTE(ace){
 
 
 
-DEFINE_GRADIENT_PALETTE(aero){
+DEFINE_GRADIENT_PALETTE(pridePalettes::aero){
   0, 131, 87, 20,      // mud   0
   40, 166, 134, 20,    //gravel 1
   50, 207, 140, 20,    // dirty orange (very thin) 2
@@ -114,7 +114,7 @@ DEFINE_GRADIENT_PALETTE(aero){
 };
 
 
-DEFINE_GRADIENT_PALETTE(inter){
+DEFINE_GRADIENT_PALETTE(pridePalettes::inter){
   0, 0, 200, 255,      // Blue  0
   40, 0, 0, 255,       //gravel 1
   42, 0, 0, 255,       // dirty orange (very thin) 2
@@ -136,7 +136,7 @@ DEFINE_GRADIENT_PALETTE(inter){
 
 
 
-DEFINE_GRADIENT_PALETTE(demi){
+DEFINE_GRADIENT_PALETTE(pridePalettes::demi){
   0, 0, 0, 255,        // Blue  0
   40, 0, 0, 255,       //gravel 1
   42, 0, 0, 255,       // dirty orange (very thin) 2
@@ -159,7 +159,7 @@ DEFINE_GRADIENT_PALETTE(demi){
 
 
 
-DEFINE_GRADIENT_PALETTE(queer){
+DEFINE_GRADIENT_PALETTE(pridePalettes::queer){
   0, 255, 255, 255,    // Blue  0
   30, 220, 43, 22,     //gravel 1
   45, 65, 34, 29,      // dirty orange (very thin) 2
@@ -181,13 +181,13 @@ DEFINE_GRADIENT_PALETTE(queer){
 
 
 
-DEFINE_GRADIENT_PALETTE(color_tester){
+DEFINE_GRADIENT_PALETTE(pridePalettes::color_tester){
   0, 139, 75, 1,    // at index 0, blue(0,0,0) //
   255, 139, 75, 15  // at index 0, blue(0,0,0) //       // last entry must be for index 255
 };
 
 
-DEFINE_GRADIENT_PALETTE(black_black){
+DEFINE_GRADIENT_PALETTE(pridePalettes::black_black){
   0, 0, 0, 0,   // at index 0, blue(0,0,0) //
   255, 0, 0, 0  //  at index 0, blue(0,0,0) //       // last entry must be for index 255
 };
