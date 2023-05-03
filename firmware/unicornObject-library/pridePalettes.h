@@ -8,10 +8,14 @@
 */
 #include <FastLED.h>
 
-#ifndef pridePalettes_h
-#define pridePalettes_h
+//#ifndef pridePalettes_h
+//#define pridePalettes_h
+
+// pragma once is precompiler message to only include this text once, it replaces header guards in most compilers
+#pragma once  
 
 
+namespace pridePalettes{
 
 DECLARE_GRADIENT_PALETTE(pride);
 DECLARE_GRADIENT_PALETTE(lesbian);
@@ -29,7 +33,7 @@ DECLARE_GRADIENT_PALETTE(black_black);
 
 
 
-
+} // end namespace
 
 
 
@@ -154,4 +158,4 @@ CRGBPalette16 select_flag() {
 */
 
 
-#endif
+//#endif

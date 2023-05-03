@@ -30,8 +30,12 @@
 
 
 
-#define START_PALETTE RainbowColors_p  // Sterile while palette to start with
-#define SECOND_PALETTE trans
+//#define START_PALETTE RainbowColors_p  // Sterile while palette to start with
+
+using namespace pridePalettes;
+
+#define START_PALETTE pridePalettes::lesbian
+#define SECOND_PALETTE pridePalettes::lesbian
 
 
 #include <autoDelay.h>
@@ -39,6 +43,7 @@
 autoDelay paletteDelay;      // delay for swapping palettes
 autoDelay speedChangeDelay;  // delay for changing framerate and animation speed
 autoDelay globalStepsDelay;  // delay for changing number of global steps
+
 unicornObject unicorn;
 
 
@@ -69,11 +74,11 @@ void loop() {
 
 
 
-  if (paletteDelay.secondsDelay(CHANGE_PALETTE_S)) {            // After set time, save next palette into currentPalette ! I dont think this is neededm nBlend means that currentPalette already had all of the colours from the last nextPalette
-    unicorn.currentPalette = unicorn.nextPalette;               // Then fill nextPalette with a predefined palette, or a random palette
-    unicorn.nextPalette = unicorn.makeRandomSaturatedPallet();  // Make this a function instead of updating a variable
+ // if (paletteDelay.secondsDelay(CHANGE_PALETTE_S)) {            // After set time, save next palette into currentPalette ! I dont think this is neededm nBlend means that currentPalette already had all of the colours from the last nextPalette
+ //   unicorn.currentPalette = unicorn.nextPalette;               // Then fill nextPalette with a predefined palette, or a random palette
+ //   unicorn.nextPalette = unicorn.makeRandomSaturatedPallet();  // Make this a function instead of updating a variable
                                                                 /// Serial.println("Making New Random Palette");
-  }
+ // }
 
 
   if (globalStepsDelay.secondsDelay(change_steps_delay)) {
