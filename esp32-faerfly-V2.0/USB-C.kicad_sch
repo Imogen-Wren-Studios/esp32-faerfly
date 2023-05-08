@@ -1023,7 +1023,7 @@
     (pin "B9" (uuid c4d29918-6ec8-4b8c-bf44-a0b72b1fbe9e))
     (pin "S1" (uuid 1c2a7f21-02da-4829-83ba-aa00e5eb8675))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4"
           (reference "J?") (unit 1)
         )
@@ -1058,7 +1058,7 @@
     (pin "1" (uuid bd6d76e8-45ed-4691-803e-42ab265b0e1e))
     (pin "2" (uuid 65fa33a9-fdd0-487b-a099-7d185280c022))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4"
           (reference "C?") (unit 1)
         )
@@ -1093,7 +1093,7 @@
     (pin "1" (uuid d311a411-0134-4c80-8972-d7e41f36fb46))
     (pin "2" (uuid abcd633e-df30-4e0a-9b03-6e09a0ce78f8))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4"
           (reference "R?") (unit 1)
         )
@@ -1121,7 +1121,7 @@
     )
     (pin "1" (uuid 718f7f85-4bf2-4b45-9586-423fc27afbf8))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4"
           (reference "#PWR?") (unit 1)
         )
@@ -1156,7 +1156,7 @@
     (pin "1" (uuid d5eb3555-2621-447c-9570-d35091560d6d))
     (pin "2" (uuid 1853ef19-863f-4c8f-ae02-eea5f2a8a273))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4"
           (reference "FB?") (unit 1)
         )
@@ -1184,7 +1184,7 @@
     )
     (pin "1" (uuid 3ffa63f4-0b62-4af0-9d46-ead0a63921e0))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4"
           (reference "#PWR?") (unit 1)
         )
@@ -1219,7 +1219,7 @@
     (pin "1" (uuid a9d3bbc9-3f25-41f6-98ce-0f92644333e8))
     (pin "2" (uuid 17d5cce1-4823-4be5-9b7b-5e41f3ad01e9))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4"
           (reference "C?") (unit 1)
         )
@@ -1254,7 +1254,7 @@
     (pin "1" (uuid 355f22d1-3d40-4da4-9c95-b9cbe61a8d3b))
     (pin "2" (uuid 07dd9c67-81db-4a69-9528-c9df5c091623))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4"
           (reference "C?") (unit 1)
         )
@@ -1289,7 +1289,7 @@
     (pin "1" (uuid 96ad5f2c-6e5e-477b-b820-18d7eba158d4))
     (pin "2" (uuid 5d3389c3-b37a-4865-a28a-f3852c949894))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4"
           (reference "C?") (unit 1)
         )
@@ -1324,7 +1324,7 @@
     (pin "1" (uuid df1136f1-ca85-48e6-8bea-08f1649a377d))
     (pin "2" (uuid b7fbf3fe-aa5f-478e-89d8-1458562ffb31))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4"
           (reference "C?") (unit 1)
         )

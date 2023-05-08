@@ -47,7 +47,7 @@ autoDelay globalStepsDelay;  // delay for changing number of global steps
 unicornObject unicorn;
 
 
-#define BRIGHTNESS 80
+#define BRIGHTNESS 70
 
 #define HUE_INIT 0
 #define SAT_INIT 255

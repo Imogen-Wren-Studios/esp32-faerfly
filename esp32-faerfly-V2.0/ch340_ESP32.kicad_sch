@@ -62,6 +62,57 @@
         )
       )
     )
+    (symbol "000_Capacitor_Film_Immo:cap_film_0805" (pin_numbers hide) (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
+      (property "Reference" "C" (at 0.635 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Value" "cap_film_0805" (at 0.635 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 1.27 -10.16 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "cap capacitor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Unpolarized capacitor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "C_*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "cap_film_0805_0_1"
+        (polyline
+          (pts
+            (xy -2.032 -0.762)
+            (xy 2.032 -0.762)
+          )
+          (stroke (width 0.508) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -2.032 0.762)
+            (xy 2.032 0.762)
+          )
+          (stroke (width 0.508) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "cap_film_0805_1_1"
+        (pin passive line (at 0 3.81 270) (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 0 -3.81 90) (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "000_IC_immo:CH340C" (in_bom yes) (on_board yes)
       (property "Reference" "U" (at -5.08 13.97 0)
         (effects (font (size 1.27 1.27)) (justify right))
@@ -380,6 +431,9 @@
   (junction (at 199.39 113.03) (diameter 0) (color 0 0 0 0)
     (uuid c3bb9159-53c3-4ed5-b3e7-067eeb7abaeb)
   )
+  (junction (at 185.42 113.03) (diameter 0) (color 0 0 0 0)
+    (uuid fe43fa89-3b88-4f04-9205-6d2eac761b18)
+  )
 
   (no_connect (at 146.05 90.17) (uuid a7a12e89-b968-43c3-b1d0-4cd5801a130c))
   (no_connect (at 125.73 80.01) (uuid a7a12e89-b968-43c3-b1d0-4cd5801a130d))
@@ -402,10 +456,6 @@
   (wire (pts (xy 116.84 71.12) (xy 116.84 66.04))
     (stroke (width 0) (type default))
     (uuid 15b3fc70-2928-4180-a219-e563936a08cf)
-  )
-  (wire (pts (xy 185.42 113.03) (xy 199.39 113.03))
-    (stroke (width 0) (type default))
-    (uuid 177bc061-09f5-4f85-bbef-936a7dae71c6)
   )
   (wire (pts (xy 199.39 113.03) (xy 199.39 114.3))
     (stroke (width 0) (type default))
@@ -463,7 +513,7 @@
     (stroke (width 0) (type default))
     (uuid 73355a43-b74c-4b67-aba9-d062be96a984)
   )
-  (wire (pts (xy 199.39 80.01) (xy 209.55 80.01))
+  (wire (pts (xy 199.39 80.01) (xy 218.44 80.01))
     (stroke (width 0) (type default))
     (uuid 751c6caa-64f3-4adf-b222-a1110be4aa15)
   )
@@ -499,6 +549,10 @@
     (stroke (width 0) (type default))
     (uuid a4bd49fd-2897-44f8-a637-74f8930352c0)
   )
+  (wire (pts (xy 185.42 115.57) (xy 185.42 113.03))
+    (stroke (width 0) (type default))
+    (uuid a8928500-c563-47c1-b014-40c1393277b2)
+  )
   (wire (pts (xy 146.05 95.25) (xy 153.67 95.25))
     (stroke (width 0) (type default))
     (uuid b5062c42-028b-4987-bebf-54e42ce3bdc5)
@@ -531,6 +585,10 @@
     (stroke (width 0) (type default))
     (uuid c07b6cdf-5898-450f-a7cf-8c35a6bb5235)
   )
+  (wire (pts (xy 185.42 123.19) (xy 185.42 125.73))
+    (stroke (width 0) (type default))
+    (uuid c0ee9235-46d9-4596-884f-53fad34761b9)
+  )
   (wire (pts (xy 135.89 63.5) (xy 135.89 66.04))
     (stroke (width 0) (type default))
     (uuid c10366d8-16f5-4c08-8ca4-66d6c1baa3b1)
@@ -546,6 +604,10 @@
   (wire (pts (xy 185.42 97.79) (xy 185.42 99.06))
     (stroke (width 0) (type default))
     (uuid cf0bd62c-d80c-4475-a810-fcbbe14cffae)
+  )
+  (wire (pts (xy 185.42 113.03) (xy 199.39 113.03))
+    (stroke (width 0) (type default))
+    (uuid d2eccdd6-db3d-4a13-bba9-2268939f6229)
   )
   (wire (pts (xy 185.42 80.01) (xy 185.42 83.82))
     (stroke (width 0) (type default))
@@ -568,6 +630,11 @@
     (effects (font (size 2 2)) (justify right bottom))
     (uuid 05c7b8e2-6a92-45a3-8bf9-40af938192cf)
   )
+  (text "CHANGELOG-V2.0\n- Added 100n to EN pin for autoreset\nNote this did not work\n\ntrying with boot pin\n\nAlso did not work\n\nremoving 100n from en pin\n\nAslo did not work gahh\n\ntry 1u on EN, needs to be held low for longer\nremove cap from boot this will not help"
+    (at 141.605 132.08 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 12322e72-1876-4fe7-853b-d2f79656ded9)
+  )
   (text "CH340_C Does not require external oscillator" (at 127 92.71 0)
     (effects (font (size 0.6 0.6)) (justify right bottom))
     (uuid 9e412c66-449d-404a-aa74-612825ecd9f4)
@@ -584,6 +651,10 @@
   (hierarchical_label "GND" (shape passive) (at 199.39 125.73 270) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 4c10135f-e38a-447a-8431-f0f7558fe407)
+  )
+  (hierarchical_label "GND" (shape passive) (at 185.42 125.73 270) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 5bea51ba-a18f-4aed-b9bf-47acfa76c496)
   )
   (hierarchical_label "D-" (shape output) (at 97.79 87.63 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
@@ -609,7 +680,7 @@
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid cb314744-386e-4165-bfbc-8b873cee6aae)
   )
-  (hierarchical_label "ESP_IO0" (shape input) (at 209.55 80.01 0) (fields_autoplaced)
+  (hierarchical_label "ESP_IO0" (shape input) (at 218.44 80.01 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid edc01f7c-9d6b-45a8-8ff9-5d55c27ec788)
   )
@@ -642,7 +713,7 @@
     (pin "1" (uuid d711126c-9a36-4f69-94b8-dbd4f90ea45e))
     (pin "2" (uuid 5e3176f1-00ea-464b-a04b-dcb9c6b56db4))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0/b86764a3-50e0-4d6c-869d-b8d48d944fad"
           (reference "C6") (unit 1)
         )
@@ -688,9 +759,35 @@
     (pin "8" (uuid dc5bbf38-ac1f-4556-af6d-24544d380359))
     (pin "9" (uuid 740a31a8-b649-4222-a92e-32493ded50dd))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0/b86764a3-50e0-4d6c-869d-b8d48d944fad"
           (reference "U4") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "000_Capacitor_Film_Immo:cap_film_0805") (at 185.42 119.38 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 4bcfa23a-2a0f-498b-998b-15511ae92fc9)
+    (property "Reference" "C27" (at 189.23 118.745 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "1u" (at 187.96 121.92 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 186.69 129.54 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 185.42 119.38 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid be6bfe91-ad32-45d4-8a6b-cb2746a22b5e))
+    (pin "2" (uuid 6a3e1431-2a1b-42ed-a096-c7b82f4eb68c))
+    (instances
+      (project "esp32-faerfly-V2.0"
+        (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0/b86764a3-50e0-4d6c-869d-b8d48d944fad"
+          (reference "C27") (unit 1)
         )
       )
     )
@@ -720,7 +817,7 @@
     (pin "1" (uuid 370c79bc-712f-4092-bf74-0ef9262456c6))
     (pin "2" (uuid d7aac5a0-367d-419b-b002-2b64f3f10679))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0/b86764a3-50e0-4d6c-869d-b8d48d944fad"
           (reference "C7") (unit 1)
         )
@@ -762,7 +859,7 @@
     (pin "2" (uuid 1e4add61-89b3-443b-80a8-b7f6ee20659b))
     (pin "3" (uuid 55efe236-3981-422a-b266-86470c412ae7))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0/b86764a3-50e0-4d6c-869d-b8d48d944fad"
           (reference "Q1") (unit 1)
         )
@@ -794,7 +891,7 @@
     (pin "1" (uuid c79a93fc-8e4b-41bc-b8da-1131087d3d21))
     (pin "2" (uuid f7dca80b-09a4-4edf-8341-8b84ee7bc100))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0/b86764a3-50e0-4d6c-869d-b8d48d944fad"
           (reference "SW3") (unit 1)
         )
@@ -826,7 +923,7 @@
     (pin "1" (uuid 6ffcabc9-fd1e-45e1-b375-f6805ca98e87))
     (pin "2" (uuid 0a3ac80d-d58f-4ac0-a6d4-b5104c42cf59))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0/b86764a3-50e0-4d6c-869d-b8d48d944fad"
           (reference "R10") (unit 1)
         )
@@ -858,7 +955,7 @@
     (pin "1" (uuid e82f023a-feb8-4e1a-a2a2-33e518e961dd))
     (pin "2" (uuid 86554d72-3f24-4554-83cc-9c5957897a22))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0/b86764a3-50e0-4d6c-869d-b8d48d944fad"
           (reference "R11") (unit 1)
         )
@@ -890,7 +987,7 @@
     (pin "1" (uuid c874bfd4-37e7-4bf4-8523-752ad92fb7e5))
     (pin "2" (uuid 346ee582-7bda-49bd-8c2e-9b044e768ecb))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0/b86764a3-50e0-4d6c-869d-b8d48d944fad"
           (reference "SW2") (unit 1)
         )
@@ -932,7 +1029,7 @@
     (pin "2" (uuid 0495c38a-5ffa-4a89-b6b4-3611a66c1c04))
     (pin "3" (uuid b1287f0b-15dc-4aff-95ca-f8f6761735fc))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/9cdb06a8-babb-4d9b-a75e-e6e2cfc518a0/b86764a3-50e0-4d6c-869d-b8d48d944fad"
           (reference "Q2") (unit 1)
         )

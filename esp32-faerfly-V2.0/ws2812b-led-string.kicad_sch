@@ -904,7 +904,7 @@
     (pin "1" (uuid 3b18f270-4d91-4a44-b623-72fa4ffe345d))
     (pin "2" (uuid e2ceb48b-8aad-4156-9a8d-41aec9901472))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "C20") (unit 1)
         )
@@ -936,7 +936,7 @@
     (pin "1" (uuid 6c10ee38-91f3-4c6e-acd5-27c007ee9655))
     (pin "2" (uuid e4d8b424-4f97-4268-bcbf-e0e255cc9845))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "C17") (unit 1)
         )
@@ -970,7 +970,7 @@
     (pin "3" (uuid a1dbb9e7-238d-4517-96de-2e771e9671e0))
     (pin "4" (uuid dde1ff34-253d-4204-8021-373a34ca63ed))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "WLED2") (unit 1)
         )
@@ -1004,7 +1004,7 @@
     (pin "3" (uuid 050fbcd9-72df-40f5-933b-d477a8628dd1))
     (pin "4" (uuid 0a71dde4-0b90-4215-8d7b-c0a6cb8b3d33))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "WLED3") (unit 1)
         )
@@ -1036,7 +1036,7 @@
     (pin "1" (uuid 85d4e053-360f-4e16-8ce6-6b07adf5c54b))
     (pin "2" (uuid 93c55136-0e26-4e1a-9b16-a66ddcac4229))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "C16") (unit 1)
         )
@@ -1070,7 +1070,7 @@
     (pin "3" (uuid 01597ab9-558b-45c2-9aff-7b10308344df))
     (pin "4" (uuid 21bd218f-fb16-44a9-9ba8-1796a8b13f59))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "WLED7") (unit 1)
         )
@@ -1102,7 +1102,7 @@
     (pin "1" (uuid b02b2422-899a-4d3e-9f6b-48267ce4db22))
     (pin "2" (uuid 58cc5c0b-ce46-4c39-9bce-189133543f54))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "C18") (unit 1)
         )
@@ -1136,7 +1136,7 @@
     (pin "3" (uuid 964cdad0-e476-4d71-b850-f7b0fe2039f5))
     (pin "4" (uuid 6f6d59fb-0e72-43b7-b1ed-54cbd9ad37aa))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "WLED12") (unit 1)
         )
@@ -1168,7 +1168,7 @@
     (pin "1" (uuid f1b92c25-cc5a-4b8e-bdb6-3480b5e2f38a))
     (pin "2" (uuid c24456c1-46da-45aa-91b9-35132e419387))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "C24") (unit 1)
         )
@@ -1200,7 +1200,7 @@
     (pin "1" (uuid b529ce87-c9db-41ab-a8c8-ef7137ad543a))
     (pin "2" (uuid 3c7614da-9de5-42e3-a80e-62c75c460895))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "C13") (unit 1)
         )
@@ -1232,7 +1232,7 @@
     (pin "1" (uuid 28f5f217-9b00-4b26-be82-082e75a57f13))
     (pin "2" (uuid a60973d4-a745-4754-a76c-e3ed75bd63af))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "C14") (unit 1)
         )
@@ -1266,7 +1266,7 @@
     (pin "3" (uuid 52a7171b-6f78-4105-8078-455f389bc1c6))
     (pin "4" (uuid fecb6963-c32e-4371-ae4c-05fa5a7e5dcc))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "WLED6") (unit 1)
         )
@@ -1298,7 +1298,7 @@
     (pin "1" (uuid 9b6d9d5e-7c27-4f5e-8038-11dbd9118952))
     (pin "2" (uuid 5259d038-6c73-4b59-acbd-6f19ea397683))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "C23") (unit 1)
         )
@@ -1330,7 +1330,7 @@
     (pin "1" (uuid 535addb7-fbab-474d-ace0-7b98c5f27a07))
     (pin "2" (uuid 5d6cca07-78e8-4c74-80f3-2a895b8f4697))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "C22") (unit 1)
         )
@@ -1362,7 +1362,7 @@
     (pin "1" (uuid 4cdde01e-3bca-486c-923b-16de80da39cd))
     (pin "2" (uuid 148b62cc-ca04-4560-b786-51981a6414e1))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "C19") (unit 1)
         )
@@ -1396,7 +1396,7 @@
     (pin "3" (uuid 40cb21e8-d080-45ca-ba5a-caddc7e45afd))
     (pin "4" (uuid 866f4482-10a3-48cd-b9b7-54cc7ee02290))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "WLED4") (unit 1)
         )
@@ -1430,7 +1430,7 @@
     (pin "3" (uuid 381c31b3-3c61-4cd7-96ee-b1bce3e4c231))
     (pin "4" (uuid c408683a-f6b3-46b0-a116-51345d35011a))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "WLED1") (unit 1)
         )
@@ -1462,7 +1462,7 @@
     (pin "1" (uuid 2a04ac9e-7096-4d4d-852f-2fa0a908319a))
     (pin "2" (uuid 03231d63-5c91-441d-bac7-bc5ef57c6015))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "C21") (unit 1)
         )
@@ -1496,7 +1496,7 @@
     (pin "3" (uuid 3be401c7-9315-48c3-85bd-e39201498251))
     (pin "4" (uuid e5dd1cfa-cb66-464b-a0c5-b8033139073a))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "WLED9") (unit 1)
         )
@@ -1530,7 +1530,7 @@
     (pin "3" (uuid d136b317-3d30-4988-bfb3-4a833087e775))
     (pin "4" (uuid 2ced9b6d-3bef-443b-96dd-6796aa6e6330))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "WLED8") (unit 1)
         )
@@ -1564,7 +1564,7 @@
     (pin "3" (uuid 034d4c07-6e5d-4bee-a768-c0c43464d909))
     (pin "4" (uuid 48e2443c-44fb-484f-8a39-c0aab766765b))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "WLED10") (unit 1)
         )
@@ -1598,7 +1598,7 @@
     (pin "3" (uuid 8789997d-7057-4acd-8e94-8b612fc40706))
     (pin "4" (uuid e6bff115-897d-4eef-bb6c-6b1a62975a4e))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "WLED5") (unit 1)
         )
@@ -1632,7 +1632,7 @@
     (pin "3" (uuid f308a997-b746-401b-8efd-3f807f525350))
     (pin "4" (uuid b4cdad02-6810-4c3b-951c-70ae71d0d816))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "WLED11") (unit 1)
         )
@@ -1664,7 +1664,7 @@
     (pin "1" (uuid 08d00857-73ad-4ed4-ae2c-a9845c9f0cb5))
     (pin "2" (uuid eaafbd7a-551e-4ab0-8314-babd3dcc71a6))
     (instances
-      (project "ImogenWren"
+      (project "esp32-faerfly-V2.0"
         (path "/84b7ad53-68b5-40da-9777-f5bb9a09ecb4/257521cf-9b93-4c7d-82f3-71ab472635d5"
           (reference "C15") (unit 1)
         )
