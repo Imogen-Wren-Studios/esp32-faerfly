@@ -142,7 +142,7 @@ void unicornObject::setNextPalette(CRGBPalette16 newPalette) {
 
 void unicornObject::printNameHSV(uint8_t hue, uint8_t saturation, uint8_t value) {  // This is not that accurate could be dialed in slighty
   uint8_t index = map(hue, 0, 255, 0, 16);                                          //#TODO This was 16
-  char buffer[64];
+  char buffer[128];
   char colorMod[12] = { " " };
   if (saturation < 150) {
     sprintf(colorMod, "%s", "Pastel");
