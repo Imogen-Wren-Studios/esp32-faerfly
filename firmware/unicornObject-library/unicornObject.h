@@ -28,7 +28,7 @@
 //#include "colorPalettes.h"
 
 
- // Moved to .ino page. these MUST go before include for unicornObject library
+// Moved to .ino page. these MUST go before include for unicornObject library
 #define LED_PIN 5
 #define NUM_LEDS 12
 
@@ -78,21 +78,19 @@ public:
 
   void paintHSV(uint8_t hue, uint8_t saturation, uint8_t value);
 
-  void show();   // Show the contents of the buffer
+  void show();  // Show the contents of the buffer
 
   void update();  // Do all nessisary updates for palettes (later this should be changed to updatePalettes or some method should work out what state we are in)
 
   void setBrightness(uint8_t brightness = 255);
 
-  void setGlobalSteps(int8_t newGlobalSteps = 1);   // sets how far the global index steps through each loop (typical is 1)
+  void setGlobalSteps(int8_t newGlobalSteps = 1);  // sets how far the global index steps through each loop (typical is 1)
 
-  int8_t g_step = 1;    // global step variable modifyer (advance this much through palette array every loop though ALL LEDs)
+  void setLocalSteps(int8_t newLocalSteps = 1);  /// does not (Have) to be positive number
 
-  void setLocalSteps(uint8_t newLocalSteps = 1);                    /// does not (Have) to be positive number
+  void setNextPalette(CRGBPalette16 newPalette);
 
-  int8_t l_step = 1;    // local step variable modifyer (advance this much through palette array for each LED in string);
-
-  void setFrameRate(uint16_t frameRate =  30);                      // 30 default value
+  void setFrameRate(uint16_t frameRate = 30);  // 30 default value
 
   CRGBPalette16 makeRandomSaturatedPallet();
 
@@ -110,11 +108,11 @@ public:
 
   void printNameHSV(uint8_t hue, uint8_t saturation, uint8_t value);
 
-  uint8_t currentIndex = 0;  // make this private once moved everything into class // Being replaced entirely with globalIndex
+  // uint8_t currentIndex = 0;  // make this private once moved everything into class // Being replaced entirely with globalIndex
 
   uint8_t globalIndex = 0;  // variable to track the global starting point for new hue update
 
-  int hue_steps = 1;  // Make this private once everything hidden in class
+  // int hue_steps = 1;  // Make this private once everything hidden in class
 
 
   char red_s[16] = "red";
@@ -197,7 +195,8 @@ private:
 
 
 
-
+  int8_t g_step = 1;  // global step variable modifyer (advance this much through palette array every loop though ALL LEDs)
+  int8_t l_step = 1;  // local step variable modifyer (advance this much through palette array for each LED in string);
 
 
   uint8_t updates_per_second = 30;

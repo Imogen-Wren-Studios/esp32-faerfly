@@ -38,7 +38,7 @@ void unicornObject::paintHSV(uint8_t hue, uint8_t saturation, uint8_t value) {
 
 // Update the output with any changes to the buffer
 void unicornObject::show() {
-  FastLED.show();                                                       // show is called by delay
+  FastLED.show();  // show is called by delay
 }
 
 // Update the output with any changes to the buffer
@@ -111,16 +111,28 @@ void unicornObject::setBrightness(uint8_t brightness) {
 }
 
 // Pass low values for best effect
-  void unicornObject::setGlobalSteps(int8_t newGlobalSteps ){
-    // This should probably limit inputs at the very least
-   g_step = newGlobalSteps;
-  }
+void unicornObject::setGlobalSteps(int8_t newGlobalSteps) {
+  // This should probably limit inputs at the very least
+  g_step = newGlobalSteps;
+}
 
-void unicornObject::printNameHSV(uint8_t hue, uint8_t saturation, uint8_t value) {   // This is not that accurate could be dialed in slighty
+void unicornObject::setLocalSteps(int8_t newLocalSteps) {
+  // This should probably limit inputs at the very least
+  l_step = newLocalSteps;
+}
+
+
+void unicornObject::setNextPalette(CRGBPalette16 newPalette){
+  nextPalette = newPalette;
+}
+
+
+
+void unicornObject::printNameHSV(uint8_t hue, uint8_t saturation, uint8_t value) {  // This is not that accurate could be dialed in slighty
   uint8_t index = map(hue, 0, 255, 0, 16);
- // if (index == 16){
- //   index = 0;
-//  }
+  // if (index == 16){
+  //   index = 0;
+  //  }
   Serial.print(index);
   Serial.print("  Colour Name: ");
   if (saturation < 150) {
@@ -149,7 +161,7 @@ void unicornObject::apply_palette() {
 */
 
 
-void unicornObject::introAnimation(uint8_t initBrightness){
+void unicornObject::introAnimation(uint8_t initBrightness) {
   /*
   for (int i = 0; i < 25; i++) {
   unicorn.paintHSV(HUE_INIT + 10*i, SAT_INIT, VAL_INIT);
@@ -176,6 +188,4 @@ void unicornObject::introAnimation(uint8_t initBrightness){
     delay(4);
   }
   delay(15);
-
-
 }
