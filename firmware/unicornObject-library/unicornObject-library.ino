@@ -53,6 +53,36 @@ unicornObject unicorn;
 #define SAT_INIT 255
 #define VAL_INIT BRIGHTNESS
 
+
+CRGBPalette16 prideArray[11] = {
+  pridePalettes::pride,
+  pridePalettes::lesbian,
+  pridePalettes::gay,
+  pridePalettes::bisexual,
+  pridePalettes::enby,
+  pridePalettes::trans,
+  pridePalettes::ace,
+  pridePalettes::aero,
+  pridePalettes::inter,
+  pridePalettes::demi,
+  pridePalettes::queer
+};
+
+
+char prideNames[][11] = {
+  "pride",
+  "lesbian",
+  "gay",
+  "bisexual",
+  "enby",
+  "trans",
+  "ace",
+  "aero",
+  "inter",
+  "demi",
+  "queer"
+};
+
 void setup() {
   Serial.begin(115200);
   unicorn.begin();
@@ -62,7 +92,7 @@ void setup() {
   unicorn.introAnimation(BRIGHTNESS);
 }
 
-#define CHANGE_PALETTE_S 60
+#define CHANGE_PALETTE_S 40
 #define CHANGE_STEPS random(5, 20)  // this should be random for best effect
 int8_t change_steps_delay = 20;
 
@@ -80,7 +110,7 @@ void loop() {
   /// Serial.println("Making New Random Palette");
   // }
 
-
+  // steps_delay controlls the speed of the animations. They are controlled to not go too fast, or at least if they go fast to turn back to slow quickly
   if (globalStepsDelay.secondsDelay(change_steps_delay)) {
     int8_t newStepVal = random(-4, 4);
     change_steps_delay = random(5, 30);
@@ -96,10 +126,13 @@ void loop() {
     Serial.print("  New seconds delay: ");
     Serial.print(change_steps_delay);
     Serial.print("  newGlobalStepVal : ");
-    Serial.println(newStepVal);
+    Serial.print(newStepVal);
     //unicorn.setGlobalSteps(newStepVal);
-    int8_t newLocalStep = random(-64, 64);
-    Serial.print("newLocalStep: ");
+
+    //LocalStep controlls the percentage of the entire palette we see at one time. if there are 256 positions, and 12 LEDs, then by selecting values close to +-20-22 then we will see all the colours at the same time. 
+    // Smaller numbers will show a smaller proportion of the colours, and larger numbers will give a "patchwork" look as further away indexes will be between close by indexes.
+    int8_t newLocalStep = random(-22, 22);
+    Serial.print("  newLocalStep: ");
     Serial.println(newLocalStep);
     unicorn.setLocalSteps(newLocalStep);
     lastSteps = newStepVal;
@@ -108,7 +141,20 @@ void loop() {
   if (paletteDelay.secondsDelay(CHANGE_PALETTE_S)) {
     Serial.print("Changing Palette to: ");
     Serial.println();
-    unicorn.setNextPalette(pridePalettes::pride);
+    uint8_t palettePicker = random(0, 13);
+    if (palettePicker == 13 || palettePicker == 11) {
+      Serial.println("Random Saturated Palette");
+      unicorn.setNextPalette(unicorn.makeRandomSaturatedPallet());
+    } else if (palettePicker == 12) {
+      Serial.println("Random Pastel Palette");
+      unicorn.setNextPalette(unicorn.makeRandomPastelPallet());
+    } else {
+      Serial.print("Pride Palette: ");
+      Serial.print(palettePicker);
+      unicorn.setNextPalette(prideArray[palettePicker]);
+      Serial.print(" ");
+      Serial.println(prideNames[palettePicker]);
+    }
   }
 
 

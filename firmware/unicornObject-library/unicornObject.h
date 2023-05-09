@@ -94,6 +94,8 @@ public:
 
   CRGBPalette16 makeRandomSaturatedPallet();
 
+  CRGBPalette16 makeRandomPastelPallet();
+
   CRGBPalette16 currentPalette;
   TBlendType currentBlending = LINEARBLEND;
 
