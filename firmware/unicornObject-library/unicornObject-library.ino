@@ -47,7 +47,7 @@ autoDelay globalStepsDelay;  // delay for changing number of global steps
 unicornObject unicorn;
 
 
-#define BRIGHTNESS 140
+#define BRIGHTNESS 70
 
 #define HUE_INIT 0
 #define SAT_INIT 255
@@ -74,36 +74,45 @@ void loop() {
 
 
 
- // if (paletteDelay.secondsDelay(CHANGE_PALETTE_S)) {            // After set time, save next palette into currentPalette ! I dont think this is neededm nBlend means that currentPalette already had all of the colours from the last nextPalette
- //   unicorn.currentPalette = unicorn.nextPalette;               // Then fill nextPalette with a predefined palette, or a random palette
- //   unicorn.nextPalette = unicorn.makeRandomSaturatedPallet();  // Make this a function instead of updating a variable
-                                                                /// Serial.println("Making New Random Palette");
- // }
+  // if (paletteDelay.secondsDelay(CHANGE_PALETTE_S)) {            // After set time, save next palette into currentPalette ! I dont think this is neededm nBlend means that currentPalette already had all of the colours from the last nextPalette
+  //   unicorn.currentPalette = unicorn.nextPalette;               // Then fill nextPalette with a predefined palette, or a random palette
+  //   unicorn.nextPalette = unicorn.makeRandomSaturatedPallet();  // Make this a function instead of updating a variable
+  /// Serial.println("Making New Random Palette");
+  // }
 
 
   if (globalStepsDelay.secondsDelay(change_steps_delay)) {
     int8_t newStepVal = random(-4, 4);
-     change_steps_delay = random(5, 30);
-    if (lastSteps > 1 || lastSteps < -1){    // force it into slower animations more frequently // this is junk but written quickly
+    change_steps_delay = random(5, 30);
+    if (lastSteps > 1 || lastSteps < -1) {  // force it into slower animations more frequently // this is junk but written quickly
       newStepVal = 1;
-    } 
-    if (newStepVal > 2 || newStepVal < -2){
-       change_steps_delay = random(1,4);
     }
-    if (newStepVal == 0){
-      change_steps_delay = random(1,2);
+    if (newStepVal > 2 || newStepVal < -2) {
+      change_steps_delay = random(1, 4);
+    }
+    if (newStepVal == 0) {
+      change_steps_delay = random(1, 2);
     }
     Serial.print("  New seconds delay: ");
     Serial.print(change_steps_delay);
     Serial.print("  newGlobalStepVal : ");
-    Serial.println(newStepVal);   
-    unicorn.setGlobalSteps(newStepVal);
+    Serial.println(newStepVal);
+    //unicorn.setGlobalSteps(newStepVal);
+    int8_t newLocalStep = random(-64, 64);
+    Serial.print("newLocalStep: ");
+    Serial.println(newLocalStep);
+    unicorn.setLocalSteps(newLocalStep);
     lastSteps = newStepVal;
+  }
+
+  if (paletteDelay.secondsDelay(CHANGE_PALETTE_S)) {
+    Serial.print("Changing Palette to: ");
+    Serial.println();
+    unicorn.setNextPalette(pridePalettes::pride);
   }
 
 
 
-  // unicorn.fillBufferPaletteColors(); // moved into update method
 
 
   unicorn.update();
