@@ -57,12 +57,24 @@ CRGBPalette16 unicornObject::makeRandomSaturatedPallet() {
   for (int i = 0; i < 16; i++) {
     uint8_t newHueIndex = random8();
     Serial.print("New HSV Colour: ");
-    Serial.println(newHueIndex);
+    unicornObject::printNameHSV(newHueIndex, 255, 255);
     newPalette[i] = CHSV(newHueIndex, 255, 255);
   }
   return newPalette;
 }
 
+// This function returns palette with totally random unsaturated colors.
+CRGBPalette16 unicornObject::makeRandomPastelPallet() {
+  CRGBPalette16 newPalette;
+  for (int i = 0; i < 16; i++) {
+    uint8_t newHueIndex = random8();
+    uint8_t newSatVal = random8();
+    Serial.print("New HSV Colour: ");
+    unicornObject::printNameHSV(newHueIndex, newSatVal, 255);
+    newPalette[i] = CHSV(newHueIndex, newSatVal, 255);
+  }
+  return newPalette;
+}
 
 
 /*
@@ -122,23 +134,21 @@ void unicornObject::setLocalSteps(int8_t newLocalSteps) {
 }
 
 
-void unicornObject::setNextPalette(CRGBPalette16 newPalette){
+void unicornObject::setNextPalette(CRGBPalette16 newPalette) {
   nextPalette = newPalette;
 }
 
 
 
 void unicornObject::printNameHSV(uint8_t hue, uint8_t saturation, uint8_t value) {  // This is not that accurate could be dialed in slighty
-  uint8_t index = map(hue, 0, 255, 0, 16);
-  // if (index == 16){
-  //   index = 0;
-  //  }
-  Serial.print(index);
-  Serial.print("  Colour Name: ");
+  uint8_t index = map(hue, 0, 255, 0, 16);                                          //#TODO This was 16
+  char buffer[64];
+  char colorMod[12] = { " " };
   if (saturation < 150) {
-    Serial.print("pastel ");
+    sprintf(colorMod, "%s", "Pastel");
   }
-  Serial.println(colorNames[index]);
+  sprintf(buffer, "Hue Index: %3i, Sat: %3i Name Index: %3i, Colour Name: %s %s", hue, saturation, index, colorMod, colorNames[index]);  //colorMod,
+  Serial.println(buffer);
 }
 
 void unicornObject::printColorName(colorEnum index) {

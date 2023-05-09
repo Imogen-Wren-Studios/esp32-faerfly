@@ -12,10 +12,10 @@
 //#define pridePalettes_h
 
 // pragma once is precompiler message to only include this text once, it replaces header guards in most compilers
-#pragma once  
+#pragma once
 
 
-namespace pridePalettes{
+namespace pridePalettes {
 
 DECLARE_GRADIENT_PALETTE(pride);
 DECLARE_GRADIENT_PALETTE(lesbian);
@@ -32,8 +32,12 @@ DECLARE_GRADIENT_PALETTE(color_tester);
 DECLARE_GRADIENT_PALETTE(black_black);
 
 
+//CRGBPalette16 prideArray[11];
 
-} // end namespace
+
+
+
+}  // end namespace
 
 
 
