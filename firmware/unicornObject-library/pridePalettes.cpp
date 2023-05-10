@@ -164,7 +164,7 @@ DEFINE_GRADIENT_PALETTE(pridePalettes::queer){
   30, 220, 43, 22,     //gravel 1
   45, 65, 34, 29,      // dirty orange (very thin) 2
   50, 255, 255, 255,   //tan_suit 3
-  60, 58, 110, 230,    //sand 4
+  60, 58, 255, 230,    //sand 4
   70, 70, 140, 210,    // clouds or grey_clouds (very thin) 5
   80, 140, 127, 121,   // reddish_dust (medium thin) 6
   100, 255, 255, 255,  // dirty_orange (thicc) 7

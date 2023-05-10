@@ -48,7 +48,6 @@ unicornObject unicorn;
 
 
 #define BRIGHTNESS 70
-
 #define HUE_INIT 0
 #define SAT_INIT 255
 #define VAL_INIT BRIGHTNESS
@@ -155,10 +154,12 @@ void loop() {
       Serial.print(" ");
       Serial.println(prideNames[palettePicker]);
     }
+    // Could also change localStep here so we get a preview of the new palette 
+    // Make blending really quick so it previews the next colours, the slow mixing of colours is kinda done for this gotta be quicker.
   }
 
 
-
+// NEXT FUNCTION CHANGE BLEND SPEED
 
 
   unicorn.update();

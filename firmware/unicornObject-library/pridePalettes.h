@@ -1,15 +1,23 @@
-/* ) . . o o 0 0 0 0 . Pride Palettes  ) . . o o 0 0 0 0 .
+/*  Pride Palettes  
+
+               _     _      
+              (_)   | |     
+    _ __  _ __ _  __| | ___ 
+    | '_ \| '__| |/ _` |/ _ \
+    | |_) | |  | | (_| |  __/
+    | .__/|_|  |_|\__,_|\___|
+    | |                      
+    |_|      
 
 
-   Take a tour through the solar system
-   with this pack of planetary
-   colour schemes
+   Show your pride with these pride flag influenced colour palettes!
+
+      Imogen Wren
+      May 2023
 
 */
 #include <FastLED.h>
 
-//#ifndef pridePalettes_h
-//#define pridePalettes_h
 
 // pragma once is precompiler message to only include this text once, it replaces header guards in most compilers
 #pragma once
@@ -30,11 +38,6 @@ DECLARE_GRADIENT_PALETTE(demi);
 DECLARE_GRADIENT_PALETTE(queer);
 DECLARE_GRADIENT_PALETTE(color_tester);
 DECLARE_GRADIENT_PALETTE(black_black);
-
-
-//CRGBPalette16 prideArray[11];
-
-
 
 
 }  // end namespace
@@ -162,4 +165,4 @@ CRGBPalette16 select_flag() {
 */
 
 
-//#endif
+
