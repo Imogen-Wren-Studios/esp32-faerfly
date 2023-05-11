@@ -217,8 +217,18 @@ void loop() {
     change_steps_delay = 20;  // 4 second preview of new palette?                                        // Make blending really quick so it previews the next colours, the slow mixing of colours is kinda done for this gotta be quicker.
   }
 
-
+//#TODO FEATURES TO ADD
+  // circle light effect
+  // -- Pallette is applied by:
+      // -- Picking a random LED, then applying palette to LEDS either side untill they meet back in the middle
+      // -- Needs some way of turning the LED dark again after, or fading in and out
   // Corrupt algorithm
+
+// Streching Goals
+  // Sorting Algorithm
+      // - palette is applied as a bunch of random colours, then over time it sorts things into the correct groupings
+
+
 
 
   unicorn.update();
