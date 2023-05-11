@@ -88,6 +88,22 @@ public:
 
   void setLocalSteps(int8_t newLocalSteps = 1);  /// does not (Have) to be positive number
 
+  void setBlendSpeed(uint8_t newBlendSpeed = 2);  // Sets how many colours are blended from newPalette into currentPallette each time (16 max or 255 max?)
+
+  enum effect {
+    smooth,
+    chase,
+    spread
+  };
+
+ // int effectArray[3] = {smooth, chase, spread};
+
+  void setEffect(effect newEffect = smooth);
+
+  void setDirection(bool newDirection = true);
+
+//  void addCorruption(uint8_t width, CHSV(0,0,255));   // No Idea if this will work
+
   void setNextPalette(CRGBPalette16 newPalette);
 
   void setFrameRate(uint16_t frameRate = 30);  // 30 default value
@@ -101,12 +117,12 @@ public:
 
   CRGBPalette16 nextPalette;
 
-  bool ledDirection = true;
 
 
-  void fillBufferPaletteColors();
 
-  void fillBufferSmooth(int16_t speed);
+
+
+
 
   void printNameHSV(uint8_t hue, uint8_t saturation, uint8_t value);
 
@@ -183,8 +199,15 @@ public:
 
 
 
+  effect currentEffect = smooth;
 
+  bool ledDirection = true;
 private:
+
+  // Used for different effects lighting  
+  void fillBufferPaletteColors();
+  void fillBufferChase();
+  void fillBufferSpread();
 
   CRGBPalette16 paletteBuffer;  // empty pallette can be used for moving palettes around if needed (try not to use - use local variable insread)
 
@@ -195,6 +218,8 @@ private:
 
   uint8_t currentBrightness = 255;
 
+  uint16_t g_ledIndex = 0;  // used in chase effect to track the current LED
+
 
 
   int8_t g_step = 1;  // global step variable modifyer (advance this much through palette array every loop though ALL LEDs)
@@ -202,6 +227,8 @@ private:
 
 
   uint8_t updates_per_second = 30;
+
+
 
   int dataPin = 5;
 };

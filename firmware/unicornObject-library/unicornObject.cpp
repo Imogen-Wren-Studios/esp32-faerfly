@@ -6,21 +6,12 @@
 
 
 void unicornObject::begin() {
-  // Serial.println("Gathering Spectrum...");
+  Serial.println("Deploying Unicorn");
   delay(1000);  // power-up safety delay
-
-
-  // ledRing = new CRGB[num_leds];
-
   FastLED.addLeds<LED_TYPE, LED_PIN, COLOR_ORDER>(ledRing, NUM_LEDS).setCorrection(TypicalLEDStrip);
-
-  //FastLED.addLeds<LED_TYPE, LED_PIN, COLOR_ORDER>(ledRing, NUM_LEDS).setCorrection(TypicalLEDStrip);
-  // Serial.println("...Processing Light Threads...");
   FastLED.setBrightness(currentBrightness);
   randomSeed(analogRead(0));  // psudo random number generator for randomness & chaos
   ledRing(0, NUM_LEDS - 1) = CHSV(255, 255, 0);
-  // Serial.println("               Weaving Colours...  \n     ...Selecting Pigments\n");
-  //  Serial.println("Chroma Paintbrush Initialised:  Luminescence Matrix Applied.\n Starting Visual Light Imbument\n ");
   FastLED.show();
   // delay(500);
 }
@@ -41,14 +32,82 @@ void unicornObject::show() {
   FastLED.show();  // show is called by delay
 }
 
+
+
+
+
 // Update the output with any changes to the buffer
 void unicornObject::update() {
-  unicornObject::fillBufferPaletteColors();
+  switch (currentEffect) {
+    case 0:  // smooth
+      unicornObject::fillBufferPaletteColors();
+      break;
+    case 1:  // chase
+      unicornObject::fillBufferChase();
+      break;
+    case 2:  // chase
+      unicornObject::fillBufferSpread();
+      break;
+    default:
+      unicornObject::fillBufferPaletteColors();
+      break;
+  }
   // n blend towards pallet
   nblendPaletteTowardPalette(currentPalette, nextPalette, blendSpeed);  // This updates currentPalette with colours from nextPalette so it acts on the currentPalette variable
   FastLED.show();                                                       // show is called by delay
   FastLED.delay(1000 / updates_per_second);                             // This isnt doing its job here Why are animations running so fast?? is it because of faster processor on ESP?
 }
+
+// EFFECTS - How the palette is applied to the LEDs+
+
+void unicornObject::fillBufferPaletteColors() {
+  uint8_t localIndex = globalIndex;
+  globalIndex += g_step;  // this value could be changed programatically later
+  if (ledDirection) {
+    for (int i = 0; i < NUM_LEDS; i++) {
+      ledRing[i] = ColorFromPalette(currentPalette, localIndex, currentBrightness, currentBlending);
+      localIndex += l_step;  //Motion Speed currentIndex is the COLOUR index, not the LED array Index
+    }
+  } else {
+    for (int i = NUM_LEDS -1; i > 0; i--) {                                                                // #TODO check if NUM_LEDS -1 is needed
+      ledRing[i] = ColorFromPalette(currentPalette, localIndex, currentBrightness, currentBlending);
+      localIndex += l_step;  //Motion Speed currentIndex is the COLOUR index, not the LED array Index
+    }
+  }
+}
+
+
+void unicornObject::fillBufferChase() {
+  uint8_t localIndex = globalIndex;
+  globalIndex += g_step;  // this value could be changed programatically later
+  ledRing[g_ledIndex] = ColorFromPalette(currentPalette, localIndex, currentBrightness, currentBlending);
+  localIndex += l_step;  //Motion Speed currentIndex is the COLOUR index, not the LED array Index
+  if (ledDirection) {
+    g_ledIndex++;
+    if (g_ledIndex > NUM_LEDS) {
+      g_ledIndex = 0;
+    }
+  } else {
+    g_ledIndex--;
+    if (g_ledIndex > NUM_LEDS) {     // Something here might be missing one LED led 0 actually #TODO CHECK
+      g_ledIndex = NUM_LEDS;
+    }
+  }
+}
+
+void unicornObject::fillBufferSpread() {
+  uint8_t localIndex = globalIndex;
+  globalIndex += g_step;  // this value could be changed programatically later
+  ledRing[random(NUM_LEDS)] = ColorFromPalette(currentPalette, localIndex, currentBrightness, currentBlending);
+  localIndex += l_step;  //Motion Speed localIndex is the COLOUR index, not the LED array Index
+  if (ledDirection) {
+
+  } else {
+  }
+}
+
+
+// MAKING RANDOM PALETTES
 
 
 // This function returns palette with totally random saturated colors.
@@ -77,6 +136,10 @@ CRGBPalette16 unicornObject::makeRandomPastelPallet() {
 }
 
 
+
+
+
+
 /*
 
 To make this pattern work correctly the following numbers need to be passed somehow.
@@ -91,27 +154,9 @@ globalIndex = n + 1
 
 
 */
-void unicornObject::fillBufferPaletteColors() {
-  uint8_t localIndex = globalIndex;
-  globalIndex += g_step;  // this value could be changed programatically later
-  for (int i = 0; i < NUM_LEDS; i++) {
-    ledRing[i] = ColorFromPalette(currentPalette, localIndex, currentBrightness, currentBlending);
-    if (ledDirection) {
-      localIndex += l_step;  //Motion Speed currentIndex is the COLOUR index, not the LED array Index
-    } else {
-      localIndex += l_step;  // Tried -= but made more jumps not good.
-    }
-  }
-}
 
 
-// This is wrong but shouldnt be broken just not worthwhile
-void unicornObject::fillBufferSmooth(int16_t speed) {
 
-  if (colorDelay.millisDelay(speed)) {
-    unicornObject::fillBufferPaletteColors();  // this is now likely wrong but compiles. does this function even needed if fill buffer is fixed? we can name nicer later
-  }
-}
 
 
 // Public Methods
@@ -133,11 +178,21 @@ void unicornObject::setLocalSteps(int8_t newLocalSteps) {
   l_step = newLocalSteps;
 }
 
+void unicornObject::setBlendSpeed(uint8_t newBlendSpeed) {
+  blendSpeed = newBlendSpeed;
+}
+
+void unicornObject::setEffect(effect newEffect) {
+  currentEffect = newEffect;
+}
 
 void unicornObject::setNextPalette(CRGBPalette16 newPalette) {
   nextPalette = newPalette;
 }
 
+void unicornObject::setDirection(bool newDirection) {
+  ledDirection = newDirection;
+}
 
 
 void unicornObject::printNameHSV(uint8_t hue, uint8_t saturation, uint8_t value) {  // This is not that accurate could be dialed in slighty
