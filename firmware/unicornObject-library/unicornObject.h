@@ -218,7 +218,7 @@ private:
 
   uint8_t currentBrightness = 255;
 
-  uint16_t g_ledIndex = 0;  // used in chase effect to track the current LED
+  int16_t g_ledIndex = 0;  // used in chase effect to track the current LED
 
 
 

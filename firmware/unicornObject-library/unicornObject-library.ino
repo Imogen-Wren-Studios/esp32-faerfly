@@ -61,7 +61,7 @@ autoDelay directionDelay;
 unicornObject unicorn;
 
 
-#define BRIGHTNESS 70
+#define BRIGHTNESS 140
 #define HUE_INIT 0
 #define SAT_INIT 255
 #define VAL_INIT BRIGHTNESS
@@ -104,7 +104,7 @@ void setup() {
   unicorn.setBrightness(BRIGHTNESS);
   unicorn.introAnimation(BRIGHTNESS);
   unicorn.setBlendSpeed(255);
-  unicorn.setEffect(unicorn.spread);
+  unicorn.setEffect(unicorn.chase);
   unicorn.setDirection(true);
 }
 
@@ -116,33 +116,40 @@ int8_t direction_change_delay = 10;
 
 int8_t lastSteps = 1;  // if the last step was 3 or -3 make it reset to 1
 
+#define RANDOMISE_EFFECT true
+#define RANDOMISE_STEPS true
+#define RANDOMISE_DIRECTION true
+#define RANDOMISE_PALETTE true
+
 void loop() {
   //unicorn.paintRGB(250, 250, 250);   //// Solid Color Wash
 
   // Changing the effect
-
-  if (effectDelay.secondsDelay(effects_change_delay)) {
-    Serial.print("Changing Effect to: ");
-    int newEffect = random(3);
-    Serial.println(newEffect);
-    switch (newEffect) {
-      case 0:
-        unicorn.setEffect(unicorn.smooth);  // god this is clunky, can we hide the array call inside the method?
-        break;
-      case 1:
-        unicorn.setEffect(unicorn.chase);
-        break;
-      case 2:
-        unicorn.setEffect(unicorn.spread);
-        break;
-      default:
-        unicorn.setEffect(unicorn.smooth);
-        break;
+  if (RANDOMISE_EFFECT) {
+    if (effectDelay.secondsDelay(effects_change_delay)) {
+      Serial.print("Changing Effect to: ");
+      int newEffect = random(3);
+      Serial.println(newEffect);
+      switch (newEffect) {
+        case 0:
+          unicorn.setEffect(unicorn.smooth);  // god this is clunky, can we hide the array call inside the method?
+          break;
+        case 1:
+          unicorn.setEffect(unicorn.chase);
+          break;
+        case 2:
+          unicorn.setEffect(unicorn.spread);
+          break;
+        default:
+          unicorn.setEffect(unicorn.smooth);
+          break;
+      }
     }
   }
 
 
-  if (directionDelay.secondsDelay(direction_change_delay)) {    // This still only works on chase NOT on smooth GAAH #TODO work out how this can actually work for smooth
+  if (RANDOMISE_DIRECTION) {
+  if (directionDelay.secondsDelay(direction_change_delay)) {  // This still only works on chase NOT on smooth GAAH #TODO work out how this can actually work for smooth
     Serial.print("Changing Direction: ");
     bool newDirection;
     if (unicorn.ledDirection) {
@@ -156,8 +163,10 @@ void loop() {
     Serial.print("New Direction Delay: ");
     Serial.println(direction_change_delay);
   }
+}
 
 
+if (RANDOMISE_STEPS) {
   // Changing the color steps
   // steps_delay controlls the speed of the animations. They are controlled to not go too fast, or at least if they go fast to turn back to slow quickly
   if (globalStepsDelay.secondsDelay(change_steps_delay)) {
@@ -186,9 +195,9 @@ void loop() {
     unicorn.setLocalSteps(newLocalStep);
     lastSteps = newStepVal;
   }
+}
 
-
-
+if (RANDOMISE_PALETTE) {
   // Changing Palettes
   if (paletteDelay.secondsDelay(CHANGE_PALETTE_S)) {
     Serial.print("Changing Palette to: ");
@@ -216,20 +225,21 @@ void loop() {
 
     change_steps_delay = 20;  // 4 second preview of new palette?                                        // Make blending really quick so it previews the next colours, the slow mixing of colours is kinda done for this gotta be quicker.
   }
+}
 
 //#TODO FEATURES TO ADD
-  // circle light effect
-  // -- Pallette is applied by:
-      // -- Picking a random LED, then applying palette to LEDS either side untill they meet back in the middle
-      // -- Needs some way of turning the LED dark again after, or fading in and out
-  // Corrupt algorithm
+// circle light effect
+// -- Pallette is applied by:
+// -- Picking a random LED, then applying palette to LEDS either side untill they meet back in the middle
+// -- Needs some way of turning the LED dark again after, or fading in and out
+// Corrupt algorithm
 
 // Streching Goals
-  // Sorting Algorithm
-      // - palette is applied as a bunch of random colours, then over time it sorts things into the correct groupings
+// Sorting Algorithm
+// - palette is applied as a bunch of random colours, then over time it sorts things into the correct groupings
 
 
 
 
-  unicorn.update();
+unicorn.update();
 }

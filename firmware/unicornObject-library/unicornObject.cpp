@@ -89,7 +89,7 @@ void unicornObject::fillBufferChase() {
     }
   } else {
     g_ledIndex--;
-    if (g_ledIndex > NUM_LEDS) {     // Something here might be missing one LED led 0 actually #TODO CHECK
+    if (g_ledIndex < 0) {     // Something here might be missing one LED led 0 actually #TODO CHECK
       g_ledIndex = NUM_LEDS;
     }
   }
