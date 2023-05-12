@@ -61,7 +61,7 @@ autoDelay directionDelay;
 unicornObject unicorn;
 
 
-#define BRIGHTNESS 140
+#define BRIGHTNESS 70
 #define HUE_INIT 0
 #define SAT_INIT 255
 #define VAL_INIT BRIGHTNESS
