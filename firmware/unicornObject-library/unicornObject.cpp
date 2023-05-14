@@ -32,6 +32,16 @@ void unicornObject::show() {
   FastLED.show();  // show is called by delay
 }
 
+// Not ideal but will work for now
+// better to make it loop like a sine function or something
+int16_t unicornObject::loopIndex(int16_t ledIndex) {
+  if (ledIndex > NUM_LEDS) {
+    ledIndex = ledIndex - NUM_LEDS+1;
+  } else if (ledIndex < 0) {  // Something here might be missing one LED led 0 actually #TODO CHECK
+    ledIndex = NUM_LEDS + ledIndex;
+  }
+  return ledIndex;
+}
 
 
 
@@ -40,7 +50,7 @@ void unicornObject::show() {
 void unicornObject::update() {
   switch (currentEffect) {
     case 0:  // smooth
-      unicornObject::fillBufferPaletteColors();
+      unicornObject::fillBufferSmooth();
       break;
     case 1:  // chase
       unicornObject::fillBufferChase();
@@ -48,8 +58,11 @@ void unicornObject::update() {
     case 2:  // chase
       unicornObject::fillBufferSpread();
       break;
+    case 3:
+      unicornObject::fillBufferDrops();
+      break;
     default:
-      unicornObject::fillBufferPaletteColors();
+      unicornObject::fillBufferSmooth();
       break;
   }
   // n blend towards pallet
@@ -60,7 +73,7 @@ void unicornObject::update() {
 
 // EFFECTS - How the palette is applied to the LEDs+
 
-void unicornObject::fillBufferPaletteColors() {
+void unicornObject::fillBufferSmooth() {
   uint8_t localIndex = globalIndex;
   globalIndex += g_step;  // this value could be changed programatically later
   if (ledDirection) {
@@ -69,7 +82,7 @@ void unicornObject::fillBufferPaletteColors() {
       localIndex += l_step;  //Motion Speed currentIndex is the COLOUR index, not the LED array Index
     }
   } else {
-    for (int i = NUM_LEDS -1; i > 0; i--) {                                                                // #TODO check if NUM_LEDS -1 is needed
+    for (int i = NUM_LEDS - 1; i > 0; i--) {  // #TODO check if NUM_LEDS -1 is needed
       ledRing[i] = ColorFromPalette(currentPalette, localIndex, currentBrightness, currentBlending);
       localIndex += l_step;  //Motion Speed currentIndex is the COLOUR index, not the LED array Index
     }
@@ -89,7 +102,7 @@ void unicornObject::fillBufferChase() {
     }
   } else {
     g_ledIndex--;
-    if (g_ledIndex < 0) {     // Something here might be missing one LED led 0 actually #TODO CHECK
+    if (g_ledIndex < 0) {  // Something here might be missing one LED led 0 actually #TODO CHECK
       g_ledIndex = NUM_LEDS;
     }
   }
@@ -105,6 +118,36 @@ void unicornObject::fillBufferSpread() {
   } else {
   }
 }
+
+// Animation needs to take number of LEDs into account
+
+void unicornObject::fillBufferDrops() {
+  uint8_t localIndex = globalIndex;
+  globalIndex += g_step;  // this value could be changed programatically later
+  if (animateCycle == 0) {
+    animateLed = random(NUM_LEDS);
+    ledRing[animateLed] = ColorFromPalette(currentPalette, localIndex, currentBrightness, currentBlending);
+    animateCycle++;
+  } else if (animateCycle > 0) {
+      int16_t upIndex = unicornObject::loopIndex(animateLed + animateCycle);
+      int16_t downIndex = unicornObject::loopIndex(animateLed - animateCycle);
+      Serial.print("animateLed: ");
+      Serial.print(animateLed);
+      Serial.print(" upIndex: ");
+      Serial.print(upIndex);
+      Serial.print(" downIndex: ");
+      Serial.println(downIndex);
+      ledRing[upIndex] = ColorFromPalette(currentPalette, localIndex, currentBrightness, currentBlending);
+      ledRing[downIndex] = ColorFromPalette(currentPalette, localIndex, currentBrightness, currentBlending);
+       localIndex += l_step;  //Motion Speed localIndex is the COLOUR index, not the LED array Index
+    }
+    animateCycle++;
+    if (animateCycle > NUM_LEDS) {
+      animateCycle = -1;  /// at -1 this effect will not start instantly, this variable needs to be reset to 0 to trigger
+    }
+  } 
+
+
 
 
 // MAKING RANDOM PALETTES
@@ -194,6 +237,9 @@ void unicornObject::setDirection(bool newDirection) {
   ledDirection = newDirection;
 }
 
+void unicornObject::setFrameRate(uint16_t frameRate) {  // 30 default value
+  updates_per_second = frameRate;
+}
 
 void unicornObject::printNameHSV(uint8_t hue, uint8_t saturation, uint8_t value) {  // This is not that accurate could be dialed in slighty
   uint8_t index = map(hue, 0, 255, 0, 16);                                          //#TODO This was 16

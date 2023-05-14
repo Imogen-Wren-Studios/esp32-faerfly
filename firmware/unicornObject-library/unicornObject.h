@@ -90,19 +90,21 @@ public:
 
   void setBlendSpeed(uint8_t newBlendSpeed = 2);  // Sets how many colours are blended from newPalette into currentPallette each time (16 max or 255 max?)
 
+  // This is stupid there is a better way of doing this. This complicates things does not make it easier
   enum effect {
     smooth,
     chase,
-    spread
+    spread,
+    drop
   };
 
- // int effectArray[3] = {smooth, chase, spread};
+  // int effectArray[3] = {smooth, chase, spread};
 
   void setEffect(effect newEffect = smooth);
 
   void setDirection(bool newDirection = true);
 
-//  void addCorruption(uint8_t width, CHSV(0,0,255));   // No Idea if this will work
+  //  void addCorruption(uint8_t width, CHSV(0,0,255));   // No Idea if this will work
 
   void setNextPalette(CRGBPalette16 newPalette);
 
@@ -201,16 +203,23 @@ public:
 
   effect currentEffect = smooth;
 
+
+  // These should be made private when possible (public for testing)
+
   bool ledDirection = true;
+
+  int16_t animateCycle = 0;  // Tracks the cycle of the animation cycle will always be less than NUM_LEDS
 private:
 
-  // Used for different effects lighting  
-  void fillBufferPaletteColors();
+  // Used for different effects lighting
+  void fillBufferSmooth();
   void fillBufferChase();
   void fillBufferSpread();
+  void fillBufferDrops();
 
   CRGBPalette16 paletteBuffer;  // empty pallette can be used for moving palettes around if needed (try not to use - use local variable insread)
 
+int16_t loopIndex(int16_t ledIndex);  // Used to check if ledIndex is out of bounds and loop back around to the start or end
 
   uint32_t hue_shift_timing = 5000;
 
@@ -220,6 +229,12 @@ private:
 
   int16_t g_ledIndex = 0;  // used in chase effect to track the current LED
 
+  // Track location of drops starting LED
+
+  int16_t animateLed = 0;
+
+
+
 
 
   int8_t g_step = 1;  // global step variable modifyer (advance this much through palette array every loop though ALL LEDs)
@@ -227,9 +242,6 @@ private:
 
 
   uint8_t updates_per_second = 30;
-
-
-
   int dataPin = 5;
 };
 
