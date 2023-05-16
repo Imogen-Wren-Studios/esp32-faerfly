@@ -144,6 +144,7 @@ After using version 1 for a little time, some clear places to improve have mater
 5.  Add digital microphone? - test theory before committing
 6.  DMX interface? -> `The DMX output required the use of a MAX485 transceiver connected to the TX-pin of the ESP in order to produce DMX output.` `If you need to use another pin for output than the TX-pin, you'll need to change this in the ESP-Dmx library itself. This setting is located in src/dependencies/dmx/ESPDMX.cpp on line 31.`
 7.  Battery Positive to ADC1 (GPIO32-39) with 100k resistor for battery usermod
+8.  Change Battery Switch to switch between USB and battery (why didnt do this on version 1?!?!)
 
 Does DMX make this project something it is not? 
 
