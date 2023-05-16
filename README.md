@@ -21,7 +21,7 @@ _The project is a business card that can be handed out at gigs and work, and als
 ### Idea
 
 
-1. An AtTiny85 based mini pocket lightshow. Rechargable and interactive. Probably get it fabbed so it isnt a soldering project, but include a programming port so it can be reprogrammed easily. <br>
+1. Mini pocket lightshow. Rechargable and interactive. Probably get it fabbed so it isnt a soldering project, but include a programming port so it can be reprogrammed easily. <br>
      **Advantages:**
     - Fun programming challenge - Can link to repo with working code in case of bricking
     - Card more likely to be used in the open and interacted with over time
@@ -126,17 +126,6 @@ _Seems to mostly be used with a microcontroller, havnt managed to find an analog
 
 https://docs.arduino.cc/built-in-examples/analog/Smoothing Smoothing Data from Capacative touch sensor
 
-## Edge Connector Idea
-
-|Pin Num| label | use | notes |
-|---    |---    |---  |---    |
-| 0     |       |     |       |    
-| 0     |       |     |       |    
-| 0     |       |     |       |    
-| 0     |       |     |       |    
-| 0     |       |     |       |    
-| 0     |       |     |       |    
-| 0     |       |     |       |  
 
 
 ## Continued Development
@@ -152,6 +141,9 @@ After using version 1 for a little time, some clear places to improve have mater
 2.  Replace USB to serial with CP2102, CH340 is too flakey see [CP2102 USB to UART](https://blackcatsoftware.us/wp-content/uploads/2020/06/esp32-devkit-v1-schematic.pdf)
 3.  Add BMP280 temp sensor
 4.  Add Accellerometer
+5.  Add digital microphone? - test theory before committing
+6.  DMX interface? -> `The DMX output required the use of a MAX485 transceiver connected to the TX-pin of the ESP in order to produce DMX output.` `If you need to use another pin for output than the TX-pin, you'll need to change this in the ESP-Dmx library itself. This setting is located in src/dependencies/dmx/ESPDMX.cpp on line 31.`
 
+Does DMX make this project something it is not? 
 
 
