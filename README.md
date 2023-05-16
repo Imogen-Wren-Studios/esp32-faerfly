@@ -137,15 +137,15 @@ for 3D printing projects. It contains mounting tabs to assit in adding diffusers
 
 After using version 1 for a little time, some clear places to improve have materialised.
 
-1. Replace GPIO surface pins with through holes
-2.  Replace USB to serial with CP2102, CH340 is too flakey see [CP2102 USB to UART](https://blackcatsoftware.us/wp-content/uploads/2020/06/esp32-devkit-v1-schematic.pdf)
-3.  Add BMP280 temp sensor
-4.  Add Accellerometer
-5.  Add digital microphone? - test theory before committing
-6.  DMX interface? -> `The DMX output required the use of a MAX485 transceiver connected to the TX-pin of the ESP in order to produce DMX output.` `If you need to use another pin for output than the TX-pin, you'll need to change this in the ESP-Dmx library itself. This setting is located in src/dependencies/dmx/ESPDMX.cpp on line 31.`
-7.  Battery Positive to ADC1 (GPIO32-39) with 100k resistor for battery usermod
-8.  Change Battery Switch to switch between USB and battery (why didnt do this on version 1?!?!)
-9.  Check max charge current for BMS. Need at least 1A if possible
+1.  [] Replace GPIO surface pins with through holes
+2.  [] Replace USB to serial with CP2102, CH340 is too flakey see [CP2102 USB to UART](https://blackcatsoftware.us/wp-content/uploads/2020/06/esp32-devkit-v1-schematic.pdf)
+3.  [] Add BMP280 temp sensor
+4.  [] Add Accellerometer
+5.  [] Add digital microphone? - test theory before committing
+6.  [] DMX interface? -> `The DMX output required the use of a MAX485 transceiver connected to the TX-pin of the ESP in order to produce DMX output.` `If you need to use another pin for output than the TX-pin, you'll need to change this in the ESP-Dmx library itself. This setting is located in src/dependencies/dmx/ESPDMX.cpp on line 31.`
+7.  [x] Battery Positive to ADC1 (GPIO32-39) with 100k resistor for battery usermod
+8.  [x] Change Battery Switch to switch between USB and battery (why didnt do this on version 1?!?!)
+9.  [x] Check max charge current for BMS. Need at least 1A if possible 550mA max using 2k ohm shunt resistor
 
 Does DMX make this project something it is not? 
 
