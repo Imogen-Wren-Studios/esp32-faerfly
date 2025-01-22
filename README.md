@@ -18,32 +18,16 @@ _The project is a business card that can be handed out at gigs and work, and als
  1. A PCB business card I can hand out to people at gigs / work to advertise myself
  2. A fun electronics project or thing
 
-### Ideas
- 1. A Ripping Beast of a fuzz I built many years ago out of recycled parts from old broadcast cameras, and have never successfully managed to replicate. <br>
-    **Disadvantages:**
-    - Limited use as soldering project due to SMD parts
-    - Wont be seen once it goes into box
-    - Difficulties with supply of Ukranian Transistor
+### Idea
 
 
- 2. An AtTiny85 based mini pocket lightshow. Rechargable and interactive. Probably get it fabbed so it isnt a soldering project, but include a programming port so it can be reprogrammed easily. <br>
+1. Mini pocket lightshow. Rechargable and interactive. Probably get it fabbed so it isnt a soldering project, but include a programming port so it can be reprogrammed easily. <br>
      **Advantages:**
     - Fun programming challenge - Can link to repo with working code in case of bricking
     - Card more likely to be used in the open and interacted with over time
     - Would have to be handed out with everything attached
     - Could exclude battery and make a point of indicating to reuse broken disposible vape for battery. Recycling electronic waste! 
 
-
- 4. Capacitive touch instrument. Extermal power supply, 9v based for ease. Basic Light Show included? 
-    - Analog or Digital?  
-    **Analog Advantages** <br>
-    - More motivation to treat it as a soldering excercise rather than a programming one.
-    - More likely to be of interest to the DIY Music crowd <br>
-    **Overall Advantages**
-    - could end up being used to make cool music <br>
-    **Disadvantages:**
-    - Circuit needs testing
-    - how sensitive is circuit to change <br>
     
  ## Strech Features
  
@@ -142,17 +126,6 @@ _Seems to mostly be used with a microcontroller, havnt managed to find an analog
 
 https://docs.arduino.cc/built-in-examples/analog/Smoothing Smoothing Data from Capacative touch sensor
 
-## Edge Connector Idea
-
-|Pin Num| label | use | notes |
-|---    |---    |---  |---    |
-| 0     |       |     |       |    
-| 0     |       |     |       |    
-| 0     |       |     |       |    
-| 0     |       |     |       |    
-| 0     |       |     |       |    
-| 0     |       |     |       |    
-| 0     |       |     |       |  
 
 
 ## Continued Development
@@ -160,35 +133,20 @@ https://docs.arduino.cc/built-in-examples/analog/Smoothing Smoothing Data from C
 Now the project has become more clearly defined, it is an ESP development board with built in WS2821b LEDs designed to be used as a wearable badge, or a light up stand
 for 3D printing projects. It contains mounting tabs to assit in adding diffusers and optics. The wifi can be used to coordinate groups of them to sync colours around the room.
 
-Given this I need a name for this development board. I was out of ideas so I asked Chat GPT and this is the current shortlist, some have been modified slightly or added to as this gave me ideas:
+## Version 2 Development
 
-### Name Ideas:
-- ESPuino
-- DevSparkie
-- Sparkino
-- ESP-Firefly
-- FaerFly
-- Faer
-- Luino
-- Comet
-- LEDirector
-- Glimmerino
-- ChromaCore
-- PixelPilot
-- PixelESP
-- ChromaPilot
-- Chromino
-- illuminuno
-- illumuino
-- IlluminESP
-- Illumin8
-- Ilumin8
-- Lumin8
-- Lumin32
-- Luminino
-- Lumino32
-- Luino32
-- Jeff
+After using version 1 for a little time, some clear places to improve have materialised.
 
+1.  [] Replace GPIO surface pins with through holes
+2.  [] Replace USB to serial with CP2102, CH340 is too flakey see [CP2102 USB to UART](https://blackcatsoftware.us/wp-content/uploads/2020/06/esp32-devkit-v1-schematic.pdf)
+3.  [] Add BMP280 temp sensor
+4.  [] Add Accellerometer
+5.  [] Add digital microphone? - test theory before committing
+6.  [] DMX interface? -> `The DMX output required the use of a MAX485 transceiver connected to the TX-pin of the ESP in order to produce DMX output.` `If you need to use another pin for output than the TX-pin, you'll need to change this in the ESP-Dmx library itself. This setting is located in src/dependencies/dmx/ESPDMX.cpp on line 31.`
+7.  [x] Battery Positive to ADC1 (GPIO32-39) with 100k resistor for battery usermod
+8.  [x] Change Battery Switch to switch between USB and battery (why didnt do this on version 1?!?!)
+9.  [x] Check max charge current for BMS. Need at least 1A if possible 550mA max using 2k ohm shunt resistor
+
+Does DMX make this project something it is not? 
 
 
